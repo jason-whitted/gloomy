@@ -1,0 +1,8 @@
+.HistoryList ul {
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+
+.HistoryList .deleted {
+  text-decoration: line-through;
+}

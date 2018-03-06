@@ -1,0 +1,19 @@
+.PartySheet .party-name {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.PartySheet thead .icon-party {
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+.PartySheet thead th:first-child {
+  text-align: center;
+}
+
+.PartySheet thead th {
+  font-weight: normal;
+  vertical-align: middle;
+  border-bottom: 0;
+}

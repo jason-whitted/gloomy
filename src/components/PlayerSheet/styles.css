@@ -1,0 +1,19 @@
+.PlayerSheet .player-name {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.PlayerSheet thead .icon-player {
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+.PlayerSheet thead th:first-child {
+  text-align: center;
+}
+
+.PlayerSheet thead th {
+  font-weight: normal;
+  vertical-align: middle;
+  border-bottom: 0;
+}

@@ -1,0 +1,36 @@
+.character .svg-class {
+  margin-right: 3px;
+}
+
+.item .svg-item {
+  margin-right: 3px;
+}
+
+.summon-flyout .action-summon {
+  width: 210px;
+  height: 66px;
+  background-image: url('../AbilityCard/images/summon1.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.summon-flyout .action-summon .summon-name {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  height: 20px;
+  width: 180px;
+  text-align: center;
+  text-shadow: 2px 2px 2px black;
+  font-family: Nyala;
+  font-size: 1.1em;
+}
+
+.summon-flyout .action-summon .summon-keyword {
+  display: none;
+}
+
+.summon-flyout .action-summon .stat {
+  margin-top: -4px;
+}

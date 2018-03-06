@@ -1,0 +1,403 @@
+.AbilityCard,
+.AbilityCard .front,
+.AbilityCard .back {
+  --ability-bg-width: calc(413px * 0.66);
+  --ability-bg-height: calc(563px * 0.66);
+  width: var(--ability-bg-width);
+  height: var(--ability-bg-height);
+}
+
+.AbilityCard .front,
+.AbilityCard .back {
+  background-size: var(--ability-bg-width) var(--ability-bg-height);
+  position: relative;
+  font-family: 'Pirata One', 'Lato', '"Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.AbilityCard .front {
+  background-image: url('./images/front.jpg');
+}
+
+.AbilityCard .back {
+  background-image: url('./images/back.jpg');
+}
+
+.AbilityCard .front .name {
+  position: absolute;
+  top: 5px;
+  left: 45px;
+  width: 180px;
+  height: 30px;
+  line-height: 30px;
+  color: white;
+  text-align: center;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+}
+
+.AbilityCard .front .level {
+  position: absolute;
+  top: 43px;
+  left: 126px;
+  width: 20px;
+  height: 20px;
+  color: black;
+  text-align: center;
+  font-size: 13px;
+}
+
+.AbilityCard .front .initiative {
+  position: absolute;
+  top: 185px;
+  left: 115px;
+  width: 42px;
+  height: 27px;
+  line-height: 30px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 0.5px;
+}
+
+.AbilityCard .front .card-number {
+  position: absolute;
+  top: 331px;
+  left: 160px;
+  width: 20px;
+  height: 13px;
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: white;
+  font-family: Calibri;
+}
+
+.AbilityCard .front .class-icon {
+  position: absolute;
+  top: 324px;
+  left: 126px;
+  font-size: 1.6em;
+}
+
+.AbilityCard .front .top,
+.AbilityCard .front .bottom {
+  font-family: Nyala, 'Lato', '"Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1em;
+  display: table;
+  color: white;
+}
+
+.AbilityCard .front .top {
+  position: absolute;
+  top: 65px;
+  left: 31px;
+  width: 210px;
+  height: 108px;
+}
+
+.AbilityCard .front .top .consumed {
+  position: absolute;
+  top: 100px;
+  left: 183px;
+  font-size: 1.5em;
+}
+
+.AbilityCard .front .top .no-recover {
+  position: absolute;
+  top: 105px;
+  left: 167px;
+  font-size: 1.25em;
+}
+
+.AbilityCard .front .bottom {
+  position: absolute;
+  top: 218px;
+  left: 31px;
+  width: 210px;
+  height: 108px;
+}
+
+.AbilityCard .front .actions {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.AbilityCard .front .actions .action {
+  font-size: 1em;
+}
+
+.AbilityCard .front .actions > .action.small {
+  font-size: 0.8em;
+  line-height: 1.1em;
+}
+
+.AbilityCard .front .actions > .action ~ .action {
+  margin-top: 8px;
+}
+
+.AbilityCard .front .actions .RichText .d-inline-block {
+  vertical-align: middle;
+}
+
+.AbilityCard .front .bonuses .action {
+  font-size: 0.8em;
+  line-height: 1em;
+}
+
+.AbilityCard .front .svg {
+  font-size: 0.8em;
+}
+
+.AbilityCard .front .action-note .svg-symbol-Recover {
+  font-size: 1rem;
+  vertical-align: baseline;
+}
+
+.AbilityCard .front .action-note .svg-symbol-XP {
+  font-size: 1.1rem;
+}
+
+.AbilityCard .front .action-note .svg-element,
+.AbilityCard .front .action-note .svg-symbol-ItemRefresh,
+.AbilityCard .front .action-note .svg-slot {
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+.AbilityCard .svg-effect {
+  vertical-align: middle;
+}
+
+.AbilityCard .front .svg-element {
+  margin-top: 5px;
+  font-size: 1.25rem;
+}
+
+.AbilityCard .front .action.large {
+  font-size: 2rem;
+}
+
+.AbilityCard .front .bottom .consumed {
+  position: absolute;
+  top: 93px;
+  left: 165px;
+  font-size: 1.5em;
+}
+
+.AbilityCard .front .bottom .no-recover {
+  position: absolute;
+  top: 98px;
+  left: 149px;
+  font-size: 1.25em;
+}
+
+.AbilityCard .front .top .action-command {
+  position: absolute;
+  top: -12px;
+  left: 7px;
+  font-size: 0.9em;
+}
+
+.AbilityCard .front .bottom .action-command {
+  position: absolute;
+  top: -1px;
+  left: 7px;
+  font-size: 0.9em;
+}
+
+.AbilityCard .front .top .action-command .svg {
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+.AbilityCard .front .top .action-song {
+  position: absolute;
+  top: -12px;
+  left: 7px;
+  font-size: 0.9em;
+}
+
+.AbilityCard .front .action-symbols .small .svg-element,
+.AbilityCard .front .action-symbols .small .svg-symbol {
+  font-size: 0.8em;
+  margin: 0;
+}
+
+.AbilityCard .front .action-symbols .svg-symbol {
+  font-size: 2.25em;
+  margin: -5px 0;
+}
+
+.AbilityCard .front .action-symbols .svg-symbol-Consumed,
+.AbilityCard .front .action-symbols .svg-symbol-Persistent {
+  font-size: 1.6em;
+  position: relative;
+  top: -5px;
+}
+
+.AbilityCard .front .action.condition {
+  line-height: 1.3em;
+}
+
+.AbilityCard .front .action.condition .colon {
+  font-size: 2em;
+}
+
+.AbilityCard .front .top .action-augment {
+  margin-top: -10px;
+}
+
+.action-augment .d-flex {
+  min-height: 2.5em;
+  color: white;
+}
+
+.AbilityCard .front .action-augment .class-ability {
+  display: block;
+  text-align: left;
+  font-size: 0.8em;
+  padding-left: 8px;
+}
+
+.AbilityCard .front .action-augment .augment-actions {
+  font-size: 1.2em;
+  flex-grow: 1;
+}
+
+.AbilityCard .front .action-summon {
+  width: 100%;
+  height: 66px;
+  background: url('./images/summon1.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.AbilityCard .action-summon.summon2 {
+  background: url('./images/summon2.png');
+  background-size: 100%;
+}
+
+.AbilityCard .action-summon.summon2 .effects:nth-of-type(1) {
+  top: 21px;
+  height: 21px;
+}
+
+.AbilityCard .action-summon.summon2 .effects:nth-of-type(2) {
+  top: 44px;
+  height: 21px;
+}
+
+.AbilityCard .front .bottom .action-summon {
+  margin-top: 5px;
+}
+
+.action-summon .stat {
+  width: 50px;
+  height: 21px;
+  padding-top: 2px;
+  text-align: left;
+}
+
+.action-summon .stat .svg.svg-element {
+  font-size: 13px;
+  position: absolute;
+  top: -3px;
+  right: 2px;
+}
+
+.action-summon .stat-hp {
+  position: absolute;
+  left: 40px;
+  top: 21px;
+}
+
+.action-summon .stat-move {
+  position: absolute;
+  left: 92px;
+  top: 21px;
+  padding-left: 2px;
+}
+
+.action-summon .stat-attack {
+  position: absolute;
+  left: 40px;
+  top: 44px;
+}
+
+.action-summon .stat-range {
+  position: absolute;
+  left: 92px;
+  top: 44px;
+  padding-left: 2px;
+}
+
+.action-summon .effects {
+  position: absolute;
+  top: 21px;
+  left: 144px;
+  width: 67px;
+  height: 44px;
+  display: table;
+}
+
+.action-summon .effects .svg-element {
+  margin-left: 1px;
+  margin-top: -4px;
+}
+
+.action-summon .effects-inner {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding-left: 1px;
+  font-size: 0.8em;
+  line-height: 0.9em;
+}
+.action-summon .effects .effects-inner .small {
+  font-size: 0.78em;
+  line-height: 1em;
+}
+
+.AbilityCard .back .class {
+  position: absolute;
+  top: 10px;
+  left: 55px;
+  width: 160px;
+  height: 30px;
+  line-height: 30px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+.AbilityCard .back .class-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 10em;
+  text-align: center;
+  margin-top: 33%;
+}
+
+.augments-flyout .popover-inner {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 90px;
+}
+
+.augments-flyout .popover-inner button {
+  flex: 1 1 33%;
+  border-radius: 0;
+  text-align: left;
+}
+
+.augments-flyout .popover-inner button .svg {
+  width: 1.5em;
+}

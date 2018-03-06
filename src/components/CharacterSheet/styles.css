@@ -1,0 +1,34 @@
+.CharacterSheet .character-name {
+  font-weight: bold;
+}
+
+.CharacterSheet .party-name {
+  font-weight: normal;
+}
+
+.CharacterSheet .party-name::before {
+  content: '<';
+}
+
+.CharacterSheet .party-name::after {
+  content: '>';
+}
+
+.CharacterSheet thead .svg-class {
+  font-size: 3em;
+  vertical-align: middle;
+}
+
+.CharacterSheet thead th {
+  font-weight: normal;
+  vertical-align: middle;
+  border-bottom: 0;
+}
+
+.CharacterSheet .perk .svg {
+  font-size: 1.3em;
+}
+
+.CharacterSheet .progress {
+  height: 2px;
+}

@@ -1,0 +1,17 @@
+export default {
+  BLESS: 'Bless',
+  CURSE: 'Curse',
+  DISARM: 'Disarm',
+  IMMOBILIZE: 'Immobilize',
+  INVISIBLE: 'Invisible',
+  MUDDLE: 'Muddle',
+  PIERCE: 'Pierce',
+  POISON: 'Poison',
+  PULL: 'Pull',
+  PUSH: 'Push',
+  ROLLING: 'Rolling',
+  STRENGTHEN: 'Strengthen',
+  STUN: 'Stun',
+  TARGET: 'Target',
+  WOUND: 'Wound',
+};

@@ -1,0 +1,18 @@
+.CharacterAddAbilityDialog .AbilityCard .icon-augment {
+  position: relative;
+}
+
+.CharacterAddAbilityDialog .AbilityCard .icon-augment::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -5px;
+  width: 17px;
+  height: 17px;
+  border: 1px dotted white;
+}
+
+.CharacterAddAbilityDialog .AbilityCard .icon-augment.active::before {
+  border-color: yellow;
+  box-shadow: 0 0 5px 3px yellow;
+}

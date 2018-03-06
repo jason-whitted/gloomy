@@ -1,0 +1,18 @@
+export default {
+  ALL_CHARACTERS_LOOT_TREASURE: 'AllCharactersLootTreasure',
+  CLEANSE: 'Cleanse',
+  DESTORY: 'Destroy',
+  EXIT: 'Exit',
+  KILL_ENEMY: 'KillEnemy',
+  KILL_ALL_ENEMIES: 'KillAllEnemies',
+  KILL_ALL_REVEALED_ENEMIES: 'KillAllRevealedEnemies',
+  KILL_X_ENEMIES: 'KillXEnemies',
+  KILL_X_TIMES_CHARACTERS_ENEMIES: 'KillXTimesCharactersEnemies',
+  LOOT_ALL_TREASURE_TILES: 'LootAllTreasureTiles',
+  OCCUPY: 'Occupy',
+  OPEN: 'Open',
+  PLACE_ITEM: 'PlaceItem',
+  PROTECT: 'Protect',
+  REVEAL: 'Reveal',
+  SURVIVE_X_ROUNDS: 'SurviveXRounds',
+};

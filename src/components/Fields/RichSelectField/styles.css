@@ -1,0 +1,19 @@
+.RichSelectField .fa-caret-down {
+  margin-right: -13px;
+  margin-top: 7px;
+  font-size: 0.8em;
+}
+
+.RichSelectField .form-control:not([size]):not([multiple]) {
+  height: calc(2.25rem + 2px);
+  background-color: white;
+}
+
+.RichSelectField .dropdown-item {
+  padding: 0.25rem 0.75rem;
+}
+
+.RichSelectField .form-control:hover {
+  background-color: inherit;
+  border: auto;
+}

@@ -1,0 +1,52 @@
+import ACTION from '../ABILITY_CARD/ACTION';
+
+export default {
+  PLUS1: {
+    [ACTION.MOVE]: 30,
+    [ACTION.ATTACK]: 50,
+    [ACTION.RANGE]: 30,
+    [ACTION.SHIELD]: 100,
+    [ACTION.PUSH]: 30,
+    [ACTION.PULL]: 30,
+    [ACTION.PIERCE]: 30,
+    [ACTION.RETALIATE]: 100,
+    [ACTION.HEAL]: 30,
+    [ACTION.TARGET]: 50,
+  },
+  SUMMON: {
+    hp: 50,
+    move: 100,
+    attack: 100,
+    range: 50,
+  },
+  LEVEL: {
+    0: 0,
+    1: 0,
+    2: 25,
+    3: 50,
+    4: 75,
+    5: 100,
+    6: 125,
+    7: 150,
+    8: 175,
+    9: 200,
+  },
+  PREVIOUS_ENHANCE: {
+    0: 0,
+    1: 75,
+    2: 150,
+    3: 225,
+  },
+  HEX: {
+    1: 200,
+    2: 100,
+    3: 66,
+    4: 50,
+    5: 40,
+    6: 33,
+    7: 28,
+    8: 25,
+    9: 22,
+    10: 20,
+  },
+};

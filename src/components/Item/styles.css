@@ -1,0 +1,157 @@
+:root {
+  --item-bg-width: calc(296px * 0.93);
+  --item-bg-height: calc(437px * 0.93);
+}
+
+.item,
+.item .front,
+.item .back {
+  /* 296x437 */
+  width: var(--item-bg-width);
+  height: var(--item-bg-height);
+}
+
+.item .front,
+.item .back {
+  background-size: var(--item-bg-width) var(--item-bg-height);
+  position: relative;
+  font-family: 'Pirata One', 'Lato', '"Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.item .front {
+  background-image: url('./images/item-front.jpg');
+}
+
+.item .back {
+  background-image: url('./images/item-back.jpg');
+}
+
+.item.random .front {
+  background-image: url('./images/item-front-random.jpg');
+}
+
+.item.random .back {
+  background-image: url('./images/item-back-random.jpg');
+}
+
+.item .name {
+  --height: 55px;
+  font-size: 1.75em;
+  position: absolute;
+  width: calc(100% - 55px);
+  height: var(--height);
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  line-height: var(--height);
+}
+
+.item .count {
+  --height: 18px;
+  position: absolute;
+  top: 210px;
+  left: 28px;
+  width: 32px;
+  height: var(--height);
+  font-family: HTowert, 'Lato', '"Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+  line-height: var(--height);
+  font-size: 0.75em;
+}
+
+.item .gold {
+  --height: 60px;
+  position: absolute;
+  top: 178px;
+  left: 192px;
+  width: 60px;
+  height: var(--height);
+  line-height: var(--height);
+  text-align: center;
+  font-size: 36px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+.item .slot {
+  --size: 35px;
+  position: absolute;
+  top: calc(var(--item-bg-height) - var(--size) - 10px);
+  left: calc(var(--item-bg-width) / 2 - var(--size) / 2);
+  width: var(--size);
+  opacity: 1;
+}
+.item .slot .svg-slot {
+  width: 35px;
+}
+
+.item .desc {
+  --height: 110px;
+  position: absolute;
+  top: 240px;
+  left: 0;
+  width: 100%;
+  height: var(--height);
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  font-family: Nyala, 'Lato', '"Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.3em;
+  font-size: 1.3em;
+  padding: 5px;
+}
+.item .desc .svg-slot {
+  vertical-align: sub;
+}
+
+.item .desc a:link,
+.item .desc a:visited,
+.item .desc a:active {
+  text-decoration: underline;
+  text-decoration-color: gold;
+  color: white;
+}
+.item .desc a:hover {
+  color: gold;
+}
+
+.item .after {
+  --height: 35px;
+  position: absolute;
+  top: 360px;
+  left: 200px;
+  width: 50px;
+  height: var(--height);
+  text-align: center;
+  line-height: var(--height);
+  font-size: 30px;
+}
+
+.item .id {
+  --height: 28px;
+  position: absolute;
+  top: 189px;
+  left: 0px;
+  width: 60px;
+  height: var(--height);
+  line-height: var(--height);
+  font-family: HTowert, 'Lato', '"Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 1.1em;
+  text-shadow: 1px 1px 1px black;
+}
+
+.item-popover {
+  border: 0;
+  background-color: transparent;
+}
+
+.item-popover .item-card {
+  border: 0;
+  background-color: transparent;
+}

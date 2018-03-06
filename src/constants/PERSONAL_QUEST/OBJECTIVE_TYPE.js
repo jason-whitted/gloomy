@@ -1,0 +1,16 @@
+export default {
+  BECOME_EXHAUSTED_X_TIMES: 'BecomeExhaustedXTimes',
+  COMPLETE_SCENARIO: 'CompleteScenario',
+  COMPLETE_X_SCENARIOS: 'CompleteXScenarios',
+  DONATE_X_TO_SANCTUARY: 'DonateXToSanctuary',
+  EARN_X_CHECKS: 'EarnXChecks',
+  EXPERIENCE_X_CHARACTERS_COMPLETE_PERSONAL_QUEST: 'ExperienceXCharactersCompletePersonalQuest',
+  EXPERIENCE_X_PARTY_MEMBERS_EXHAUSTED: 'ExperienceXPartyMembersExhausted',
+  HAVE_X_GOLD: 'HaveXGold',
+  KILL_X_ELITE_ENEMIES: 'KillXEliteEnemies',
+  KILL_X_ENEMIES: 'KillXEnemies',
+  KILL_X_ENEMIES_WITH_ITEM: 'KillXEnemiesWithItem',
+  KILL_X_ENEMY_TYPES: 'KillXEnemyTypes',
+  OWN_X_ITEM_SLOTS: 'OwnXItemSlots',
+  PURCHASE_X_AUGMENTED_ABILITIES: 'PurchaseXAugmentedAbilities',
+};

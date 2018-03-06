@@ -1,0 +1,19 @@
+.CampaignSheet .campaign-name {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.CampaignSheet thead .icon-campaign {
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+.CampaignSheet thead th:first-child {
+  text-align: center;
+}
+
+.CampaignSheet thead th {
+  font-weight: normal;
+  vertical-align: middle;
+  border-bottom: 0;
+}
