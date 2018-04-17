@@ -63,3 +63,12 @@
   vertical-align: middle;
   width: 3em;
 }
+
+.svg-attack .hl {
+  fill: #333;
+}
+
+.svg-attack-2x .hl,
+.svg-attack.light .hl {
+  fill: white;
+}

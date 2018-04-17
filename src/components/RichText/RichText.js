@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { ClassAbility, Summon } from '../Common';
-import { ClassIcon, EffectIcon, ElementIcon, HexIcon, SlotIcon, SymbolIcon } from '../Icons';
+import { AttackIcon, ClassIcon, EffectIcon, ElementIcon, HexIcon, SlotIcon, SymbolIcon } from '../Icons';
 
 class RichText extends Component {
   render() {
@@ -16,6 +16,8 @@ class RichText extends Component {
           switch (parts[0]) {
             case 'LineBreak':
               return <br key={n} />;
+            case 'Attack':
+              return <AttackIcon key={n} attack={parts[1]} />;
             case 'Effect':
               return <EffectIcon key={n} effect={parts[1]} />;
             case 'Symbol':

@@ -15,97 +15,97 @@ const remove = deck => (...cards) =>
 export default {
   [ID.ADD1_NEG1_DARK]: {
     id: ID.ADD1_NEG1_DARK,
-    name: 'Add one (attack:-1) (Element:Dark)',
+    name: 'Add one (Attack:-1) (Element:Dark)',
     apply: deck => [...deck, CARD.NEG1_DARK],
   },
   [ID.ADD1_NEG2_AND2_POS2]: {
     id: ID.ADD1_NEG2_AND2_POS2,
-    name: 'Add one (attack:-2) and add two (attack:+2)',
+    name: 'Add one (Attack:-2) and add two (Attack:+2)',
     apply: deck => [...deck, CARD.NEG2, CARD.POS2, CARD.POS2],
   },
   [ID.ADD1_POS0_REFRESH_ITEM]: {
     id: ID.ADD1_POS0_REFRESH_ITEM,
-    name: 'Add one (attack:+0) (Symbol:ItemRefresh) an item',
+    name: 'Add one (Attack:+0) (Symbol:ItemRefresh) an item',
     apply: deck => [...deck, CARD.POS0_REFRESH_ITEM],
   },
   [ID.ADD1_POS0_STUN]: {
     id: ID.ADD1_POS0_STUN,
-    name: 'Add one (attack:+0) (Effect:Stun)',
+    name: 'Add one (Attack:+0) (Effect:Stun)',
     apply: deck => [...deck, CARD.POS0_STUN],
   },
   [ID.ADD1_POS0_TARGET]: {
     id: ID.ADD1_POS0_TARGET,
-    name: 'Add one (attack:+0) (Effect:Target)',
+    name: 'Add one (Attack:+0) (Effect:Target)',
     apply: deck => [...deck, CARD.POS0_TARGET],
   },
   [ID.ADD1_POS1_AIR]: {
     id: ID.ADD1_POS1_AIR,
-    name: 'Add one (attack:+1) (Element:Air)',
+    name: 'Add one (Attack:+1) (Element:Air)',
     apply: deck => [...deck, CARD.POS1_AIR],
   },
   [ID.ADD1_POS1_CURSE]: {
     id: ID.ADD1_POS1_CURSE,
-    name: 'Add one (attack:+1) (Effect:Curse)',
+    name: 'Add one (Attack:+1) (Effect:Curse)',
     apply: deck => [...deck, CARD.POS1_CURSE],
   },
   [ID.ADD1_POS1_HEAL2]: {
     id: ID.ADD1_POS1_HEAL2,
-    name: 'Add one (attack:+1) (Symbol:Heal) 2',
+    name: 'Add one (Attack:+1) (Symbol:Heal) 2',
     apply: deck => [...deck, CARD.POS1_HEAL2],
   },
   [ID.ADD1_POS1_IMMOBILIZE]: {
     id: ID.ADD1_POS1_IMMOBILIZE,
-    name: 'Add one (attack:+1) (Effect:Immobilize)',
+    name: 'Add one (Attack:+1) (Effect:Immobilize)',
     apply: deck => [...deck, CARD.POS1_IMMOBILIZE],
   },
   [ID.ADD1_POS1_INVISIBLE]: {
     id: ID.ADD1_POS1_INVISIBLE,
-    name: 'Add one (attack:+1) (Effect:Invisible)',
+    name: 'Add one (Attack:+1) (Effect:Invisible)',
     apply: deck => [...deck, CARD.POS1_INVISIBLE],
   },
   [ID.ADD1_POS1_POISON]: {
     id: ID.ADD1_POS1_POISON,
-    name: 'Add one (attack:+1) (Effect:Poison)',
+    name: 'Add one (Attack:+1) (Effect:Poison)',
     apply: deck => [...deck, CARD.POS1_POISON],
   },
   [ID.ADD1_POS1_SHIELD1]: {
     id: ID.ADD1_POS1_SHIELD1,
-    name: 'Add one (attack:+1) (Symbol:Shield) 1',
+    name: 'Add one (Attack:+1) (Symbol:Shield) 1',
     apply: deck => [...deck, CARD.POS1_SHIELD1],
   },
   [ID.ADD1_POS1_STUN]: {
     id: ID.ADD1_POS1_STUN,
-    name: 'Add one (attack:+1) (Effect:Stun)',
+    name: 'Add one (Attack:+1) (Effect:Stun)',
     apply: deck => [...deck, CARD.POS1_STUN],
   },
   [ID.ADD1_POS1_WOUND]: {
     id: ID.ADD1_POS1_WOUND,
-    name: 'Add one (attack:+1) (Effect:Wound)',
+    name: 'Add one (Attack:+1) (Effect:Wound)',
     apply: deck => [...deck, CARD.POS1_WOUND],
   },
   [ID.ADD1_POS2]: {
     id: ID.ADD1_POS2,
-    name: 'Add one (attack:+2)',
+    name: 'Add one (Attack:+2)',
     apply: deck => [...deck, CARD.POS2],
   },
   [ID.ADD1_POS2_FIRE]: {
     id: ID.ADD1_POS2_FIRE,
-    name: 'Add one (attack:+2) (Element:Fire)',
+    name: 'Add one (Attack:+2) (Element:Fire)',
     apply: deck => [...deck, CARD.POS2_FIRE],
   },
   [ID.ADD1_POS2_ICE]: {
     id: ID.ADD1_POS2_ICE,
-    name: 'Add one (attack:+2) (Element:Ice)',
+    name: 'Add one (Attack:+2) (Element:Ice)',
     apply: deck => [...deck, CARD.POS2_ICE],
   },
   [ID.ADD1_POS2_MUDDLE]: {
     id: ID.ADD1_POS2_MUDDLE,
-    name: 'Add one (attack:+2) (Effect:Muddle)',
+    name: 'Add one (Attack:+2) (Effect:Muddle)',
     apply: deck => [...deck, CARD.POS2_MUDDLE],
   },
   [ID.ADD1_POS3]: {
     id: ID.ADD1_POS3,
-    name: 'Add one (attack:+3)',
+    name: 'Add one (Attack:+3)',
     apply: deck => [...deck, CARD.POS3],
   },
   [ID.ADD1_ROLLING_DARK_AND_ADD1_ROLLING_EARTH]: {
@@ -145,12 +145,12 @@ export default {
   },
   [ID.ADD1_ROLLING_POS1_DISARM]: {
     id: ID.ADD1_ROLLING_POS1_DISARM,
-    name: 'Add one (Effect:Rolling) (attack:+1) (Effect:Disarm)',
+    name: 'Add one (Effect:Rolling) (Attack:+1) (Effect:Disarm)',
     apply: deck => [...deck, CARD.ROLLING_POS1_DISARM],
   },
   [ID.ADD1_ROLLING_POS2]: {
     id: ID.ADD1_ROLLING_POS2,
-    name: 'Add one (Effect:Rolling) (attack:+2)',
+    name: 'Add one (Effect:Rolling) (Attack:+2)',
     apply: deck => [...deck, CARD.ROLLING_POS2],
   },
   [ID.ADD1_ROLLING_STUN]: {
@@ -165,12 +165,12 @@ export default {
   },
   [ID.ADD2_POS1]: {
     id: ID.ADD2_POS1,
-    name: 'Add two (attack:+1)',
+    name: 'Add two (Attack:+1)',
     apply: deck => [...deck, CARD.POS1, CARD.POS1],
   },
   [ID.ADD2_POS1_PUSH1]: {
     id: ID.ADD2_POS1_PUSH1,
-    name: 'Add two (attack:+1) (Effect:Push) 1',
+    name: 'Add two (Attack:+1) (Effect:Push) 1',
     apply: deck => [...deck, CARD.POS1_PUSH1, CARD.POS1_PUSH1],
   },
   [ID.ADD2_ROLLING_AIR]: {
@@ -225,7 +225,7 @@ export default {
   },
   [ID.ADD2_ROLLING_POS1]: {
     id: ID.ADD2_ROLLING_POS1,
-    name: 'Add two (Effect:Rolling) (attack:+1)',
+    name: 'Add two (Effect:Rolling) (Attack:+1)',
     apply: deck => [...deck, CARD.ROLLING_POS1, CARD.ROLLING_POS1],
   },
   [ID.ADD2_ROLLING_PUSH2]: {
@@ -245,22 +245,22 @@ export default {
   },
   [ID.ADD3_POS0_AIR]: {
     id: ID.ADD3_POS0_AIR,
-    name: 'Add three (attack:+0) (Element:Air)',
+    name: 'Add three (Attack:+0) (Element:Air)',
     apply: deck => [...deck, CARD.POS0_AIR, CARD.POS0_AIR, CARD.POS0_AIR],
   },
   [ID.ADD3_POS0_EARTH]: {
     id: ID.ADD3_POS0_EARTH,
-    name: 'Add three (attack:+0) (Element:Earth)',
+    name: 'Add three (Attack:+0) (Element:Earth)',
     apply: deck => [...deck, CARD.POS0_EARTH, CARD.POS0_EARTH, CARD.POS0_EARTH],
   },
   [ID.ADD3_POS0_FIRE]: {
     id: ID.ADD3_POS0_FIRE,
-    name: 'Add three (attack:+0) (Element:Fire)',
+    name: 'Add three (Attack:+0) (Element:Fire)',
     apply: deck => [...deck, CARD.POS0_FIRE, CARD.POS0_FIRE, CARD.POS0_FIRE],
   },
   [ID.ADD3_POS0_ICE]: {
     id: ID.ADD3_POS0_ICE,
-    name: 'Add three (attack:+0) (Element:Ice)',
+    name: 'Add three (Attack:+0) (Element:Ice)',
     apply: deck => [...deck, CARD.POS0_ICE, CARD.POS0_ICE, CARD.POS0_ICE],
   },
   [ID.ADD3_ROLLING_MUDDLE]: {
@@ -275,7 +275,7 @@ export default {
   },
   [ID.ADD3_ROLLING_POS1]: {
     id: ID.ADD3_ROLLING_POS1,
-    name: 'Add three (Effect:Rolling) (attack:+1)',
+    name: 'Add three (Effect:Rolling) (Attack:+1)',
     apply: deck => [...deck, CARD.ROLLING_POS1, CARD.ROLLING_POS1, CARD.ROLLING_POS1],
   },
   [ID.ADD3_ROLLING_PULL1]: {
@@ -295,12 +295,12 @@ export default {
   },
   [ID.IGNORE_NEGATIVE_ITEM_EFFECTS_AND_ADD1_POS1]: {
     id: ID.IGNORE_NEGATIVE_ITEM_EFFECTS_AND_ADD1_POS1,
-    name: 'Ignore negative item effects and add one (attack:+1)',
+    name: 'Ignore negative item effects and add one (Attack:+1)',
     apply: deck => [...deck, CARD.POS1],
   },
   [ID.IGNORE_NEGATIVE_ITEM_EFFECTS_AND_ADD2_POS1]: {
     id: ID.IGNORE_NEGATIVE_ITEM_EFFECTS_AND_ADD2_POS1,
-    name: 'Ignore negative item effects and add two (attack:+1)',
+    name: 'Ignore negative item effects and add two (Attack:+1)',
     apply: deck => [...deck, CARD.POS1, CARD.POS1],
   },
   [ID.IGNORE_NEGATIVE_SCENARIO_EFFECTS]: {
@@ -310,112 +310,112 @@ export default {
   },
   [ID.IGNORE_NEGATIVE_SCENARIO_EFFECTS_AND_ADD1_POS1]: {
     id: ID.IGNORE_NEGATIVE_SCENARIO_EFFECTS_AND_ADD1_POS1,
-    name: 'Ignore negative scenario effects and add one (attack:+1)',
+    name: 'Ignore negative scenario effects and add one (Attack:+1)',
     apply: deck => [...deck, CARD.POS1],
   },
   [ID.IGNORE_NEGATIVE_SCENARIO_EFFECTS_AND_ADD2_POS1]: {
     id: ID.IGNORE_NEGATIVE_SCENARIO_EFFECTS_AND_ADD2_POS1,
-    name: 'Ignore negative scenario effects and add two (attack:+1)',
+    name: 'Ignore negative scenario effects and add two (Attack:+1)',
     apply: deck => [...deck, CARD.POS1, CARD.POS1],
   },
   [ID.REMOVE1_NEG2]: {
     id: ID.REMOVE1_NEG2,
-    name: 'Remove one (attack:-2)',
+    name: 'Remove one (Attack:-2)',
     apply: deck => remove(deck)(CARD.NEG2),
   },
   [ID.REMOVE2_NEG1]: {
     id: ID.REMOVE2_NEG1,
-    name: 'Remove two (attack:-1)',
+    name: 'Remove two (Attack:-1)',
     apply: deck => remove(deck)(CARD.NEG1, CARD.NEG1),
   },
   [ID.REMOVE4_POS0]: {
     id: ID.REMOVE4_POS0,
-    name: 'Remove four (attack:+0)',
+    name: 'Remove four (Attack:+0)',
     apply: deck => remove(deck)(CARD.POS0, CARD.POS0, CARD.POS0, CARD.POS0),
   },
   [ID.REPLACE1_NEG1_DARK_WITH1_POS1_DARK]: {
     id: ID.REPLACE1_NEG1_DARK_WITH1_POS1_DARK,
-    name: 'Replace one (attack:-1) (Element:Dark) with one (attack:+1) (Element:Dark)',
+    name: 'Replace one (Attack:-1) (Element:Dark) with one (Attack:+1) (Element:Dark)',
     apply: deck => [...remove(deck)(CARD.NEG1_DARK), CARD.POS1_DARK],
   },
   [ID.REPLACE1_NEG1_WITH1_POS0_STUN]: {
     id: ID.REPLACE1_NEG1_WITH1_POS0_STUN,
-    name: 'Replace one (attack:-1) with one (attack:+0) (Effect:Stun)',
+    name: 'Replace one (Attack:-1) with one (Attack:+0) (Effect:Stun)',
     apply: deck => [...remove(deck)(CARD.NEG1), CARD.POS0_STUN],
   },
   [ID.REPLACE1_NEG1_WITH1_POS1]: {
     id: ID.REPLACE1_NEG1_WITH1_POS1,
-    name: 'Replace one (attack:-1) with one (attack:+1)',
+    name: 'Replace one (Attack:-1) with one (Attack:+1)',
     apply: deck => [...remove(deck)(CARD.NEG1), CARD.POS1],
   },
   [ID.REPLACE1_NEG2_WITH1_POS0]: {
     id: ID.REPLACE1_NEG2_WITH1_POS0,
-    name: 'Replace one (attack:-2) with one (attack:+0)',
+    name: 'Replace one (Attack:-2) with one (Attack:+0)',
     apply: deck => [...remove(deck)(CARD.NEG2), CARD.POS0],
   },
   [ID.REPLACE1_POS0_WITH1_POS1_DISARM]: {
     id: ID.REPLACE1_POS0_WITH1_POS1_DISARM,
-    name: 'Replace one (attack:+0) with one (attack:+1) (Effect:Disarm)',
+    name: 'Replace one (Attack:+0) with one (Attack:+1) (Effect:Disarm)',
     apply: deck => [...remove(deck)(CARD.POS0), CARD.POS1_DISARM],
   },
   [ID.REPLACE1_POS0_WITH1_POS1_IMMOBILIZE]: {
     id: ID.REPLACE1_POS0_WITH1_POS1_IMMOBILIZE,
-    name: 'Replace one (attack:+0) with one (attack:+1) (Effect:Immobilize)',
+    name: 'Replace one (Attack:+0) with one (Attack:+1) (Effect:Immobilize)',
     apply: deck => [...remove(deck)(CARD.POS0), CARD.POS1_IMMOBILIZE],
   },
   [ID.REPLACE1_POS0_WITH1_POS2]: {
     id: ID.REPLACE1_POS0_WITH1_POS2,
-    name: 'Replace one (attack:+0) with one (attack:+2)',
+    name: 'Replace one (Attack:+0) with one (Attack:+2)',
     apply: deck => [...remove(deck)(CARD.POS0), CARD.POS2],
   },
   [ID.REPLACE1_POS0_WITH1_POS2_CURSE]: {
     id: ID.REPLACE1_POS0_WITH1_POS2_CURSE,
-    name: 'Replace one (attack:+0) with one (attack:+2) (Effect:Curse)',
+    name: 'Replace one (Attack:+0) with one (Attack:+2) (Effect:Curse)',
     apply: deck => [...remove(deck)(CARD.POS0), CARD.POS2_CURSE],
   },
   [ID.REPLACE1_POS0_WITH1_POS2_POISON]: {
     id: ID.REPLACE1_POS0_WITH1_POS2_POISON,
-    name: 'Replace one (attack:+0) with one (attack:+2) (Effect:Poison)',
+    name: 'Replace one (Attack:+0) with one (Attack:+2) (Effect:Poison)',
     apply: deck => [...remove(deck)(CARD.POS0), CARD.POS2_POISON],
   },
   [ID.REPLACE1_POS0_WITH1_POS2_WOUND]: {
     id: ID.REPLACE1_POS0_WITH1_POS2_WOUND,
-    name: 'Replace one (attack:+0) with one (attack:+2) (Effect:Wound)',
+    name: 'Replace one (Attack:+0) with one (Attack:+2) (Effect:Wound)',
     apply: deck => [...remove(deck)(CARD.POS0), CARD.POS2_WOUND],
   },
   [ID.REPLACE1_POS0_WITH1_POS3_MUDDLE]: {
     id: ID.REPLACE1_POS0_WITH1_POS3_MUDDLE,
-    name: 'Replace one (attack:+0) with one (attack:+3) (Effect:Muddle)',
+    name: 'Replace one (Attack:+0) with one (Attack:+3) (Effect:Muddle)',
     apply: deck => [...remove(deck)(CARD.POS0), CARD.POS3_MUDDLE],
   },
   [ID.REPLACE1_POS0_WITH1_ROLLING_POS2]: {
     id: ID.REPLACE1_POS0_WITH1_ROLLING_POS2,
-    name: 'Replace one (attack:+0) with one (Effect:Rolling) (attack:+2)',
+    name: 'Replace one (Attack:+0) with one (Effect:Rolling) (Attack:+2)',
     apply: deck => [...remove(deck)(CARD.POS0), CARD.ROLLING_POS2],
   },
   [ID.REPLACE2_POS0_WITH1_POS0_FIRE_AND1_POS0_EARTH]: {
     id: ID.REPLACE2_POS0_WITH1_POS0_FIRE_AND1_POS0_EARTH,
-    name: 'Replace two (attack:+0) with one (attack:+0) (Element:Fire) and one (attack:+0) (Element:Earth)',
+    name: 'Replace two (Attack:+0) with one (Attack:+0) (Element:Fire) and one (Attack:+0) (Element:Earth)',
     apply: deck => [...remove(deck)(CARD.POS0, CARD.POS0), CARD.POS0_FIRE, CARD.POS0_EARTH],
   },
   [ID.REPLACE2_POS0_WITH1_POS0_ICE_AND1_POS0_AIR]: {
     id: ID.REPLACE2_POS0_WITH1_POS0_ICE_AND1_POS0_AIR,
-    name: 'Replace two (attack:+0) with one (attack:+0) (Element:Ice) and one (attack:+0) (Element:Air)',
+    name: 'Replace two (Attack:+0) with one (Attack:+0) (Element:Ice) and one (Attack:+0) (Element:Air)',
     apply: deck => [...remove(deck)(CARD.POS0, CARD.POS0), CARD.POS0_ICE, CARD.POS_AIR],
   },
   [ID.REPLACE2_POS0_WITH2_POS2]: {
     id: ID.REPLACE2_POS0_WITH2_POS2,
-    name: 'Replace two (attack:+0) with two (attack:+2)',
+    name: 'Replace two (Attack:+0) with two (Attack:+2)',
     apply: deck => [...remove(deck)(CARD.POS0, CARD.POS0), CARD.POS2, CARD.POS2],
   },
   [ID.REPLACE2_POS1_WITH1_POS4]: {
     id: ID.REPLACE2_POS1_WITH1_POS4,
-    name: 'Replace two (attack:+1) with one (attack:+4)',
+    name: 'Replace two (Attack:+1) with one (Attack:+4)',
     apply: deck => [...remove(deck)(CARD.POS1, CARD.POS1), CARD.POS4, CARD.POS4],
   },
   [ID.REPLACE2_POS1_WITH2_POS2]: {
     id: ID.REPLACE2_POS1_WITH2_POS2,
-    name: 'Replace two (attack:+1) with two (attack:+2)',
+    name: 'Replace two (Attack:+1) with two (Attack:+2)',
     apply: deck => [...remove(deck)(CARD.POS1, CARD.POS1), CARD.POS2, CARD.POS2],
   },
 };

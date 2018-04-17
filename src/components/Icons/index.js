@@ -1,3 +1,4 @@
+export { default as AttackIcon } from './AttackIcon';
 export { default as AugmentIcon } from './AugmentIcon';
 export { default as AugmentAvailableIcon } from './AugmentAvailableIcon';
 export { default as BugIcon } from './BugIcon';

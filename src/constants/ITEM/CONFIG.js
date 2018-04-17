@@ -99,7 +99,7 @@ export default {
   [ID.IRON_HELMET]: {
     id: ID.IRON_HELMET,
     name: 'Iron Helmet',
-    desc: 'When attacked, consider any (attack:2x) attack modifier card the enemy draws to be a (attack:+0) instead.',
+    desc: 'When attacked, consider any (Attack:2x) attack modifier card the enemy draws to be a (Attack:+0) instead.',
     count: 2,
     gold: 10,
     effects: [],
@@ -564,7 +564,7 @@ export default {
     id: ID.VERSATILE_DAGGER,
     name: 'Versatile Dagger',
     desc:
-      'Whenever you use the default top of an ability card, perform an (attack:+3) action instead of an (attack:+2) action.',
+      'Whenever you use the default top of an ability card, perform an (Attack:+3) action instead of an (Attack:+2) action.',
     count: 2,
     gold: 25,
     effects: [],
@@ -947,7 +947,7 @@ export default {
     id: ID.BALANCED_BLADE,
     name: 'Balanced Blade',
     desc:
-      'Whenever you use the default top of an ability card, perform an (attack:+4) instead of an (attack:+2) action.',
+      'Whenever you use the default top of an ability card, perform an (Attack:+4) instead of an (Attack:+2) action.',
     count: 2,
     gold: 60,
     effects: [],
@@ -1088,7 +1088,7 @@ export default {
   [ID.FRIGID_BLADE]: {
     id: ID.FRIGID_BLADE,
     name: 'Frigid Blade',
-    desc: 'During your melee attack, (Element:Ice:Consume) to add (attack:+2) to a single attack.',
+    desc: 'During your melee attack, (Element:Ice:Consume) to add (Attack:+2) to a single attack.',
     count: 2,
     gold: 30,
     effects: [],
@@ -1101,7 +1101,7 @@ export default {
   [ID.STORM_BLADE]: {
     id: ID.STORM_BLADE,
     name: 'Storm Blade',
-    desc: 'During your melee attack, (Element:Air:Consume) to add (attack:+2) to a single attack.',
+    desc: 'During your melee attack, (Element:Air:Consume) to add (Attack:+2) to a single attack.',
     count: 2,
     gold: 30,
     effects: [],
@@ -1114,7 +1114,7 @@ export default {
   [ID.INFERNO_BLADE]: {
     id: ID.INFERNO_BLADE,
     name: 'Inferno Blade',
-    desc: 'During your melee attack, (Element:Fire:Consume) to add (attack:+2) to a single attack.',
+    desc: 'During your melee attack, (Element:Fire:Consume) to add (Attack:+2) to a single attack.',
     count: 2,
     gold: 30,
     effects: [],
@@ -1127,7 +1127,7 @@ export default {
   [ID.TREMOR_BLADE]: {
     id: ID.TREMOR_BLADE,
     name: 'Tremor Blade',
-    desc: 'During your melee attack, (Element:Earth:Consume) to add (attack:+2) to a single attack.',
+    desc: 'During your melee attack, (Element:Earth:Consume) to add (Attack:+2) to a single attack.',
     count: 2,
     gold: 30,
     effects: [],
@@ -1140,7 +1140,7 @@ export default {
   [ID.BRILLIANT_BLADE]: {
     id: ID.BRILLIANT_BLADE,
     name: 'Brilliant Blade',
-    desc: 'During your melee attack, (Element:Light:Consume) to add (attack:+2) to a single attack.',
+    desc: 'During your melee attack, (Element:Light:Consume) to add (Attack:+2) to a single attack.',
     count: 2,
     gold: 30,
     effects: [],
@@ -1153,7 +1153,7 @@ export default {
   [ID.NIGHT_BLADE]: {
     id: ID.NIGHT_BLADE,
     name: 'Night Blade',
-    desc: 'During your melee attack, (Element:Dark:Consume) to add (attack:+2) to a single attack.',
+    desc: 'During your melee attack, (Element:Dark:Consume) to add (Attack:+2) to a single attack.',
     count: 2,
     gold: 30,
     effects: [],
@@ -1402,7 +1402,7 @@ export default {
   [ID.SECOND_SKIN]: {
     id: ID.SECOND_SKIN,
     name: 'Second Skin',
-    desc: 'Remove two (attack:-1) from your attack modifier deck.',
+    desc: 'Remove two (Attack:-1) from your attack modifier deck.',
     count: 1,
     gold: 30,
     effects: [{ type: EFFECT.REMOVE_X_CARDS, count: 2, card: ATTACK_MODIFIER_CARD.NEG1 }],
@@ -2012,7 +2012,7 @@ export default {
   [ID.MASTERS_LUTE]: {
     id: ID.MASTERS_LUTE,
     name: 'Master’s Lute',
-    desc: 'After performing any song action, immediately perform an (attack:+2) or (Symbol:Move) 2 action.',
+    desc: 'After performing any song action, immediately perform an (Attack:+2) or (Symbol:Move) 2 action.',
     count: 1,
     gold: 50,
     effects: [],
