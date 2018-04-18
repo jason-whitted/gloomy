@@ -39,7 +39,7 @@ describe(ACTION.name, () => {
       };
       const expected = {
         characters: {
-          1: { id: 1, player: 1, party: 1, xp: 5, gold: 6, attackDeck: [], donate: false, checks: 0, maxPerks: 0 },
+          1: { id: 1, player: 1, party: 1, xp: 5, gold: 6, attackDeck: [], donate: true, checks: 0, maxPerks: 0 },
           2: { id: 1, player: 1, party: 1, xp: 0, gold: 0, attackDeck: [], donate: false, checks: 0, maxPerks: 0 },
         },
         parties: {

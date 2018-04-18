@@ -81,12 +81,19 @@ class PartyFinishScenarioDialog extends Component {
       // Increment the stepIndex
       stepIndex++;
 
-      const next = steps[stepIndex];
-      if (next) {
+      const findStep = type => steps.find(s => s.type === type);
+      const failed = findStep(STEP.RESULT).values.result === SCENARIO_STATUS.AVAILABLE || undefined;
+      let next;
+      while (true) {
+        next = steps[stepIndex];
+        if (!next) break;
+
         // Skip this step?
         if (next.type === STEP.REQUIRE_ATTENDEE && this.getAttendees().length) {
           stepIndex++;
-        }
+        } else if (next.type.startsWith(STEP.REWARD) && failed) {
+          stepIndex++;
+        } else break;
       }
 
       this.setState({ stepIndex }, next ? undefined : this.complete);
@@ -124,33 +131,35 @@ class PartyFinishScenarioDialog extends Component {
     );
 
     const rewards = {};
-    let reward;
-    if ((reward = findStep(STEP.REWARD + SCENARIO_REWARD_TYPE.CHOOSE_1_SCENARIO))) {
-      rewards[SCENARIO_REWARD_TYPE.CHOOSE_1_SCENARIO] = parseInt(reward.values.scenario, 10);
-    }
-    if ((reward = findStep(STEP.REWARD + SCENARIO_REWARD_TYPE.COLLECTIVE_GOLD))) {
-      rewards[SCENARIO_REWARD_TYPE.COLLECTIVE_GOLD] = Object.entries(reward.values.characters).reduce(
-        (obj, [k, v]) => ({
-          ...obj,
-          [k.slice(1)]: parseInt(v, 10) || 0,
-        }),
-        {},
-      );
-    }
-    if ((reward = findStep(STEP.REWARD + SCENARIO_REWARD_TYPE.ITEM))) {
-      rewards[SCENARIO_REWARD_TYPE.ITEM] = parseInt(reward.values.character, 10);
-    }
-    if ((reward = findStep(STEP.REWARD + SCENARIO_REWARD_TYPE.ITEM_2X))) {
-      rewards[SCENARIO_REWARD_TYPE.ITEM_2X] = [
-        parseInt(reward.values.character1, 10),
-        parseInt(reward.values.character2, 10),
-      ];
-    }
-    if ((reward = findStep(STEP.REWARD + SCENARIO_REWARD_TYPE.RETIRE))) {
-      rewards[SCENARIO_REWARD_TYPE.RETIRE] = parseInt(reward.values.character, 10);
-    }
-    if ((reward = findStep(STEP.REWARD + SCENARIO_REWARD_TYPE.EITHER))) {
-      rewards[SCENARIO_REWARD_TYPE.EITHER] = reward.values.option;
+    if (!failed) {
+      let reward;
+      if ((reward = findStep(STEP.REWARD + SCENARIO_REWARD_TYPE.CHOOSE_1_SCENARIO))) {
+        rewards[SCENARIO_REWARD_TYPE.CHOOSE_1_SCENARIO] = parseInt(reward.values.scenario, 10);
+      }
+      if ((reward = findStep(STEP.REWARD + SCENARIO_REWARD_TYPE.COLLECTIVE_GOLD))) {
+        rewards[SCENARIO_REWARD_TYPE.COLLECTIVE_GOLD] = Object.entries(reward.values.characters).reduce(
+          (obj, [k, v]) => ({
+            ...obj,
+            [k.slice(1)]: parseInt(v, 10) || 0,
+          }),
+          {},
+        );
+      }
+      if ((reward = findStep(STEP.REWARD + SCENARIO_REWARD_TYPE.ITEM))) {
+        rewards[SCENARIO_REWARD_TYPE.ITEM] = parseInt(reward.values.character, 10);
+      }
+      if ((reward = findStep(STEP.REWARD + SCENARIO_REWARD_TYPE.ITEM_2X))) {
+        rewards[SCENARIO_REWARD_TYPE.ITEM_2X] = [
+          parseInt(reward.values.character1, 10),
+          parseInt(reward.values.character2, 10),
+        ];
+      }
+      if ((reward = findStep(STEP.REWARD + SCENARIO_REWARD_TYPE.RETIRE))) {
+        rewards[SCENARIO_REWARD_TYPE.RETIRE] = parseInt(reward.values.character, 10);
+      }
+      if ((reward = findStep(STEP.REWARD + SCENARIO_REWARD_TYPE.EITHER))) {
+        rewards[SCENARIO_REWARD_TYPE.EITHER] = reward.values.option;
+      }
     }
 
     this.submit({

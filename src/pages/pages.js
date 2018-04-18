@@ -5,4 +5,5 @@ export { Character } from './Character';
 export { Home } from './Home';
 export { NotFound } from './NotFound';
 export { Party } from './Party';
+export { PatchNotes } from './PatchNotes';
 export { Player } from './Player';

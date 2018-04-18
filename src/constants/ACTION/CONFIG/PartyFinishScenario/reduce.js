@@ -51,7 +51,7 @@ export default (state, action) => {
           // remove blessings (sanctuary donations)
           attackDeck: value.attackDeck.filter(c => c !== ATTACK_MODIFIER_CARD.BLESS),
           // Update sanctuary donation status
-          donate: completedCampaignScenario,
+          donate: !casual,
         },
       };
     }, {}),

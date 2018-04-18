@@ -6,6 +6,7 @@ import * as Page from './pages';
 export default () => (
   <Switch>
     <Route exact path="/" component={Page.Home} />
+    <Route exact path="/patches" component={Page.PatchNotes} />
     <Route exact path="/auth/callback" component={Page.AuthCallback} />
     <Route exact path="/campaign/:campaignID" component={Page.Campaign} />
     <Route exact path="/campaign/:campaignID/character/:characterID" component={Page.Character} />

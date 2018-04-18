@@ -33,11 +33,14 @@ class Home extends Component {
           </div>
           <div className="col-12 col-md-4">{authenticated && <Cards classes={campaign.classes} />}</div>
         </div>
-        <div>
-          <small>
+        <footer className="small text-center text-muted">
+          <div>
+            Version {process.env.REACT_APP_VERSION} (<a href="/patches">Patch Notes</a>)
+          </div>
+          <div>
             Questions? Problems? Check out the FAQ on <a href="https://github.com/jason-whitted/gloomy">GitHub</a>.
-          </small>
-        </div>
+          </div>
+        </footer>
       </div>
     );
   }
