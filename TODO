@@ -18,3 +18,8 @@ campaign page
 
 Player
   Permissions using Github username
+
+FinishScenario dialog
+  Ask if treasure tile was looted
+  Display treasure tile status in Scenario List
+  Build a scenario list^^

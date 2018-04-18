@@ -16,7 +16,9 @@ class CharacterUnlockItemDesignDialog extends Component {
 
   componentWillMount() {
     const { campaign } = this.props;
-    const items = Object.values(ITEM_CONFIG).filter(item => item.type === ITEM_TYPE.RANDOM && !campaign.items[item.id]);
+    const items = Object.values(ITEM_CONFIG).filter(
+      item => (item.type === ITEM_TYPE.RANDOM || item.type === ITEM_TYPE.OTHER) && !campaign.items[item.id],
+    );
     this.setState({ items });
   }
 
