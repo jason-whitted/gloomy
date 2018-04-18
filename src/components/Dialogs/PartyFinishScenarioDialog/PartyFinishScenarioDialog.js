@@ -43,7 +43,7 @@ class PartyFinishScenarioDialog extends Component {
       stepIndex: 0,
       steps: [
         { type: STEP.RESULT },
-        ...(solo ? [character] : party.characters).map(character => ({
+        ...(solo ? [character] : party.characters.filter(c => !c.hiatus)).map(character => ({
           type: STEP.CHARACTER,
           character,
           CharacterForm: createCharacterForm(character),

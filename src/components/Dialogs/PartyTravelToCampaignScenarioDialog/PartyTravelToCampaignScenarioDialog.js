@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-import { ACTION, ACTION_CONFIG, SCENARIO_REQUIREMENT_CONFIG } from '../../../constants';
+import { ACTION, ACTION_CONFIG, REGION, SCENARIO_REQUIREMENT_CONFIG } from '../../../constants';
 import { SelectField, TextField } from '../../Fields';
 import connectConfig from './connect';
 import formConfig from './form';
@@ -15,9 +15,20 @@ class PartyTravelToCampaignScenarioDialog extends Component {
 
   componentWillMount() {
     const { campaign, party } = this.props;
-    const scenarios = campaign.scenarios.filter(
-      scenario => scenario.available && SCENARIO_REQUIREMENT_CONFIG.eligible({ campaign, party, scenario }),
-    );
+    const scenarios = campaign.scenarios
+      .filter(scenario => scenario.available && SCENARIO_REQUIREMENT_CONFIG.eligible({ campaign, party, scenario }))
+      .map(scenario => {
+        const from = party.location.scenario || {};
+        const linked = from.links && from.links.includes(scenario.id);
+        let roadEventRequired = !!scenario.id;
+        if (linked) roadEventRequired = false;
+        if (party.location.gloomhaven && scenario.region.id === REGION.GLOOMHAVEN) roadEventRequired = false;
+        return {
+          ...scenario,
+          linked,
+          roadEventRequired,
+        };
+      });
     this.setState({ scenarios });
     this.props.change('roadEvents', campaign.roadEvents.top);
     this.props.change('roadEventRequired', scenarios.filter(s => s.roadEventRequired).map(s => s.id));
