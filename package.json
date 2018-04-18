@@ -6,7 +6,6 @@
     "classnames": "^2.2.5",
     "clone": "^1.0.4",
     "concurrently": "^3.5.1",
-    "cross-env": "^5.1.4",
     "deep-object-diff": "^1.1.0",
     "history": "^4.7.2",
     "moment": "^2.21.0",
@@ -31,7 +30,7 @@
     "shortid": "^2.2.8"
   },
   "scripts": {
-    "start": "cross-env REACT_APP_VERSION=$npm_package_version concurrently \"yarn server\" \"yarn client\"",
+    "start": "concurrently \"yarn server\" \"yarn client\"",
     "client": "react-scripts start",
     "server": "nodemon server",
     "build": "react-scripts build",

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { version } from '../../../package.json';
 
 import { CampaignList } from '../../components/CampaignList';
 import { Cards } from '../../components/Cards';
@@ -35,7 +36,7 @@ class Home extends Component {
         </div>
         <footer className="small text-center text-muted">
           <div>
-            Version {process.env.REACT_APP_VERSION} (<a href="/patches">Patch Notes</a>)
+            Version {version} (<a href="/patches">Patch Notes</a>)
           </div>
           <div>
             Questions? Problems? Check out the FAQ on <a href="https://github.com/jason-whitted/gloomy">GitHub</a>.
