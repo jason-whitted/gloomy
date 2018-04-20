@@ -6,6 +6,13 @@ import Issue from './Issue';
 
 export default () => (
   <div className="col-12">
+    <h5>Version 0.1.6</h5>
+    <ul>
+      <li>
+        <BugIcon />
+        Bug Fix: Most items available in item receive/unlock dialogs
+      </li>
+    </ul>
     <h5>Version 0.1.5</h5>
     <ul>
       <li>
