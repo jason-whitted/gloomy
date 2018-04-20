@@ -235,6 +235,7 @@ class CharacterSheet extends Component {
                   <Flyout.CharacterQuestFlyout
                     readonly={readonly}
                     character={character}
+                    onManualProgressClick={this.show(Dialog.CharacterManualQuestProgressDialog)}
                     onKillEnemyClick={this.show(Dialog.CharacterKillEnemyDialog)}
                     onExhaustionClick={this.show(Dialog.CharacterExhaustionDialog)}
                   />:

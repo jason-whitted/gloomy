@@ -1,7 +1,10 @@
 import { ACTION } from '../../../ACTION';
 import { SCENARIO_CONFIG } from '../../../SCENARIO';
+import manualQuestProgress from '../manualQuestProgress';
 
 export default campaign => (character, action) => {
+  if (character.imported) return manualQuestProgress(campaign)(character, action);
+
   switch (action.action) {
     case ACTION.PARTY_FINISH_SCENARIO: {
       if (!action.payload.characters[character.id] || action.payload.failed) return character;

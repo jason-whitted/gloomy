@@ -9,9 +9,9 @@ describe(ACTION.name, () => {
     it('should create a history entry', () => {
       const expected = {
         action: ACTION.id,
-        payload: { player: 1, party: 2, name: 'Bob', level: 3, class: 4, quest: 5 },
+        payload: { player: 1, party: 2, name: 'Bob', level: 3, class: 4, quest: 5, imported: true },
       };
-      const actual = ACTION.create({ player: 1, party: 2, name: 'Bob', level: 3, class: 4, quest: 5 });
+      const actual = ACTION.create({ player: 1, party: 2, name: 'Bob', level: 3, class: 4, quest: 5, imported: true });
       expect(actual).toEqual(expected);
     });
   });
@@ -69,6 +69,7 @@ describe(ACTION.name, () => {
             donate: false,
             by: 'by',
             dt: 'dt',
+            imported: true,
           },
         },
       };
@@ -79,6 +80,7 @@ describe(ACTION.name, () => {
         level: 1,
         class: CLASS.BRUTE,
         quest: 523,
+        imported: true,
       });
       const actual = ACTION.reduce(campaign, mockGithub(action));
       expect(actual).toEqual(expected);

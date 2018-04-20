@@ -2,10 +2,13 @@ import { ACTION } from '../../../ACTION';
 import { ENEMY } from '../../../ENEMY';
 import { ITEM } from '../../../ITEM';
 import { SCENARIO } from '../../../SCENARIO';
+import manualQuestProgress from '../manualQuestProgress';
 
 const targetEnemies = [ENEMY.LIVING_BONES, ENEMY.LIVING_CORPSE, ENEMY.LIVING_SPIRIT];
 
 export default campaign => (character, action) => {
+  if (character.imported) return manualQuestProgress(campaign)(character, action);
+
   switch (action.action) {
     case ACTION.PARTY_FINISH_SCENARIO: {
       if (!action.payload.characters[character.id] || action.payload.failed) return character;

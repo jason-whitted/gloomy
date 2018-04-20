@@ -1,5 +1,6 @@
 export { App } from './App';
 export { AuthCallback } from './AuthCallback';
+export { Builder } from './Builder';
 export { Campaign } from './Campaign';
 export { Character } from './Character';
 export { Home } from './Home';

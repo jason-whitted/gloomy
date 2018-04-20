@@ -17,6 +17,7 @@ export * from './CharacterBuyItemDialog';
 export * from './CharacterExhaustionDialog';
 export * from './CharacterKillEnemyDialog';
 export * from './CharacterLevelUpDialog';
+export * from './CharacterManualQuestProgressDialog';
 export * from './CharacterNotesDialog';
 export * from './CharacterReceiveItemDialog';
 export * from './CharacterRenameDialog';

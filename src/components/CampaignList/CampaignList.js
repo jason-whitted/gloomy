@@ -27,20 +27,29 @@ class CampaignList extends Component {
   };
 
   render() {
-    const { config, loading } = this.props;
+    const { appendCampaignAction, config } = this.props;
     const active = t => t.name === this.state.tab;
     const { Content } = TABS.find(active);
+    const loading = (this.props.loading && Content !== Create) || !config;
 
     return (
       <div className="card my-3">
         <div className="card-header">
           <ul className="nav nav-tabs card-header-tabs">
-            {TABS.map(tab => <Tab key={tab.name} {...tab} active={active(tab)} onClick={this.changeTab} />)}
+            {TABS.map(tab => (
+              <Tab
+                key={tab.name}
+                {...tab}
+                active={active(tab)}
+                onClick={this.changeTab}
+                appendCampaignAction={appendCampaignAction}
+              />
+            ))}
           </ul>
         </div>
         <div className="card-body">
           {loading && 'Loading...'}
-          {!loading && config && <Content {...this.props} changeTab={this.changeTab} />}
+          {!loading && <Content {...this.props} changeTab={this.changeTab} />}
         </div>
       </div>
     );
@@ -52,6 +61,7 @@ CampaignList.propTypes = {
   loading: PropTypes.bool.isRequired,
   user: PropTypes.object,
   addConfig: PropTypes.func.isRequired,
+  appendCampaignAction: PropTypes.func.isRequired,
   createCampaign: PropTypes.func.isRequired,
   createConfig: PropTypes.func.isRequired,
   deleteCampaign: PropTypes.func.isRequired,

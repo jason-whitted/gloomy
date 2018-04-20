@@ -21,4 +21,10 @@ export default ({ id: campaignID, action }) => (dispatch, getState) =>
 
     await dispatch({ type: CONST.CAMPAIGN_APPEND_ACTION_SUCCESS });
     await dispatch(getCampaign({ id, force: true }));
+
+    const { campaign: { data: campaign } } = getState();
+    return {
+      campaign,
+      action: campaign.history[campaign.history.length - 1],
+    };
   }).catch(error => dispatch({ type: CONST.CAMPAIGN_APPEND_ACTION_FAILURE, payload: error.message }));

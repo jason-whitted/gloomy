@@ -32,4 +32,6 @@ export default ({ name }) => (dispatch, getState) =>
     await dispatch({ type: CONST.CAMPAIGN_CREATE_SUCCESS });
     await dispatch(getConfig({ force: true }));
     await dispatch(getCampaign({ id }));
+
+    return getState().campaign;
   }).catch(error => dispatch({ type: CONST.CAMPAIGN_CREATE_FAILURE, payload: error.message }));

@@ -1,8 +1,11 @@
 import { ACTION } from '../../../ACTION';
 import { ENEMY } from '../../../ENEMY';
 import { SCENARIO } from '../../../SCENARIO';
+import manualQuestProgress from '../manualQuestProgress';
 
 export default campaign => (character, action) => {
+  if (character.imported) return manualQuestProgress(campaign)(character, action);
+
   switch (action.action) {
     case ACTION.CHARACTER_KILL_ENEMY: {
       if (action.payload.character !== character.id) return character;

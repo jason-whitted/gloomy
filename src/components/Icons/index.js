@@ -4,6 +4,7 @@ export { default as AugmentAvailableIcon } from './AugmentAvailableIcon';
 export { default as BugIcon } from './BugIcon';
 export { default as BuyIcon } from './BuyIcon';
 export { default as CampaignIcon } from './CampaignIcon';
+export { default as ChartIcon } from './ChartIcon';
 export { default as ClassIcon } from './ClassIcon';
 export { default as CrossFingersIcon } from './CrossFingersIcon';
 export { default as DesignIcon } from './DesignIcon';

@@ -1,5 +1,9 @@
+import manualQuestProgress from '../manualQuestProgress';
+
 export default campaign => (state, action) => {
   let character = state;
+
+  if (character.imported) return manualQuestProgress(campaign)(state, action);
 
   if (!character.retirement.ignored) {
     character = {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { version } from '../../../package.json';
 
 import { CampaignList } from '../../components/CampaignList';
@@ -36,7 +37,7 @@ class Home extends Component {
         </div>
         <footer className="small text-center text-muted">
           <div>
-            Version {version} (<a href="/patches">Patch Notes</a>)
+            Version {version} (<Link to="/patches">Patch Notes</Link>)
           </div>
           <div>
             Questions? Problems? Check out the FAQ on <a href="https://github.com/jason-whitted/gloomy">GitHub</a>.

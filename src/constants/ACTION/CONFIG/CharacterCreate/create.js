@@ -1,6 +1,6 @@
 import ID from '../../ID';
 
-export default ({ player, party, name, level, class: $class, quest }) => ({
+export default ({ player, party, name, level, class: $class, quest, imported }) => ({
   action: ID.CHARACTER_CREATE,
   payload: {
     player: parseInt(player, 10) || 0,
@@ -9,5 +9,6 @@ export default ({ player, party, name, level, class: $class, quest }) => ({
     level: parseInt(level, 10) || 0,
     class: $class,
     quest: parseInt(quest, 10) || 0,
+    imported: imported || undefined,
   },
 });

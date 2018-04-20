@@ -1,4 +1,10 @@
-import { createCampaign, deleteCampaign, getCampaign, selectIsCampaignLoading } from '../../store/campaign';
+import {
+  appendCampaignAction,
+  createCampaign,
+  deleteCampaign,
+  getCampaign,
+  selectIsCampaignLoading,
+} from '../../store/campaign';
 import {
   addConfig,
   createConfig,
@@ -17,6 +23,7 @@ const select = state => ({
 
 const boundActions = {
   addConfig,
+  appendCampaignAction,
   createCampaign,
   createConfig,
   deleteCampaign,

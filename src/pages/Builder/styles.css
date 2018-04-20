@@ -1,0 +1,9 @@
+textarea {
+  font-family: monospace;
+  font-size: 0.8em;
+}
+
+button[disabled] .icon,
+button.disabled .icon {
+  filter: grayscale(100%);
+}

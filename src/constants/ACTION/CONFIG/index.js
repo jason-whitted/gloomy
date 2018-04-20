@@ -4,6 +4,7 @@ import ID from '../ID';
 
 import CampaignAddProsperity from './CampaignAddProsperity';
 import CampaignCreate from './CampaignCreate';
+import CampaignPatch from './CampaignPatch';
 import CampaignUnlockClass from './CampaignUnlockClass';
 import CampaignUnlockCityEvent from './CampaignUnlockCityEvent';
 import CampaignUnlockRoadEvent from './CampaignUnlockRoadEvent';
@@ -20,6 +21,7 @@ import CharacterExhaustion from './CharacterExhaustion';
 import CharacterHiatus from './CharacterHiatus';
 import CharacterKillEnemy from './CharacterKillEnemy';
 import CharacterLevelUp from './CharacterLevelUp';
+import CharacterManualQuestProgress from './CharacterManualQuestProgress';
 import CharacterNotes from './CharacterNotes';
 import CharacterReceiveItem from './CharacterReceiveItem';
 import CharacterRename from './CharacterRename';
@@ -41,6 +43,7 @@ import PlayerRename from './PlayerRename';
 const config = {
   [ID.CAMPAIGN_ADD_PROSPERITY]: CampaignAddProsperity,
   [ID.CAMPAIGN_CREATE]: CampaignCreate,
+  [ID.CAMPAIGN_PATCH]: CampaignPatch,
   [ID.CAMPAIGN_UNLOCK_CLASS]: CampaignUnlockClass,
   [ID.CAMPAIGN_UNLOCK_CITY_EVENT]: CampaignUnlockCityEvent,
   [ID.CAMPAIGN_UNLOCK_ROAD_EVENT]: CampaignUnlockRoadEvent,
@@ -57,6 +60,7 @@ const config = {
   [ID.CHARACTER_HIATUS]: CharacterHiatus,
   [ID.CHARACTER_KILL_ENEMY]: CharacterKillEnemy,
   [ID.CHARACTER_LEVEL_UP]: CharacterLevelUp,
+  [ID.CHARACTER_MANUAL_QUEST_PROGRESS]: CharacterManualQuestProgress,
   [ID.CHARACTER_NOTES]: CharacterNotes,
   [ID.CHARACTER_RECEIVE_ITEM]: CharacterReceiveItem,
   [ID.CHARACTER_RENAME]: CharacterRename,

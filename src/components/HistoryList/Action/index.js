@@ -1,5 +1,6 @@
 export { default as Bug } from './Bug';
 export { default as CampaignAddProsperity } from './CampaignAddProsperity';
+export { default as CampaignPatch } from './CampaignPatch';
 export { default as CampaignUnlockCityEvent } from './CampaignUnlockCityEvent';
 export { default as CampaignUnlockRoadEvent } from './CampaignUnlockRoadEvent';
 export { default as CampaignUnlockScenario } from './CampaignUnlockScenario';
@@ -15,6 +16,7 @@ export { default as CharacterExhaustion } from './CharacterExhaustion';
 export { default as CharacterHiatus } from './CharacterHiatus';
 export { default as CharacterKillEnemy } from './CharacterKillEnemy';
 export { default as CharacterLevelUp } from './CharacterLevelUp';
+export { default as CharacterManualQuestProgress } from './CharacterManualQuestProgress';
 export { default as CharacterNotes } from './CharacterNotes';
 export { default as CharacterReceiveItem } from './CharacterReceiveItem';
 export { default as CharacterRename } from './CharacterRename';

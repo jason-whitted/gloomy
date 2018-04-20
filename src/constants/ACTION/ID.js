@@ -1,6 +1,7 @@
 export default {
   CAMPAIGN_ADD_PROSPERITY: 'CampaignAddProsperity',
   CAMPAIGN_CREATE: 'CampaignCreate',
+  CAMPAIGN_PATCH: 'CampaignPatch',
   CAMPAIGN_UNLOCK_CLASS: 'CampaignUnlockClass',
   CAMPAIGN_UNLOCK_CITY_EVENT: 'CampaignUnlockCityEvent',
   CAMPAIGN_UNLOCK_ROAD_EVENT: 'CampaignUnlockRoadEvent',
@@ -17,6 +18,7 @@ export default {
   CHARACTER_HIATUS: 'CharacterHiatus',
   CHARACTER_KILL_ENEMY: 'CharacterKillEnemy',
   CHARACTER_LEVEL_UP: 'CharacterLevelUp',
+  CHARACTER_MANUAL_QUEST_PROGRESS: 'CharacterManualQuestProgress',
   CHARACTER_NOTES: 'CharacterNotes',
   CHARACTER_RECEIVE_ITEM: 'CharacterReceiveItem',
   CHARACTER_RENAME: 'CharacterRename',

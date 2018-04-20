@@ -1,7 +1,7 @@
 import { ABILITY_CARD_CONFIG, STANDARD_ATTACK_MODIFIER_DECK, PERSONAL_QUEST_CONFIG } from '../../../../constants';
 import { Convert } from '../../../../common/Convert';
 
-export default (campaign, { payload: { player, party, name, level, class: $class, quest }, id, by, dt }) => {
+export default (campaign, { payload: { player, party, name, level, class: $class, quest, imported }, id, by, dt }) => {
   const abilityDeck = Object.values(ABILITY_CARD_CONFIG).reduce(
     (obj, card) =>
       card.class !== $class || card.level > 1
@@ -70,6 +70,7 @@ export default (campaign, { payload: { player, party, name, level, class: $class
         donate: false,
         by,
         dt,
+        imported,
       },
     },
   };
