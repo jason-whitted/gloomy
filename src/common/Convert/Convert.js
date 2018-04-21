@@ -9,7 +9,7 @@ import {
 import scenarioRewardToText from './scenarioRewardToText';
 
 const XP = [0, 0, 45, 95, 150, 210, 275, 345, 420, 500];
-const PROSPERITY = [0, 0, 5, 11, 18, 26, 35, 45, 56, 68];
+const PROSPERITY = [0, 0, 4, 9, 15, 22, 30, 39, 49, 64];
 
 const abilityAugmentCost = ({ ability, augments = {}, slotID, augmentID }) => {
   const findActionWithAugmentSlot = actions => {

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import { Convert } from '../../../common';
 
-const PROSPERITY = [0, 5, 11, 18, 26, 35, 45, 56, 68];
+const PROSPERITY = [0, 4, 9, 15, 22, 30, 39, 49, 64];
 
 export default props => {
   const { campaign } = props;
