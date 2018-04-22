@@ -1,1 +1,1 @@
-export { default as GlobalAchievement } from './reduce';
+export { default as GlobalAchievement } from '../../../CampaignAddAchievement/reduce';

@@ -15,7 +15,7 @@ describe(ACTION.name, () => {
     it('should update the inventory / gold', () => {
       const campaign = {
         characters: {
-          1: { id: 1, party: 2, items: {} },
+          1: { id: 1, party: 2, items: {}, gold: 0 },
         },
         items: {},
         parties: {
@@ -25,7 +25,7 @@ describe(ACTION.name, () => {
       };
       const expected = {
         characters: {
-          1: { id: 1, party: 2, items: { 3: 1 } },
+          1: { id: 1, party: 2, items: { 3: 1 }, gold: 0 },
         },
         items: { 3: 2 },
         parties: {

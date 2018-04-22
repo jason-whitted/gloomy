@@ -2,12 +2,17 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
-import { GlobalAchievementIcon } from '../Icons';
+import GlobalAchievementItem from './GlobalAchievementItem';
+import removeDialog from './removeDialog';
 
 class GlobalAchievementList extends Component {
   state = { open: false };
 
   toggle = () => this.setState({ open: !this.state.open });
+
+  removeAchievement = achievement => {
+    this.props.onClick(removeDialog(achievement))();
+  };
 
   render() {
     const { achievements } = this.props;
@@ -19,20 +24,14 @@ class GlobalAchievementList extends Component {
     if (this.state.open || achievements.length < 3) {
       return (
         <ListGroup>
-          {achievements.map(a => (
-            <ListGroupItem key={a.id}>
-              <GlobalAchievementIcon /> {a.name}
-            </ListGroupItem>
-          ))}
+          {achievements.map(a => <GlobalAchievementItem key={a.id} achievement={a} onClick={this.removeAchievement} />)}
         </ListGroup>
       );
     }
 
     return (
       <ListGroup>
-        <ListGroupItem>
-          <GlobalAchievementIcon /> {achievements[0].name}
-        </ListGroupItem>
+        <GlobalAchievementItem achievement={achievements[0]} onClick={this.removeAchievement} />
         <ListGroupItem tag="a" href="#expand" onClick={this.toggle}>
           &hellip;and {achievements.length - 1} other{achievements.length === 2 ? '' : 's'}
         </ListGroupItem>

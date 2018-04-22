@@ -15,11 +15,11 @@ class CharacterReceiveItemDialog extends Component {
   state = { items: [] };
 
   componentWillMount() {
-    const { campaign } = this.props;
+    const { campaign, character } = this.props;
     const items = Object.values(ITEM_CONFIG).filter(
       item =>
         (item.type === ITEM_TYPE.PROSPERITY || item.type === ITEM_TYPE.RANDOM || item.type === ITEM_TYPE.OTHER) &&
-        !campaign.items[item.id],
+        (!campaign.items[item.id] || (!!character.party.items[item.id] && !character.items[item.id])),
     );
     this.setState({ items });
   }

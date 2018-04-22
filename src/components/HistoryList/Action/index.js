@@ -1,4 +1,5 @@
 export { default as Bug } from './Bug';
+export { default as CampaignAddAchievement } from './CampaignAddAchievement';
 export { default as CampaignAddProsperity } from './CampaignAddProsperity';
 export { default as CampaignPatch } from './CampaignPatch';
 export { default as CampaignUnlockCityEvent } from './CampaignUnlockCityEvent';
@@ -26,6 +27,7 @@ export { default as CharacterSellItem } from './CharacterSellItem';
 export { default as CharacterSellAllItems } from './CharacterSellAllItems';
 export { default as CharacterUnlockItemDesign } from './CharacterUnlockItemDesign';
 export { default as DeleteAction } from './DeleteAction';
+export { default as PartyAddAchievement } from './PartyAddAchievement';
 export { default as PartyAddReputation } from './PartyAddReputation';
 export { default as PartyFinishScenario } from './PartyFinishScenario';
 export { default as PartyTravelToGloomhaven } from './PartyTravelToGloomhaven';

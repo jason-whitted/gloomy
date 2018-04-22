@@ -1,8 +1,11 @@
 import { ITEM_CONFIG } from '../../../../constants';
+import { Convert } from '../../../../common/Convert';
 
 export default (campaign, { payload: { character, item } }) => {
   const curChar = campaign.characters[character];
   const { count } = ITEM_CONFIG[item];
+
+  const alreadyOwned = !!curChar.items[item];
 
   return {
     ...campaign,
@@ -15,6 +18,8 @@ export default (campaign, { payload: { character, item } }) => {
           // Put the item in their inventory
           [item]: 1,
         },
+        // If they already have the item, then sell it
+        gold: curChar.gold + (alreadyOwned ? Convert.itemToSellPrice(item) : 0),
       },
     },
     items: {
@@ -31,7 +36,7 @@ export default (campaign, { payload: { character, item } }) => {
           items: {
             ...val.items,
             // eslint-disable-next-line eqeqeq
-            [item]: key == curChar.party ? count - 1 : count,
+            [item]: (campaign.parties[key].items[item] || count) + (key == curChar.party && !alreadyOwned ? -1 : 0),
           },
         },
       }),

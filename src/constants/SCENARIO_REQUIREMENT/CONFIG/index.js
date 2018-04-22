@@ -8,7 +8,7 @@ import PartyAchievement from './PartyAchievement';
 import PersonalQuest from './PersonalQuest';
 
 const config = {
-  [ID.BRAVER]: Bravery,
+  [ID.BRAVERY]: Bravery,
   [ID.GLOBAL_ACHIEVEMENT]: GlobalAchievement,
   [ID.ITEM_EQUIPPED]: ItemEquipped,
   [ID.ONE_OF]: OneOf,
@@ -25,10 +25,10 @@ Object.defineProperty(config, 'eligible', {
       eligible: true,
     };
 
-    const eligibility = scenario.requirements.reduce(
-      (result, requirement) => config[requirement.type].reduce(result, requirement),
-      initialState,
-    );
+    const eligibility = scenario.requirements.reduce((result, requirement) => {
+      const ret = config[requirement.type].reduce(result, requirement);
+      return ret;
+    }, initialState);
 
     return eligibility.eligible;
   },

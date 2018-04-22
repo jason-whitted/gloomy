@@ -86,9 +86,11 @@ class PartySheet extends Component {
                 </td>
               </tr>
               <tr>
-                <td>Achievements:</td>
                 <td>
-                  <PartyAchievementList achievements={party.achievements} />
+                  <Flyout.PartyAchievementsFlyout party={party} onClick={this.show(Dialog.PartyAddAchievementDialog)} />:
+                </td>
+                <td>
+                  <PartyAchievementList achievements={party.achievements} onClick={this.show} />
                 </td>
               </tr>
             </tbody>

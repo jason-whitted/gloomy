@@ -1,3 +1,4 @@
+export { default as CampaignAchievementsFlyout } from './CampaignAchievementsFlyout';
 export { default as CampaignCharactersFlyout } from './CampaignCharactersFlyout';
 export { default as CampaignIDFlyout } from './CampaignIDFlyout';
 export { default as CampaignNameFlyout } from './CampaignNameFlyout';

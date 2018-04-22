@@ -1,1 +1,1 @@
-export { default as PartyAchievement } from './reduce';
+export { default as PartyAchievement } from '../../../PartyAddAchievement/reduce';

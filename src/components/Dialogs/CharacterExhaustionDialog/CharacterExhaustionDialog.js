@@ -12,7 +12,7 @@ class CharacterExhaustionDialog extends Component {
     const { appendCampaignAction, character } = this.props;
     const action = ACTION_CONFIG[ACTION.CHARACTER_EXHAUSTION].create({
       character: character.id,
-      count: parseInt(values.gold, 10),
+      count: parseInt(values.count, 10),
       self: values.target === 'self',
     });
     appendCampaignAction({ action });

@@ -10,7 +10,6 @@ import { Gold } from './Gold';
 import { Item } from './Item';
 import { Item2x } from './Item2x';
 import { ItemDesign } from './ItemDesign';
-import { LostPartyAchievement } from './LostPartyAchievement';
 import { PartyAchievement } from './PartyAchievement';
 import { Prosperity } from './Prosperity';
 import { Reputation } from './Reputation';
@@ -46,7 +45,7 @@ const reduceScenarioReward = (campaign, config) => {
     case REWARD.ENVELOPE:
       return Envelope(campaign, { envelope: reward.envelope });
     case REWARD.GLOBAL_ACHIEVEMENT:
-      return GlobalAchievement(campaign, { achievement: reward.achievement });
+      return GlobalAchievement(campaign, { payload: { achievement: reward.achievement } });
     case REWARD.GOLD:
       return Gold(campaign, { characters, count: reward.count });
     case REWARD.ITEM:
@@ -69,9 +68,9 @@ const reduceScenarioReward = (campaign, config) => {
         },
       });
     case REWARD.LOST_PARTY_ACHIEVEMENT:
-      return LostPartyAchievement(campaign, { party, achievement: reward.achievement });
+      return PartyAchievement(campaign, { payload: { party, achievement: reward.achievement, remove: true } });
     case REWARD.PARTY_ACHIEVEMENT:
-      return PartyAchievement(campaign, { party, achievement: reward.achievement });
+      return PartyAchievement(campaign, { payload: { party, achievement: reward.achievement } });
     case REWARD.PROSPERITY:
       return Prosperity(campaign, {
         ...config,

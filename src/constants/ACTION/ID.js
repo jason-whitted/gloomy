@@ -1,4 +1,5 @@
 export default {
+  CAMPAIGN_ADD_ACHIEVEMENT: 'CampaignAddAchievement',
   CAMPAIGN_ADD_PROSPERITY: 'CampaignAddProsperity',
   CAMPAIGN_CREATE: 'CampaignCreate',
   CAMPAIGN_PATCH: 'CampaignPatch',
@@ -28,6 +29,7 @@ export default {
   CHARACTER_SELL_ITEM: 'CharacterSellItem',
   CHARACTER_UNLOCK_ITEM_DESIGN: 'CharacterUnlockItemDesign',
   DELETE_ACTION: 'DeleteAction',
+  PARTY_ADD_ACHIEVEMENT: 'PartyAddAchievement',
   PARTY_ADD_REPUTATION: 'PartyAddReputation',
   PARTY_CREATE: 'PartyCreate',
   PARTY_FINISH_SCENARIO: 'PartyFinishScenario',

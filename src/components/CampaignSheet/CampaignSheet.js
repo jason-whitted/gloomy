@@ -64,9 +64,14 @@ class CampaignSheet extends Component {
                 </td>
               </tr>
               <tr>
-                <td>Achievements:</td>
                 <td>
-                  <GlobalAchievementList achievements={campaign.achievements} />
+                  <Flyout.CampaignAchievementsFlyout
+                    campaign={campaign}
+                    onClick={this.show(Dialog.CampaignAddAchievementDialog)}
+                  />:
+                </td>
+                <td>
+                  <GlobalAchievementList achievements={campaign.achievements} onClick={this.show} />
                 </td>
               </tr>
               <tr>
@@ -74,6 +79,10 @@ class CampaignSheet extends Component {
                 <td>
                   <EnvelopeList envelopes={campaign.envelopes} />
                 </td>
+              </tr>
+              <tr>
+                <td>Donations:</td>
+                <td>{campaign.donations}</td>
               </tr>
             </tbody>
           </table>

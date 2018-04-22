@@ -14,7 +14,7 @@ const validate = ({ name, build }) => {
   };
 
   try {
-    JSON.parse(LZUTF8.decompress(build, { inputEncoding: 'Base64' }));
+    JSON.parse(LZUTF8.decompress(build.replace(/\s/g, ''), { inputEncoding: 'Base64' }));
   } catch (e) {
     result.build = 'Invalid';
   }

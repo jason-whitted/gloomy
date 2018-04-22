@@ -2,6 +2,7 @@ import * as Diff from 'deep-object-diff';
 import { PERSONAL_QUEST_CONFIG } from '../../PERSONAL_QUEST';
 import ID from '../ID';
 
+import CampaignAddAchievement from './CampaignAddAchievement';
 import CampaignAddProsperity from './CampaignAddProsperity';
 import CampaignCreate from './CampaignCreate';
 import CampaignPatch from './CampaignPatch';
@@ -31,6 +32,7 @@ import CharacterSellItem from './CharacterSellItem';
 import CharacterSellAllItems from './CharacterSellAllItems';
 import CharacterUnlockItemDesign from './CharacterUnlockItemDesign';
 import DeleteAction from './DeleteAction';
+import PartyAddAchievement from './PartyAddAchievement';
 import PartyAddReputation from './PartyAddReputation';
 import PartyCreate from './PartyCreate';
 import PartyFinishScenario from './PartyFinishScenario';
@@ -41,6 +43,7 @@ import PlayerCreate from './PlayerCreate';
 import PlayerRename from './PlayerRename';
 
 const config = {
+  [ID.CAMPAIGN_ADD_ACHIEVEMENT]: CampaignAddAchievement,
   [ID.CAMPAIGN_ADD_PROSPERITY]: CampaignAddProsperity,
   [ID.CAMPAIGN_CREATE]: CampaignCreate,
   [ID.CAMPAIGN_PATCH]: CampaignPatch,
@@ -70,6 +73,7 @@ const config = {
   [ID.CHARACTER_SELL_ALL_ITEMS]: CharacterSellAllItems,
   [ID.CHARACTER_UNLOCK_ITEM_DESIGN]: CharacterUnlockItemDesign,
   [ID.DELETE_ACTION]: DeleteAction,
+  [ID.PARTY_ADD_ACHIEVEMENT]: PartyAddAchievement,
   [ID.PARTY_ADD_REPUTATION]: PartyAddReputation,
   [ID.PARTY_CREATE]: PartyCreate,
   [ID.PARTY_FINISH_SCENARIO]: PartyFinishScenario,

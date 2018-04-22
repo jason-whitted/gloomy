@@ -6,6 +6,21 @@ import Issue from './Issue';
 
 export default () => (
   <div className="col-12">
+    <h5>Version 0.1.8</h5>
+    <ul>
+      <li>
+        <StarIcon /> New Feature: Add perks directly from the Perk list <Issue number="8" />
+      </li>
+      <li>
+        <BugIcon /> Bug Fix: Items are available to a party after importing <Issue number="7" />
+      </li>
+      <li>
+        <BugIcon /> Bug Fix: Traveling to scenarios requiring Bravery now works <Issue number="9" />
+      </li>
+      <li>
+        <BugIcon /> Bug Fix: Quest tracking exhaustion now increments properly <Issue number="11" />
+      </li>
+    </ul>
     <h5>Version 0.1.7</h5>
     <ul>
       <li>

@@ -166,16 +166,9 @@ class CharacterSheet extends Component {
           <table className="table table-sm">
             <tbody>
               <tr>
-                <td>
-                  <Flyout.CharacterPerksFlyout
-                    readonly={readonly}
-                    character={character}
-                    onClick={this.show(Dialog.CharacterAddPerkDialog)}
-                  />:
-                  {character.perkUp && <StarIcon title="Perk available!" />}
-                </td>
+                <td>Perks: {character.perkUp && <StarIcon title="Perk available!" />}</td>
                 <td className="w-100">
-                  <PerkList {...this.props} />
+                  <PerkList {...this.props} onClick={this.show} />
                 </td>
               </tr>
               <tr>

@@ -1,6 +1,6 @@
 {
   "name": "gloomy",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": true,
   "dependencies": {
     "classnames": "^2.2.5",

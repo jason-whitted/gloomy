@@ -39,7 +39,7 @@ class Builder extends Component {
 
   pasteBase64 = event => {
     try {
-      const text = event.clipboardData.getData('Text');
+      const text = event.clipboardData.getData('Text').replace(/\s/g, '');
       this.setBase64(text);
     } catch (e) {
       alert('Error trying to parse build from clipboard.\n' + e.message);

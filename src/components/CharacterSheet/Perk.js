@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { ListGroup, ListGroupItem } from 'reactstrap';
 import classNames from 'classnames';
 
+import { Flyout } from '../Flyout';
 import { RichText } from '../RichText';
 
 const checkmark = checked =>
@@ -11,8 +12,14 @@ const checkmark = checked =>
   });
 
 class Perk extends Component {
+  click = event => {
+    const { perk, onClick } = this.props;
+
+    onClick(perk);
+  };
+
   render() {
-    const { name, count, checks } = this.props;
+    const { perkUp, perk: { name, count, checks } } = this.props;
 
     const bools = Array(count)
       .fill(0)
@@ -20,19 +27,24 @@ class Perk extends Component {
 
     return (
       <div className="perk small">
-        {bools.map((b, i) => <i key={i} className={checkmark(b)} />)}
+        {bools.map((b, i) => {
+          const text = <i key={i} className={checkmark(b)} />;
+          if (b || !perkUp) return text;
+
+          return (
+            <Flyout key={i} text={text}>
+              <ListGroup>
+                <ListGroupItem tag="button" action onClick={this.click}>
+                  Select Perk&hellip;
+                </ListGroupItem>
+              </ListGroup>
+            </Flyout>
+          );
+        })}
         <RichText text={name} />
       </div>
     );
   }
 }
-
-Perk.propTypes = {
-  name: PropTypes.string.isRequired,
-  count: PropTypes.number.isRequired,
-  checks: PropTypes.number.isRequired,
-};
-
-Perk.defaultProps = {};
 
 export default Perk;

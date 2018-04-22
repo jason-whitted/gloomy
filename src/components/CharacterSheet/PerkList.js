@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Perk from './Perk';
+import perkDialog from './perkDialog';
 
 class PerkList extends Component {
+  addPerk = perk => {
+    this.props.onClick(perkDialog(perk))();
+  };
+
   render() {
     const { character } = this.props;
 
@@ -26,7 +31,7 @@ class PerkList extends Component {
       <div>
         {Object.values(perks)
           .sort(sortPerks)
-          .map(p => <Perk key={p.id} {...p} />)}
+          .map(p => <Perk key={p.id} perk={p} perkUp={character.perkUp} onClick={this.addPerk} />)}
       </div>
     );
   }

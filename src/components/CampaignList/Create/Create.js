@@ -15,7 +15,9 @@ class Create extends Component {
   submit = async values => {
     const { appendCampaignAction, changeTab, createCampaign } = this.props;
     const build =
-      this.state.builder && values.build && JSON.parse(LZUTF8.decompress(values.build, { inputEncoding: 'Base64' }));
+      this.state.builder &&
+      values.build &&
+      JSON.parse(LZUTF8.decompress(values.build.replace(/\s/g, ''), { inputEncoding: 'Base64' }));
 
     let curStep = 0;
     const totalSteps = (build && build.players.length + build.parties.length + build.characters.length + 3) || 2;
@@ -100,6 +102,7 @@ class Create extends Component {
       this.setState({ step: 'Wrapping Up' });
       {
         const { cityEvents, roadEvents, scenarios, envelopes, donations } = build;
+        const items = build.items.reduce((obj, id) => ({ ...obj, [id]: ITEM_CONFIG[id].count }), {});
         const action = ACTION_CONFIG[ACTION.CAMPAIGN_PATCH].create({
           updates: [
             {
@@ -109,9 +112,10 @@ class Create extends Component {
                 roadEvents: { top: roadEvents },
                 scenarios,
                 envelopes: envelopes,
-                items: build.items.reduce((obj, id) => ({ ...obj, [id]: ITEM_CONFIG[id].count }), {}),
+                items,
                 donations,
                 characters: charactersPatch,
+                parties: build.parties.reduce((obj, { id }) => ({ ...obj, [id]: { items } }), {}),
               },
             },
             { type: 'update', path: 'achievements', value: build.globalAchievements },
