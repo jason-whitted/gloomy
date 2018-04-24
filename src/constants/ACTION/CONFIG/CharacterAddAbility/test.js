@@ -15,45 +15,17 @@ describe(ACTION.name, () => {
     it('should update the ability', () => {
       const campaign = {
         characters: {
-          123: {
-            abilityDeck: {
-              1: {
-                id: 1,
-                augments: {},
-              },
-            },
-          },
-          789: {
-            abilityDeck: {
-              1: {
-                id: 1,
-                augments: {},
-              },
-            },
-          },
+          123: { abilityDeck: [1] },
+          789: { abilityDeck: [1] },
         },
       };
       const expected = {
         characters: {
           123: {
-            abilityDeck: {
-              1: {
-                id: 1,
-                augments: {},
-              },
-            },
+            abilityDeck: [1],
           },
           789: {
-            abilityDeck: {
-              1: {
-                id: 1,
-                augments: {},
-              },
-              2: {
-                id: 2,
-                augments: {},
-              },
-            },
+            abilityDeck: [1, 2],
           },
         },
       };

@@ -12,7 +12,12 @@ const CharacterAbilitiesFlyout = ({ readonly, campaign, character, onAddAbilityC
 
   const { gloomhaven } = character.party.location;
   const countAugments = character.abilityDeck.reduce((t, c) => {
-    return t + (!c.augments ? 0 : Object.values(c.augments).filter(a => !a.readonly && a.type !== AUGMENT.AVAILABLE));
+    return (
+      t +
+      (!c.augmentSlots
+        ? 0
+        : Object.values(c.augmentSlots).filter(a => !a.readonly && a.type !== AUGMENT.AVAILABLE).length)
+    );
   }, 0);
   const abilityUp = gloomhaven && character.abilityUp;
   const augmentUp = gloomhaven && countAugments < Convert.prosperityToProsperityLevel(campaign.prosperity);

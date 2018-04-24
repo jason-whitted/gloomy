@@ -35,6 +35,7 @@ export * from './PartyRenameDialog';
 export * from './PartyAddReputationDialog';
 export * from './PartyFinishScenarioDialog';
 export * from './PartyFinishSoloScenarioDialog';
+export * from './PartySuggestedLevelDialog';
 export * from './PartyTravelToCampaignScenarioDialog';
 export * from './PartyTravelToCasualScenarioDialog';
 export * from './PartyTravelToGloomhavenDialog';

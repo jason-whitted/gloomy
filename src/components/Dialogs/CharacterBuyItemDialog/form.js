@@ -11,7 +11,7 @@ const initialValues = {
 
 const validate = ({ gold, discount, item }) =>
   errors({
-    item: !item ? 'Required' : ITEM_CONFIG[item].gold - discount > gold ? 'Too expensive' : '',
+    item: !item ? 'Required' : ITEM_CONFIG[item].gold + discount > gold ? 'Too expensive' : '',
   });
 
 export default {

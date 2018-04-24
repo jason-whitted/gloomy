@@ -30,6 +30,7 @@ describe(ACTION.name, () => {
         characters: {},
         cityEvents: events(),
         classes: { BR: true, CH: true, MT: true, SC: true, SW: true, TI: true },
+        augments: {},
         donations: 0,
         envelopes: {},
         items: { 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2, 7: 2, 8: 2, 9: 2, 10: 2, 11: 2, 12: 4, 13: 4, 14: 4 },

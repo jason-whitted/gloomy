@@ -22,7 +22,7 @@ class PartyTravelToCampaignScenarioDialog extends Component {
         const linked = from.links && from.links.includes(scenario.id);
         let roadEventRequired = !!scenario.id;
         if (linked) roadEventRequired = false;
-        if (party.location.gloomhaven && scenario.region.id === REGION.GLOOMHAVEN) roadEventRequired = false;
+        if (party.location.gloomhaven && scenario.linksGloomhaven) roadEventRequired = false;
         return {
           ...scenario,
           linked,

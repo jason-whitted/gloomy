@@ -23,7 +23,8 @@ describe('PQ:ImplementOfLight', () => {
   });
 
   it('should progress', () => {
-    const result = reduce(finishScenario({ scenario: SCENARIO.NECROMANCERS_SANCTUM }));
+    character.items[ITEM.SKULLBANE_AXE] = 1;
+    const result = reduce(finishScenario({ scenario: SCENARIO.BLACK_BARROW }));
     expect(result.retirement).toMatchObject({ complete: false, progress: 1 / 8 });
   });
 
@@ -35,18 +36,7 @@ describe('PQ:ImplementOfLight', () => {
       killEnemy({ enemy: ENEMY.LIVING_CORPSE, count: 3 }),
       killEnemy({ enemy: ENEMY.LIVING_SPIRIT, count: 3 }),
     );
-    expect(result.retirement).toMatchObject({ complete: false, progress: 1 / 8 });
-  });
-
-  it('should only count enmies if you have finished the quest', () => {
-    character.items[ITEM.SKULLBANE_AXE] = 1;
-    const result = reduce(
-      killEnemy({ enemy: ENEMY.LIVING_BONES, count: 3 }),
-      finishScenario({ scenario: SCENARIO.NECROMANCERS_SANCTUM }),
-      killEnemy({ enemy: ENEMY.LIVING_CORPSE, count: 3 }),
-      killEnemy({ enemy: ENEMY.LIVING_SPIRIT, count: 3 }),
-    );
-    expect(result.retirement).toMatchObject({ complete: false, progress: 7 / 8 });
+    expect(result.retirement).toMatchObject({ complete: false, progress: 0 });
   });
 
   it('should complete', () => {

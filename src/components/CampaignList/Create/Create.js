@@ -87,7 +87,7 @@ class Create extends Component {
           const action = ACTION_CONFIG[ACTION.CHARACTER_RETIRE].create({ character: build.characters[i].id });
           const result = await appendCampaignAction({ id: campaign.id, action });
           campaign = result.campaign;
-          build.characters[i] = campaign.characters[result.action.id];
+          build.characters[i] = campaign.characters[build.characters[i].id];
         }
 
         if (character.bonusPerks) {

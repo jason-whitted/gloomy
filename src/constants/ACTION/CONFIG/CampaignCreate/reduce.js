@@ -29,6 +29,7 @@ export default (campaign, { payload: { gist, history } }) => ({
   characters: {},
   cityEvents: starterEventDeck(),
   classes: starterClasses(),
+  augments: {},
   donations: 0,
   envelopes: {},
   items: starterItems(),

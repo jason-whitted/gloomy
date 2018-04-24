@@ -93,7 +93,7 @@ export default {
       actions: [
         { action: ACTION.ATTACK, value: 2 },
         {
-          action: ACTION.ELEMENT_AIR_CONSUME,
+          action: ACTION.ELEMENT_DARK_CONSUME,
           condition: true,
           bonuses: [
             {
@@ -111,7 +111,7 @@ export default {
       actions: [
         { action: ACTION.MOVE, value: 2 },
         {
-          action: ACTION.ELEMENT_AIR_CONSUME,
+          action: ACTION.ELEMENT_DARK_CONSUME,
           condition: true,
           bonuses: [
             {
@@ -310,7 +310,7 @@ export default {
         { action: ACTION.MOVE, value: 1 },
         { action: ACTION.ATTACK, value: 2 },
         {
-          action: ACTION.ELEMENT_AIR_CONSUME,
+          action: ACTION.ELEMENT_DARK_CONSUME,
           condition: true,
           bonuses: [{ action: ACTION.NOTE, value: '+2 Move (Symbol:Move), +2 Attack (Symbol:Attack), (XP:1)' }],
           className: 'mt-0',
@@ -934,7 +934,7 @@ export default {
           bonuses: [{ action: ACTION.JUMP }],
         },
         {
-          action: ACTION.ELEMENT_AIR_CONSUME,
+          action: ACTION.ELEMENT_DARK_CONSUME,
           condition: true,
           bonuses: [{ action: ACTION.NOTE, value: 'Kill one adjacent normal enemy, (XP:1)' }],
           className: 'mt-0',

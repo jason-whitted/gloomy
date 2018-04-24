@@ -69,7 +69,8 @@ class PartySheet extends Component {
                   <Flyout.PartyScenarioFlyout
                     campaign={campaign}
                     party={party}
-                    onClick={this.show(Dialog.PartyFinishScenarioDialog)}
+                    onSuggestedLevelClick={this.show(Dialog.PartySuggestedLevelDialog)}
+                    onFinishScenarioClick={this.show(Dialog.PartyFinishScenarioDialog)}
                   />
                   {!gloomhaven && casual && ' (casual)'}
                 </td>

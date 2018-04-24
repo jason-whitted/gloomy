@@ -3,17 +3,8 @@ import { Convert } from '../../../../common/Convert';
 
 export default (campaign, { payload: { player, party, name, level, class: $class, quest, imported }, id, by, dt }) => {
   const abilityDeck = Object.values(ABILITY_CARD_CONFIG).reduce(
-    (obj, card) =>
-      card.class !== $class || card.level > 1
-        ? obj
-        : {
-            ...obj,
-            [card.id]: {
-              id: card.id,
-              augments: {},
-            },
-          },
-    {},
+    (arr, card) => (card.class !== $class || card.level > 1 ? arr : [...arr, card.id]),
+    [],
   );
 
   return {

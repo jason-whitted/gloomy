@@ -99,8 +99,9 @@ export default createSelector(selectRawCampaign, raw => {
     c.items = Object.keys(c.items).map(k => campaign.items.find(i => i.id == k));
     c.perks = c.perks.map(p => clone(CONST.PERK_CONFIG[p]));
     c.attackDeck = c.attackDeck.map(k => clone(CONST.ATTACK_MODIFIER_CARD_CONFIG[k]));
-    c.abilityDeck = Object.values(c.abilityDeck).map(({ id, augments }) => {
+    c.abilityDeck = c.abilityDeck.map(id => {
       const ability = clone(CONST.ABILITY_CARD_CONFIG[id]);
+      const augments = campaign.augments[id] || {};
       if (ability.augmentSlots) {
         ability.augmentSlots = Object.entries(ability.augmentSlots).reduce(
           (obj, [key, val]) => ({

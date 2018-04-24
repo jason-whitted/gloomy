@@ -136,6 +136,7 @@ export default {
     boss: true,
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.GLOOMHAVEN_WAREHOUSE),
+    linksGloomhaven: true,
     requirements: [
       { type: SCENARIO_REQUIREMENT.PARTY_ACHIEVEMENT, achievement: PARTY_ACHIEVEMENT.JEKSERAHS_PLANS, complete: true },
       {
@@ -203,6 +204,7 @@ export default {
     boss: true,
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.GLOOMHAVEN_SQUARE_A),
+    linksGloomhaven: true,
     requirements: [
       {
         type: SCENARIO_REQUIREMENT.GLOBAL_ACHIEVEMENT,
@@ -229,6 +231,7 @@ export default {
     boss: true,
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.GLOOMHAVEN_SQUARE_B),
+    linksGloomhaven: true,
     requirements: [
       {
         type: SCENARIO_REQUIREMENT.GLOBAL_ACHIEVEMENT,
@@ -297,6 +300,7 @@ export default {
     name: 'Lost Island',
     region: REGION.MISTY_SEA,
     links: gloomhavenLinks(ID.LOST_ISLAND),
+    linksGloomhaven: true,
     requirements: [],
     goals: [{ type: GOAL.KILL_ALL_ENEMIES }],
     effects: [],
@@ -307,6 +311,7 @@ export default {
     name: 'Abandoned Sewers',
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.ABANDONED_SEWERS),
+    linksGloomhaven: true,
     requirements: [],
     goals: [{ type: GOAL.KILL_ALL_ENEMIES }],
     effects: [],
@@ -428,6 +433,7 @@ export default {
     name: 'Deep Ruins',
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.DEEP_RUINS),
+    linksGloomhaven: true,
     requirements: [],
     goals: [{ type: GOAL.OCCUPY }],
     effects: [{ type: EFFECT.ADD_X_CARDS, count: 3, card: ATTACK_MODIFIER_CARD.NEG1 }],
@@ -469,6 +475,7 @@ export default {
     name: 'Ancient Cistern',
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.ANCIENT_CISTERN),
+    linksGloomhaven: true,
     requirements: [
       {
         type: SCENARIO_REQUIREMENT.ONE_OF,
@@ -572,6 +579,7 @@ export default {
     name: 'Plane of Night',
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.PLANE_OF_NIGHT),
+    linksGloomhaven: true,
     requirements: [
       {
         type: SCENARIO_REQUIREMENT.GLOBAL_ACHIEVEMENT,
@@ -676,6 +684,7 @@ export default {
     boss: true,
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.GLOOMHAVEN_BATTLEMENTS_A),
+    linksGloomhaven: true,
     requirements: [
       { type: SCENARIO_REQUIREMENT.PARTY_ACHIEVEMENT, achievement: PARTY_ACHIEVEMENT.A_DEMONS_ERRAND, complete: true },
       {
@@ -703,6 +712,7 @@ export default {
     boss: true,
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.GLOOMHAVEN_BATTLEMENTS_B),
+    linksGloomhaven: true,
     requirements: [
       { type: SCENARIO_REQUIREMENT.PARTY_ACHIEVEMENT, achievement: PARTY_ACHIEVEMENT.A_DEMONS_ERRAND, complete: true },
       {
@@ -726,6 +736,7 @@ export default {
     name: 'Doom Trench',
     region: REGION.MISTY_SEA,
     links: gloomhavenLinks(ID.DOOM_TRENCH),
+    linksGloomhaven: true,
     requirements: [
       {
         type: SCENARIO_REQUIREMENT.GLOBAL_ACHIEVEMENT,
@@ -915,6 +926,7 @@ export default {
     boss: true,
     region: REGION.MISTY_SEA,
     links: gloomhavenLinks(ID.LAIR_OF_THE_UNSEEING_EYE),
+    linksGloomhaven: true,
     requirements: [
       {
         type: SCENARIO_REQUIREMENT.PARTY_ACHIEVEMENT,
@@ -970,6 +982,7 @@ export default {
     name: 'Ghost Fortress',
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.GHOST_FORTRESS),
+    linksGloomhaven: true,
     requirements: [
       {
         type: SCENARIO_REQUIREMENT.GLOBAL_ACHIEVEMENT,
@@ -996,6 +1009,7 @@ export default {
     boss: true,
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.THE_VOID),
+    linksGloomhaven: true,
     requirements: [
       {
         type: SCENARIO_REQUIREMENT.GLOBAL_ACHIEVEMENT,
@@ -1018,6 +1032,7 @@ export default {
     name: 'Noxious Cellar',
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.NOXIOUS_CELLAR),
+    linksGloomhaven: true,
     requirements: [{ type: SCENARIO_REQUIREMENT.PERSONAL_QUEST, quest: PERSONAL_QUEST.SEEKER_OF_XORN }],
     goals: [{ type: GOAL.ALL_CHARACTERS_LOOT_TREASURE }],
     effects: [{ type: EFFECT.ADD_X_CARDS, count: 2, card: ATTACK_MODIFIER_CARD.CURSE }],
@@ -1087,6 +1102,7 @@ export default {
     name: 'Investigation',
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.INVESTIGATION),
+    linksGloomhaven: true,
     requirements: [{ type: SCENARIO_REQUIREMENT.PERSONAL_QUEST, quest: PERSONAL_QUEST.VENGEANCE }],
     goals: [{ type: GOAL.KILL_ENEMY, enemy: ENEMY.INFILTRATOR }],
     effects: [],
@@ -1097,6 +1113,7 @@ export default {
     name: 'Bloody Shack',
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.BLOODY_SHACK),
+    linksGloomhaven: true,
     requirements: [{ type: SCENARIO_REQUIREMENT.PERSONAL_QUEST, quest: PERSONAL_QUEST.VENGEANCE }],
     goals: [{ type: GOAL.KILL_ENEMY, enemy: ENEMY.HARVESTER }],
     effects: [],
@@ -1120,6 +1137,7 @@ export default {
     name: 'Alchemy Lab',
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.ALCHEMY_LAB),
+    linksGloomhaven: true,
     requirements: [{ type: SCENARIO_REQUIREMENT.PERSONAL_QUEST, quest: PERSONAL_QUEST.FINDING_THE_CURE }],
     goals: [{ type: GOAL.LOOT_ALL_TREASURE_TILES }, { type: GOAL.EXIT }],
     effects: [],
@@ -1166,6 +1184,7 @@ export default {
     name: 'Underwater Lagoon',
     region: REGION.MISTY_SEA,
     links: gloomhavenLinks(ID.UNDERWATER_LAGOON),
+    linksGloomhaven: true,
     requirements: [
       {
         type: SCENARIO_REQUIREMENT.GLOBAL_ACHIEVEMENT,
@@ -1195,6 +1214,7 @@ export default {
     name: 'Clockwork Cove',
     region: REGION.COPPERNECK_MOUNTAINS,
     links: gloomhavenLinks(ID.CLOCKWORK_COVE),
+    linksGloomhaven: true,
     requirements: [],
     goals: [{ type: GOAL.OCCUPY }],
     effects: [],
@@ -1237,6 +1257,7 @@ export default {
     name: 'Chained Isle',
     region: REGION.MISTY_SEA,
     links: gloomhavenLinks(ID.CHAINED_ISLE),
+    linksGloomhaven: true,
     requirements: [],
     goals: [{ type: GOAL.KILL_ALL_ENEMIES }],
     effects: [],
@@ -1277,6 +1298,7 @@ export default {
     name: 'Merchant Ship',
     region: REGION.MISTY_SEA,
     links: gloomhavenLinks(ID.MERCHANT_SHIP),
+    linksGloomhaven: true,
     requirements: [
       { type: SCENARIO_REQUIREMENT.PARTY_ACHIEVEMENT, achievement: PARTY_ACHIEVEMENT.HIGH_SEA_ESCORT, complete: true },
     ],
@@ -1311,6 +1333,7 @@ export default {
     name: 'Vault of Secrets',
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.VAULT_OF_SECRETS),
+    linksGloomhaven: true,
     requirements: [],
     goals: [{ type: GOAL.LOOT_ALL_TREASURE_TILES }, { type: GOAL.KILL_ALL_ENEMIES }],
     effects: [],
@@ -1321,6 +1344,7 @@ export default {
     name: 'Sacrifice Pit',
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.SACRIFICE_PIT),
+    linksGloomhaven: true,
     requirements: [],
     goals: [{ type: GOAL.KILL_ALL_ENEMIES }],
     effects: [],
@@ -1381,6 +1405,7 @@ export default {
     name: 'Shadows Within',
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.SHADOWS_WITHIN),
+    linksGloomhaven: true,
     requirements: [
       { type: SCENARIO_REQUIREMENT.PARTY_ACHIEVEMENT, achievement: PARTY_ACHIEVEMENT.BAD_BUSINESS, complete: true },
     ],
@@ -1415,6 +1440,7 @@ export default {
     name: 'Harried Village',
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.HARRIED_VILLAGE),
+    linksGloomhaven: true,
     requirements: [],
     goals: [],
     effects: [],
@@ -1429,6 +1455,7 @@ export default {
     name: 'Corrupted Cove',
     region: REGION.UNKNOWN,
     links: gloomhavenLinks(ID.CORRUPTED_COVE),
+    linksGloomhaven: true,
     requirements: [
       {
         type: SCENARIO_REQUIREMENT.PARTY_ACHIEVEMENT,
@@ -1444,6 +1471,7 @@ export default {
     name: 'Plane of Water',
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.PLANE_OF_WATER),
+    linksGloomhaven: true,
     requirements: [
       {
         type: SCENARIO_REQUIREMENT.GLOBAL_ACHIEVEMENT,
@@ -1461,6 +1489,7 @@ export default {
     name: 'Syndicate Hideout',
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.SYNDICATE_HIDEOUT),
+    linksGloomhaven: true,
     requirements: [
       { type: SCENARIO_REQUIREMENT.PARTY_ACHIEVEMENT, achievement: PARTY_ACHIEVEMENT.SIN_RA, complete: true },
     ],
@@ -1493,6 +1522,7 @@ export default {
     name: 'Back Alley Brawl',
     region: REGION.GLOOMHAVEN,
     links: gloomhavenLinks(ID.BACK_ALLEY_BRAWL),
+    linksGloomhaven: true,
     requirements: [
       { type: SCENARIO_REQUIREMENT.PARTY_ACHIEVEMENT, achievement: PARTY_ACHIEVEMENT.DEBT_COLLECTION, complete: true },
     ],
@@ -1505,6 +1535,7 @@ export default {
     name: 'Sunken Vessel',
     region: REGION.MISTY_SEA,
     links: gloomhavenLinks(ID.SUNKEN_VESSEL),
+    linksGloomhaven: true,
     requirements: [
       {
         type: SCENARIO_REQUIREMENT.PARTY_ACHIEVEMENT,

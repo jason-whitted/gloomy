@@ -77,6 +77,10 @@
   text-shadow: 2px 2px 2px black;
 }
 
+.item .gold a {
+  color: inherit;
+}
+
 .item .slot {
   --size: 35px;
   position: absolute;
@@ -129,6 +133,28 @@
   text-align: center;
   line-height: var(--height);
   font-size: 30px;
+}
+
+.item .effects {
+  --height: 40px;
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  width: 100px;
+  height: var(--height);
+  line-height: var(--height);
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+.item .effects .svg-symbol {
+  font-size: 35px;
+}
+
+.item .effects .svg-effect {
+  font-size: 25px;
+  padding-bottom: 3px;
 }
 
 .item .id {

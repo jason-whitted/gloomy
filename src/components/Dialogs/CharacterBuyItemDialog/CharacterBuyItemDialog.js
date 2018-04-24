@@ -13,10 +13,14 @@ import connectConfig from './connect';
 import formConfig from './form';
 
 class CharacterBuyItemDialog extends Component {
+  state = { discount: 0 };
+
   componentWillMount() {
     const { character, change } = this.props;
+    const discount = Convert.reputationToShopPriceModifier(character.party.reputation);
+    this.setState({ discount });
     change('gold', character.gold);
-    change('discount', Convert.reputationToShopPriceModifier(character.party.reputation));
+    change('discount', discount);
   }
 
   submit = values => {
@@ -36,6 +40,7 @@ class CharacterBuyItemDialog extends Component {
 
   render() {
     const { campaign, character, formValues, handleSubmit, submitting } = this.props;
+    const { discount } = this.state;
 
     const available = character.party.items.filter(
       // eslint-disable-next-line eqeqeq
@@ -58,7 +63,7 @@ class CharacterBuyItemDialog extends Component {
                 </option>
               ))}
             </SelectField>
-            {item && <Item item={item} />}
+            {item && <Item item={item} discount={discount} />}
           </ModalBody>
           <ModalFooter>
             <Button color="success" disabled={submitting}>

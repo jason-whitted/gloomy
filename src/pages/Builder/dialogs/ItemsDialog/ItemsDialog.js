@@ -10,7 +10,7 @@ class ItemsDialog extends Component {
     const { build } = this.props;
     const items = Array(63)
       .fill(0)
-      .map((_, i) => (build.items.includes(i + 71) ? i + 1 : ''));
+      .map((_, i) => (build.items.includes(i + 71) ? i + 71 : ''));
     this.props.initialize({ items });
   }
 

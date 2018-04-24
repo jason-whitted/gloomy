@@ -3,10 +3,9 @@ import { Convert } from '../../../../common/Convert';
 
 export default (campaign, { payload: { character, ability, slot, augment } }) => {
   const curChar = campaign.characters[character];
-  const augments = curChar.abilityDeck[ability].augments;
   const cost = Convert.abilityAugmentCost({
     ability: ABILITY_CARD_CONFIG[ability],
-    augments,
+    augments: campaign.augments[ability],
     slotID: slot,
     augmentID: augment,
   });
@@ -18,16 +17,13 @@ export default (campaign, { payload: { character, ability, slot, augment } }) =>
       [character]: {
         ...curChar,
         gold: curChar.gold - cost.cost,
-        abilityDeck: {
-          ...curChar.abilityDeck,
-          [ability]: {
-            ...curChar.abilityDeck[ability],
-            augments: {
-              ...augments,
-              [slot]: augment,
-            },
-          },
-        },
+      },
+    },
+    augments: {
+      ...campaign.augments,
+      [ability]: {
+        ...campaign.augments[ability],
+        [slot]: augment,
       },
     },
   };

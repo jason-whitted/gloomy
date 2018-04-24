@@ -101,14 +101,14 @@ export default ({ id, force = false }) => (dispatch, getState) => {
     let campaign = ACTION_CONFIG.reduce({}, action);
 
     // Mark deleted history
-    for (let i = history.length - 1; i >= 0; i--) {
-      const entry = history[i];
+    for (let i = campaign.history.length - 1; i >= 0; i--) {
+      const entry = campaign.history[i];
       if (entry.action === ACTION.DELETE_ACTION && !entry.deleted) {
         campaign = ACTION_CONFIG.reduce(campaign, entry);
       }
     }
 
-    campaign = history.reduce(ACTION_CONFIG.reduce, campaign);
+    campaign = campaign.history.filter(h => !h.deleted).reduce(ACTION_CONFIG.reduce, campaign);
 
     await dispatch({
       type: CONST.CAMPAIGN_GET_SUCCESS,

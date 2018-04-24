@@ -5,7 +5,7 @@ import { ListGroup, ListGroupItem } from 'reactstrap';
 import { Flyout } from '../../Flyout';
 import { ScenarioIcon, StarIcon } from '../../Icons';
 
-const PartyScenarioFlyout = ({ mode, campaign, party, onClick }) => {
+const PartyScenarioFlyout = ({ mode, campaign, party, onSuggestedLevelClick, onFinishScenarioClick }) => {
   const { location } = party;
   const { gloomhaven, scenario, region } = location;
 
@@ -27,7 +27,10 @@ const PartyScenarioFlyout = ({ mode, campaign, party, onClick }) => {
     <Flyout text={name} className="scenario-name">
       <Flyout.Head>Actions</Flyout.Head>
       <ListGroup>
-        <ListGroupItem tag="button" action onClick={onClick}>
+        <ListGroupItem tag="button" action onClick={onSuggestedLevelClick}>
+          {prefix}Suggested Level&hellip;
+        </ListGroupItem>
+        <ListGroupItem tag="button" action onClick={onFinishScenarioClick}>
           <ScenarioIcon /> {prefix}Finish Scenario&hellip;
         </ListGroupItem>
       </ListGroup>
@@ -38,7 +41,8 @@ const PartyScenarioFlyout = ({ mode, campaign, party, onClick }) => {
 PartyScenarioFlyout.propTypes = {
   campaign: PropTypes.object.isRequired,
   party: PropTypes.object.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onSuggestedLevelClick: PropTypes.func.isRequired,
+  onFinishScenarioClick: PropTypes.func.isRequired,
   mode: PropTypes.oneOf(['party', 'character']),
 };
 

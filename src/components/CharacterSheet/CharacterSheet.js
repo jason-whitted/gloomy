@@ -96,7 +96,8 @@ class CharacterSheet extends Component {
                     mode="character"
                     campaign={campaign}
                     party={character.party}
-                    onClick={this.show(Dialog.PartyFinishScenarioDialog)}
+                    onSuggestedLevelClick={this.show(Dialog.PartySuggestedLevelDialog)}
+                    onFinishScenarioClick={this.show(Dialog.PartyFinishScenarioDialog)}
                   />
                   {!gloomhaven && casual && ' (casual)'}
                 </td>

@@ -1,3 +1,4 @@
+export * from './CheckboxField';
 export * from './RichSelectField';
 export * from './SelectField';
 export * from './TextAreaField';

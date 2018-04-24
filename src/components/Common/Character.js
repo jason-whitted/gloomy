@@ -32,7 +32,7 @@ class Character extends Component {
         )}
         {noLink && character.name}
         {(level || $class) && ' - '}
-        {level && `Level ${level}`}
+        {level && `Level ${character.level} `}
         {$class && `${character.race.name} ${character.class.name}`}
       </span>
     );
