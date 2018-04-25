@@ -12,6 +12,7 @@ export * from './HEALTH_POOL';
 export * from './ITEM';
 export * from './PARTY_ACHIEVEMENT';
 export * from './PERK';
+export * from './PERMISSION';
 export * from './PERSONAL_QUEST';
 export * from './RACE';
 export * from './REGION';

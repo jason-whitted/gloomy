@@ -1,4 +1,3 @@
-import { ATTACK_MODIFIER_CARD } from '../ATTACK_MODIFIER_CARD';
 import { ELEMENT } from '../ELEMENT';
 import { ENEMY } from '../ENEMY';
 import { SLOT } from '../SLOT';
@@ -6,7 +5,6 @@ import { SUMMON } from '../SUMMON';
 import ID from './ID';
 import TYPE from './TYPE';
 import AFTER from './AFTER_TYPE';
-import EFFECT from './EFFECT_TYPE';
 import WHAT from './WHAT_TYPE';
 import WHEN from './WHEN_TYPE';
 

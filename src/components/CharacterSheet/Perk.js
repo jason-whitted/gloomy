@@ -19,7 +19,7 @@ class Perk extends Component {
   };
 
   render() {
-    const { perkUp, perk: { name, count, checks } } = this.props;
+    const { readonly, perkUp, perk: { name, count, checks } } = this.props;
 
     const bools = Array(count)
       .fill(0)
@@ -29,7 +29,7 @@ class Perk extends Component {
       <div className="perk small">
         {bools.map((b, i) => {
           const text = <i key={i} className={checkmark(b)} />;
-          if (b || !perkUp) return text;
+          if (b || readonly || !perkUp) return text;
 
           return (
             <Flyout key={i} text={text}>

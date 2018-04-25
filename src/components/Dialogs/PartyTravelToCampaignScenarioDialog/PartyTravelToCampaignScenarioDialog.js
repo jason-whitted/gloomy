@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-import { ACTION, ACTION_CONFIG, REGION, SCENARIO_REQUIREMENT_CONFIG } from '../../../constants';
+import { ACTION, ACTION_CONFIG, SCENARIO_REQUIREMENT_CONFIG } from '../../../constants';
 import { SelectField, TextField } from '../../Fields';
 import connectConfig from './connect';
 import formConfig from './form';

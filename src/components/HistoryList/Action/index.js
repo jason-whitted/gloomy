@@ -1,7 +1,9 @@
 export { default as Bug } from './Bug';
 export { default as CampaignAddAchievement } from './CampaignAddAchievement';
 export { default as CampaignAddProsperity } from './CampaignAddProsperity';
+export { default as CampaignContributors } from './CampaignContributors';
 export { default as CampaignPatch } from './CampaignPatch';
+export { default as CampaignPermissions } from './CampaignPermissions';
 export { default as CampaignUnlockCityEvent } from './CampaignUnlockCityEvent';
 export { default as CampaignUnlockRoadEvent } from './CampaignUnlockRoadEvent';
 export { default as CampaignUnlockScenario } from './CampaignUnlockScenario';
@@ -35,4 +37,5 @@ export { default as PartyTravelToScenario } from './PartyTravelToScenario';
 export { default as PartyCreate } from './PartyCreate';
 export { default as PartyRename } from './PartyRename';
 export { default as PlayerCreate } from './PlayerCreate';
+export { default as PlayerOwners } from './PlayerOwners';
 export { default as PlayerRename } from './PlayerRename';

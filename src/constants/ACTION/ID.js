@@ -1,8 +1,10 @@
 export default {
   CAMPAIGN_ADD_ACHIEVEMENT: 'CampaignAddAchievement',
   CAMPAIGN_ADD_PROSPERITY: 'CampaignAddProsperity',
+  CAMPAIGN_CONTRIBUTORS: 'CampaignContributors',
   CAMPAIGN_CREATE: 'CampaignCreate',
   CAMPAIGN_PATCH: 'CampaignPatch',
+  CAMPAIGN_PERMISSIONS: 'CampaignPermissions',
   CAMPAIGN_UNLOCK_CLASS: 'CampaignUnlockClass',
   CAMPAIGN_UNLOCK_CITY_EVENT: 'CampaignUnlockCityEvent',
   CAMPAIGN_UNLOCK_ROAD_EVENT: 'CampaignUnlockRoadEvent',
@@ -37,5 +39,6 @@ export default {
   PARTY_TRAVEL_TO_GLOOMHAVEN: 'PartyTravelToGloomhaven',
   PARTY_TRAVEL_TO_SCENARIO: 'PartyTravelToScenario',
   PLAYER_CREATE: 'PlayerCreate',
+  PLAYER_OWNERS: 'PlayerOwners',
   PLAYER_RENAME: 'PlayerRename',
 };

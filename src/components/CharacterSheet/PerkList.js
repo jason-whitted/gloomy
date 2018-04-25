@@ -10,7 +10,7 @@ class PerkList extends Component {
   };
 
   render() {
-    const { character } = this.props;
+    const { readonly, character } = this.props;
 
     const perks = character.class.perks.reduce((dict, perk) => {
       if (!dict[perk.id]) {
@@ -31,7 +31,7 @@ class PerkList extends Component {
       <div>
         {Object.values(perks)
           .sort(sortPerks)
-          .map(p => <Perk key={p.id} perk={p} perkUp={character.perkUp} onClick={this.addPerk} />)}
+          .map(p => <Perk key={p.id} perk={p} perkUp={character.perkUp} onClick={this.addPerk} readonly={readonly} />)}
       </div>
     );
   }

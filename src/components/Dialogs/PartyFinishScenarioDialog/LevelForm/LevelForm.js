@@ -10,7 +10,7 @@ class LevelForm extends Component {
     const { isOpen, attendees, onBack, onNext, onCancel, handleSubmit } = this.props;
 
     const avgLevel = attendees.reduce((t, c) => t + c.level, 0) / attendees.length;
-    const suggestedLevel = Math.round(avgLevel / 2);
+    const suggestedLevel = Math.ceil(avgLevel / 2);
     const placeholder = `Suggested Level: ${suggestedLevel}`;
 
     return (

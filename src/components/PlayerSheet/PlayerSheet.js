@@ -1,29 +1,29 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { CampaignCreateCharacterDialog, PlayerRenameDialog } from '../Dialogs';
+import * as Dialog from '../Dialogs';
 import * as Flyout from './Flyouts';
 import { PlayerIcon } from '../Icons';
 import { CharacterList } from '../CharacterList';
 import './styles.css';
 
 class PlayerSheet extends Component {
-  state = { Dialog: null };
+  state = { dialog: null };
 
-  show = Dialog => event => {
+  show = dialog => event => {
     document.body.click(); // close down any popovers
-    this.setState({ Dialog });
+    this.setState({ dialog });
   };
 
-  hide = () => this.setState({ Dialog: null });
+  hide = () => this.setState({ dialog: null });
 
   render() {
-    const { player } = this.props;
-    const { Dialog } = this.state;
+    const { campaign, player } = this.props;
+    const { dialog: DialogComponent } = this.state;
 
     return (
       <div className="PlayerSheet row">
-        {Dialog && <Dialog {...this.props} onClose={this.hide} />}
+        {DialogComponent && <DialogComponent {...this.props} onClose={this.hide} />}
         <div className="col-12">
           <table className="table table-sm table-bordered table-card">
             <thead>
@@ -32,7 +32,12 @@ class PlayerSheet extends Component {
                   <PlayerIcon />
                 </th>
                 <th className="bg-light p-2 w-100 w-50">
-                  <Flyout.PlayerNameFlyout player={player} onClick={this.show(PlayerRenameDialog)} />
+                  <Flyout.PlayerNameFlyout
+                    campaign={campaign}
+                    player={player}
+                    onRenameClick={this.show(Dialog.PlayerRenameDialog)}
+                    onOwnersClick={this.show(Dialog.PlayerOwnersDialog)}
+                  />
                 </th>
               </tr>
             </thead>
@@ -43,7 +48,7 @@ class PlayerSheet extends Component {
             <tbody>
               <tr>
                 <td>
-                  <Flyout.PlayerCharactersFlyout onClick={this.show(CampaignCreateCharacterDialog)} />:
+                  <Flyout.PlayerCharactersFlyout onClick={this.show(Dialog.CampaignCreateCharacterDialog)} />:
                 </td>
                 <td className="w-100">
                   <CharacterList characters={player.characters} />

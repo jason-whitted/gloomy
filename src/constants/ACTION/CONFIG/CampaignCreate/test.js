@@ -25,6 +25,8 @@ describe(ACTION.name, () => {
         dt: 'dt',
         by: 'by',
         owner: 'by',
+        contributors: [],
+        permissions: '0000',
         history: [2],
         achievements: { 8: 1 },
         characters: {},

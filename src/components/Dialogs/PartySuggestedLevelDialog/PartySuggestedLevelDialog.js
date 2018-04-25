@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
 import { Alert, Modal, ModalHeader, ModalBody } from 'reactstrap';
 
-import { ACTION, ACTION_CONFIG } from '../../../constants';
 import { Character } from '../../Common';
 import { CheckboxField } from '../../Fields';
 import connectConfig from './connect';
@@ -31,7 +30,7 @@ class PartySuggestedLevelDialog extends Component {
 
     const attendees = characters.filter((c, i) => formValues.characters[i]);
     const avgLevel = attendees.reduce((t, c) => t + c.level, 0) / attendees.length;
-    const suggestedLevel = Math.round(avgLevel / 2);
+    const suggestedLevel = Math.ceil(avgLevel / 2);
 
     return (
       <Modal isOpen toggle={this.cancel}>

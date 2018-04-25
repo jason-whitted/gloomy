@@ -3,15 +3,16 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { Progress } from 'reactstrap';
 
+import { PERMISSION_RULE } from '../../constants';
 import * as Dialog from '../Dialogs';
 import * as Flyout from './Flyouts';
 import * as PartyFlyout from '../PartySheet/Flyouts';
-
 import { ClassIcon, StarIcon } from '../Icons';
 import { CharacterList } from '../CharacterList';
 import Checkmarks from './Checkmarks';
 import ItemList from './ItemList';
 import PerkList from './PerkList';
+import Visibility from './Visibility';
 import './styles.css';
 
 class CharacterSheet extends Component {
@@ -33,10 +34,17 @@ class CharacterSheet extends Component {
     const canDonate = character.donate && character.gold >= 10 && character.party.location.gloomhaven;
     const { casual, gloomhaven } = character.party.location;
 
-    const readonly = character.retired || character.hiatus;
+    const readonly = character.retired || character.hiatus || character.restricted;
     const canRetire = character.retirement.complete && !character.retired;
 
     const peers = character.party.characters.filter(c => c.id !== character.id && !c.hiatus);
+
+    const perm = {
+      gold: campaign.permissions[PERMISSION_RULE.NON_OWNER_PLAYER_GOLD],
+      items: campaign.permissions[PERMISSION_RULE.NON_OWNER_PLAYER_ITEMS],
+      quest: campaign.permissions[PERMISSION_RULE.NON_OWNER_PLAYER_QUEST],
+      notes: campaign.permissions[PERMISSION_RULE.NON_OWNER_PLAYER_NOTES],
+    };
 
     return (
       <div className="CharacterSheet row">
@@ -142,7 +150,9 @@ class CharacterSheet extends Component {
                 </td>
                 <td>
                   {canDonate && <StarIcon title="Sanctuary donation available" />}
-                  {character.gold}
+                  <Visibility restricted={character.restricted} visibility={perm.gold}>
+                    {character.gold}
+                  </Visibility>
                 </td>
               </tr>
               <tr>
@@ -157,7 +167,14 @@ class CharacterSheet extends Component {
                   />:
                 </td>
                 <td>
-                  <ItemList show={this.show} dialog={Dialog.CharacterSellItemDialog} {...this.props} />
+                  <Visibility restricted={character.restricted} visibility={perm.items}>
+                    <ItemList
+                      readonly={readonly}
+                      show={this.show}
+                      dialog={Dialog.CharacterSellItemDialog}
+                      {...this.props}
+                    />
+                  </Visibility>
                 </td>
               </tr>
             </tbody>
@@ -169,7 +186,7 @@ class CharacterSheet extends Component {
               <tr>
                 <td>Perks: {character.perkUp && <StarIcon title="Perk available!" />}</td>
                 <td className="w-100">
-                  <PerkList {...this.props} onClick={this.show} />
+                  <PerkList readonly={readonly} {...this.props} onClick={this.show} />
                 </td>
               </tr>
               <tr>
@@ -193,7 +210,9 @@ class CharacterSheet extends Component {
                   />:
                 </td>
                 <td>
-                  <small>{character.notes}</small>
+                  <Visibility restricted={character.restricted} visibility={perm.notes}>
+                    <small>{character.notes}</small>
+                  </Visibility>
                 </td>
               </tr>
             </tbody>
@@ -235,8 +254,10 @@ class CharacterSheet extends Component {
                   />:
                 </td>
                 <td>
-                  {character.quest.name} ({Math.round(character.retirement.progress * 100)}% complete)
-                  <Progress className="bg-danger" color="success" value={character.retirement.progress} max={1} />
+                  <Visibility restricted={character.restricted} visibility={perm.quest}>
+                    {character.quest.name} ({Math.round(character.retirement.progress * 100)}% complete)
+                    <Progress className="bg-danger" color="success" value={character.retirement.progress} max={1} />
+                  </Visibility>
                 </td>
               </tr>
             </tbody>

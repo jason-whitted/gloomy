@@ -1,4 +1,10 @@
-import { CLASS_CONFIG, GLOBAL_ACHIEVEMENT, ITEM_CONFIG, ITEM_TYPE } from '../../../../constants';
+import {
+  CLASS_CONFIG,
+  GLOBAL_ACHIEVEMENT,
+  ITEM_CONFIG,
+  ITEM_TYPE,
+  PERMISSION_RULE_CONFIG,
+} from '../../../../constants';
 
 const starterClasses = () =>
   Object.entries(CLASS_CONFIG).reduce((obj, [key, val]) => (!val.starter ? obj : { ...obj, [key]: true }), {});
@@ -18,12 +24,19 @@ const starterItems = () =>
     {},
   );
 
+const starterPermissions = () =>
+  Object.values(PERMISSION_RULE_CONFIG)
+    .map(r => r.default)
+    .join('');
+
 export default (campaign, { payload: { gist, history } }) => ({
   id: gist.id,
   name: gist.description,
   dt: gist.created_at,
   by: gist.owner.login,
   owner: gist.owner.login,
+  contributors: [],
+  permissions: starterPermissions(),
   history,
   achievements: { [GLOBAL_ACHIEVEMENT.CITY_RULE_MILITARISTIC]: 1 },
   characters: {},

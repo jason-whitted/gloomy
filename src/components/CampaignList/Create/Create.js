@@ -91,8 +91,8 @@ class Create extends Component {
         }
 
         if (character.bonusPerks) {
-          const { id, maxPerks } = build.characters[i];
-          charactersPatch[id] = maxPerks + character.bonusPerks;
+          const { id } = build.characters[i];
+          charactersPatch[id] = character.level - 1 + character.bonusPerks;
         }
 
         progress();

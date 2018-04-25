@@ -24,6 +24,7 @@ describe(ACTION.name, () => {
             characters: {},
             retired: {},
             parties: {},
+            owners: [],
             by: 'by',
             dt: 'dt',
           },

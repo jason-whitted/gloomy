@@ -5,9 +5,11 @@ import clone from 'clone';
 import { Convert } from '../../../common/Convert';
 import * as CONST from '../../../constants';
 import selectRawCampaign from './selectRawCampaign';
+import selectUser from '../../user/selectors/selectUser';
 
-export default createSelector(selectRawCampaign, raw => {
+export default createSelector(selectRawCampaign, selectUser, (raw, user) => {
   const campaign = clone(raw.data);
+  campaign.isOwner = campaign.owner === (user || {}).login;
   campaign.prosperityLevel = Convert.prosperityToProsperityLevel(campaign.prosperity);
 
   if (campaign.prosperityLevel >= 3) {
@@ -120,6 +122,7 @@ export default createSelector(selectRawCampaign, raw => {
     c.levelUp = Convert.xpToLevel(c.xp) > c.level;
     c.perkUp = c.maxPerks > c.perks.length;
     c.abilityUp = c.maxAbilities > c.abilityDeck.length;
+    c.restricted = !!c.player.owners.length && !c.player.owners.some(p => p.toLowerCase() === user.login.toLowerCase());
   });
   return campaign;
 });

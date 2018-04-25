@@ -4,15 +4,21 @@ import { ListGroup, ListGroupItem } from 'reactstrap';
 
 import { Flyout } from '../../Flyout';
 
-const CampaignNameFlyout = ({ campaign, onClick }) => {
-  if (!campaign.owner) return campaign.name;
+const CampaignNameFlyout = ({ campaign, onRenameClick, onContributorsClick, onPermissionsClick }) => {
+  if (!campaign.isOwner) return campaign.name;
 
   return (
     <Flyout text={campaign.name} className="campaign-name">
       <Flyout.Head>Actions</Flyout.Head>
       <ListGroup>
-        <ListGroupItem tag="button" action onClick={onClick}>
+        <ListGroupItem tag="button" action onClick={onRenameClick}>
           <i className="fa fa-fw fa-pencil" /> Rename&hellip;
+        </ListGroupItem>
+        <ListGroupItem tag="button" action onClick={onContributorsClick}>
+          Contributors&hellip;
+        </ListGroupItem>
+        <ListGroupItem tag="button" action onClick={onPermissionsClick}>
+          Permissions&hellip;
         </ListGroupItem>
       </ListGroup>
     </Flyout>
@@ -21,7 +27,9 @@ const CampaignNameFlyout = ({ campaign, onClick }) => {
 
 CampaignNameFlyout.propTypes = {
   campaign: PropTypes.object.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onRenameClick: PropTypes.func.isRequired,
+  onContributorsClick: PropTypes.func.isRequired,
+  onPermissionsClick: PropTypes.func.isRequired,
 };
 
 CampaignNameFlyout.defaultProps = {};

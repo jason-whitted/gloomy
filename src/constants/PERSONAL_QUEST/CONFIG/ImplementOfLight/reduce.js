@@ -1,7 +1,6 @@
 import { ACTION } from '../../../ACTION';
 import { ENEMY } from '../../../ENEMY';
 import { ITEM } from '../../../ITEM';
-import { SCENARIO } from '../../../SCENARIO';
 import manualQuestProgress from '../manualQuestProgress';
 
 const targetEnemies = [ENEMY.LIVING_BONES, ENEMY.LIVING_CORPSE, ENEMY.LIVING_SPIRIT];

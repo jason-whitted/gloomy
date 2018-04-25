@@ -40,7 +40,12 @@ class CampaignSheet extends Component {
                   <CampaignIcon />
                 </th>
                 <th className="bg-light p-2 w-100 w-50">
-                  <Flyout.CampaignNameFlyout campaign={campaign} onClick={this.show(Dialog.CampaignRenameDialog)} />
+                  <Flyout.CampaignNameFlyout
+                    campaign={campaign}
+                    onRenameClick={this.show(Dialog.CampaignRenameDialog)}
+                    onContributorsClick={this.show(Dialog.CampaignContributorsDialog)}
+                    onPermissionsClick={this.show(Dialog.CampaignPermissionsDialog)}
+                  />
                   <div className="float-sm-right small">
                     <Flyout.CampaignIDFlyout campaign={campaign} />
                   </div>
@@ -64,6 +69,10 @@ class CampaignSheet extends Component {
                 </td>
               </tr>
               <tr>
+                <td>Donations:</td>
+                <td>{campaign.donations}</td>
+              </tr>
+              <tr>
                 <td>
                   <Flyout.CampaignAchievementsFlyout
                     campaign={campaign}
@@ -79,10 +88,6 @@ class CampaignSheet extends Component {
                 <td>
                   <EnvelopeList envelopes={campaign.envelopes} />
                 </td>
-              </tr>
-              <tr>
-                <td>Donations:</td>
-                <td>{campaign.donations}</td>
               </tr>
             </tbody>
           </table>

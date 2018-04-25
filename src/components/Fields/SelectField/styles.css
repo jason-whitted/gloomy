@@ -2,3 +2,13 @@
   display: inline-block;
   width: auto;
 }
+
+.SelectField.form-inline label {
+  flex: 1 1 50%;
+  justify-content: flex-end;
+  padding-right: 1em;
+}
+
+.SelectField.form-inline .form-control {
+  flex: 1 1 50%;
+}

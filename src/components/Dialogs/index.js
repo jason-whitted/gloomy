@@ -1,8 +1,10 @@
 export * from './CampaignAddAchievementDialog';
+export * from './CampaignAddProsperityDialog';
+export * from './CampaignContributorsDialog';
 export * from './CampaignCreateCharacterDialog';
 export * from './CampaignCreatePartyDialog';
 export * from './CampaignCreatePlayerDialog';
-export * from './CampaignAddProsperityDialog';
+export * from './CampaignPermissionsDialog';
 export * from './CampaignRemoveAchievementDialog';
 export * from './CampaignRenameDialog';
 export * from './CampaignUnlockCityEventDialog';
@@ -39,4 +41,5 @@ export * from './PartySuggestedLevelDialog';
 export * from './PartyTravelToCampaignScenarioDialog';
 export * from './PartyTravelToCasualScenarioDialog';
 export * from './PartyTravelToGloomhavenDialog';
+export * from './PlayerOwnersDialog';
 export * from './PlayerRenameDialog';

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { UnexpectedError } from '../../components/UnexpectedError';
 import { Login } from '../../components/Login';
 import { MessageQueue } from '../../components/MessageQueue';
+import { Footer } from '../../components/Footer';
 import Routes from '../Routes.js';
 import logo from './logo.svg';
 import './styles.css';
@@ -44,6 +45,7 @@ class App extends Component {
             </div>
           )}
         </div>
+        <Footer />
       </div>
     );
   }

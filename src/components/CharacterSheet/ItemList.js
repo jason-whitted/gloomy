@@ -8,7 +8,7 @@ import { SellIcon, SlotIcon } from '../Icons';
 
 class ItemList extends Component {
   render() {
-    const { character, show, dialog: Dialog } = this.props;
+    const { readonly, character, show, dialog: Dialog } = this.props;
     const { items } = character;
 
     const CharacterSellItemDialog = item => props => <Dialog item={item} {...props} />;
@@ -29,9 +29,11 @@ class ItemList extends Component {
                 <ListGroupItem className="m-0 p-0 item-card">
                   <Item item={item} />
                 </ListGroupItem>
-                <ListGroupItem tag="button" action onClick={show(CharacterSellItemDialog(item))}>
-                  <SellIcon /> Sell Item&hellip;
-                </ListGroupItem>
+                {!readonly && (
+                  <ListGroupItem tag="button" action onClick={show(CharacterSellItemDialog(item))}>
+                    <SellIcon /> Sell Item&hellip;
+                  </ListGroupItem>
+                )}
               </ListGroup>
             </Flyout>
           </ListGroupItem>

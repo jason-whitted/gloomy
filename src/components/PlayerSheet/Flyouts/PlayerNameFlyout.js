@@ -4,20 +4,26 @@ import { ListGroup, ListGroupItem } from 'reactstrap';
 
 import { Flyout } from '../../Flyout';
 
-const PlayerNameFlyout = ({ player, onClick }) => (
+const PlayerNameFlyout = ({ campaign, player, onRenameClick, onOwnersClick }) => (
   <Flyout text={player.name} className="player-name">
     <Flyout.Head>Actions</Flyout.Head>
     <ListGroup>
-      <ListGroupItem tag="button" action onClick={onClick}>
+      <ListGroupItem tag="button" action onClick={onRenameClick}>
         <i className="fa fa-fw fa-id-card-o" /> Rename&hellip;
       </ListGroupItem>
+      {campaign.isOwner && (
+        <ListGroupItem tag="button" action onClick={onOwnersClick}>
+          Owners&hellip;
+        </ListGroupItem>
+      )}
     </ListGroup>
   </Flyout>
 );
 
 PlayerNameFlyout.propTypes = {
   player: PropTypes.object.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onRenameClick: PropTypes.func.isRequired,
+  onOwnersClick: PropTypes.func.isRequired,
 };
 
 PlayerNameFlyout.defaultProps = {};

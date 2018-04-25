@@ -4,8 +4,10 @@ import ID from '../ID';
 
 import CampaignAddAchievement from './CampaignAddAchievement';
 import CampaignAddProsperity from './CampaignAddProsperity';
+import CampaignContributors from './CampaignContributors';
 import CampaignCreate from './CampaignCreate';
 import CampaignPatch from './CampaignPatch';
+import CampaignPermissions from './CampaignPermissions';
 import CampaignUnlockClass from './CampaignUnlockClass';
 import CampaignUnlockCityEvent from './CampaignUnlockCityEvent';
 import CampaignUnlockRoadEvent from './CampaignUnlockRoadEvent';
@@ -40,13 +42,16 @@ import PartyRename from './PartyRename';
 import PartyTravelToGloomhaven from './PartyTravelToGloomhaven';
 import PartyTravelToScenario from './PartyTravelToScenario';
 import PlayerCreate from './PlayerCreate';
+import PlayerOwners from './PlayerOwners';
 import PlayerRename from './PlayerRename';
 
 const config = {
   [ID.CAMPAIGN_ADD_ACHIEVEMENT]: CampaignAddAchievement,
   [ID.CAMPAIGN_ADD_PROSPERITY]: CampaignAddProsperity,
+  [ID.CAMPAIGN_CONTRIBUTORS]: CampaignContributors,
   [ID.CAMPAIGN_CREATE]: CampaignCreate,
   [ID.CAMPAIGN_PATCH]: CampaignPatch,
+  [ID.CAMPAIGN_PERMISSIONS]: CampaignPermissions,
   [ID.CAMPAIGN_UNLOCK_CLASS]: CampaignUnlockClass,
   [ID.CAMPAIGN_UNLOCK_CITY_EVENT]: CampaignUnlockCityEvent,
   [ID.CAMPAIGN_UNLOCK_ROAD_EVENT]: CampaignUnlockRoadEvent,
@@ -81,6 +86,7 @@ const config = {
   [ID.PARTY_TRAVEL_TO_GLOOMHAVEN]: PartyTravelToGloomhaven,
   [ID.PARTY_TRAVEL_TO_SCENARIO]: PartyTravelToScenario,
   [ID.PLAYER_CREATE]: PlayerCreate,
+  [ID.PLAYER_OWNERS]: PlayerOwners,
   [ID.PLAYER_RENAME]: PlayerRename,
 };
 
@@ -90,6 +96,12 @@ Object.defineProperty(config, 'reduce', {
     const { reduce } = config[action.action] || {};
     if (!reduce) {
       console.warn(`Action not found: ${action.action}`);
+      return campaign;
+    }
+
+    const contributors = campaign.contributors || [];
+    if (action.by && contributors.length && !contributors.some(c => c.toLowerCase() === action.by.toLowerCase())) {
+      console.warn(`Action ${action.id}-${action.action} skipped because ${action.by} was not a contributor.`);
       return campaign;
     }
 

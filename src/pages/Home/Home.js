@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { version } from '../../../package.json';
 
 import { CampaignList } from '../../components/CampaignList';
 import { Cards } from '../../components/Cards';
@@ -35,14 +33,6 @@ class Home extends Component {
           </div>
           <div className="col-12 col-md-4">{authenticated && <Cards classes={campaign.classes} />}</div>
         </div>
-        <footer className="small text-center text-muted">
-          <div>
-            Version {version} (<Link to="/patches">Patch Notes</Link>)
-          </div>
-          <div>
-            Questions? Problems? Check out the FAQ on <a href="https://github.com/jason-whitted/gloomy">GitHub</a>.
-          </div>
-        </footer>
       </div>
     );
   }

@@ -16,11 +16,12 @@ const PartyScenarioFlyout = ({ mode, campaign, party, onSuggestedLevelClick, onF
       </span>
     );
 
-  if (gloomhaven) return 'Gloomhaven';
-  if (!scenario || !scenario.id) return 'Unknown';
-  if (location.campaign && scenario.complete) return scenario.name;
+  if (!gloomhaven) {
+    if (!scenario || !scenario.id) return 'Unknown';
+    if (location.campaign && scenario.complete) return scenario.name;
+  }
 
-  const name = region.unknown ? scenario.name : `${scenario.name}, ${region.name}`;
+  const name = gloomhaven ? 'Gloomhaven' : region.unknown ? scenario.name : `${scenario.name}, ${region.name}`;
   const prefix = mode !== 'party' ? 'Party: ' : '';
 
   return (
@@ -30,9 +31,11 @@ const PartyScenarioFlyout = ({ mode, campaign, party, onSuggestedLevelClick, onF
         <ListGroupItem tag="button" action onClick={onSuggestedLevelClick}>
           {prefix}Suggested Level&hellip;
         </ListGroupItem>
-        <ListGroupItem tag="button" action onClick={onFinishScenarioClick}>
-          <ScenarioIcon /> {prefix}Finish Scenario&hellip;
-        </ListGroupItem>
+        {!gloomhaven && (
+          <ListGroupItem tag="button" action onClick={onFinishScenarioClick}>
+            <ScenarioIcon /> {prefix}Finish Scenario&hellip;
+          </ListGroupItem>
+        )}
       </ListGroup>
     </Flyout>
   );

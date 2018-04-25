@@ -6,7 +6,6 @@ import { withRouter } from 'react-router-dom';
 
 import { Breadcrumb } from '../../components/Breadcrumb';
 import { PartySheet } from '../../components/PartySheet';
-
 import connectConfig from './connect';
 
 class PartyPage extends Component {

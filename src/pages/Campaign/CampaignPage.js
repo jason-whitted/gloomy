@@ -4,10 +4,10 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import connectConfig from './connect';
 import { Breadcrumb } from '../../components/Breadcrumb';
 import { CampaignSheet } from '../../components/CampaignSheet';
 import { HistoryList } from '../../components/HistoryList';
+import connectConfig from './connect';
 
 class Campaign extends Component {
   componentWillMount() {

@@ -1,13 +1,17 @@
 import * as CONST from '../constants';
 import { createTask, githubApi } from '../../../common';
-import { selectCampaign } from '../selectors';
+import { selectCampaign, selectIsContributor } from '../selectors';
 import { getCampaign } from './getCampaign';
 
 const task = createTask({ errorTitle: 'Unable to update campaign!' });
 
 export default ({ id: campaignID, action }) => (dispatch, getState) =>
   task(async () => {
-    const id = campaignID || selectCampaign(getState()).id;
+    const state = getState();
+    const id = campaignID || selectCampaign(state).id;
+
+    if (!selectIsContributor(state))
+      throw new Error('Access Denied! You do not have permission to contribute to this campaign.');
 
     await dispatch({ type: CONST.CAMPAIGN_APPEND_ACTION });
 

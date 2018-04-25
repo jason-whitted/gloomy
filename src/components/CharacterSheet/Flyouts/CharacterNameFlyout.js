@@ -5,8 +5,8 @@ import { ListGroup, ListGroupItem } from 'reactstrap';
 import { Flyout } from '../../Flyout';
 import { HiatusIcon, HundredIcon } from '../../Icons';
 
-const CharacterNameFlyout = ({ character, onRenameClick, onToggleHiatusClick, onRetireClick }) => {
-  if (character.retired) return <b>{character.name}</b>;
+const CharacterNameFlyout = ({ character, onRenameClick, onToggleHiatusClick, onRetireClick, readonly }) => {
+  if (readonly || character.retired) return <b>{character.name}</b>;
 
   const canRetire = character.party.location.gloomhaven && character.retirement.complete;
 
