@@ -11,6 +11,7 @@ export default (campaign, { payload: { name }, id, by, dt }) => ({
       achievements: [],
       // New party gets all available campaign items from the start
       items: { ...campaign.items },
+      notes: '',
       by,
       dt,
     },

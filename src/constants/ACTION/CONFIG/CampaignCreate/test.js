@@ -42,6 +42,7 @@ describe(ACTION.name, () => {
         prosperity: 0,
         roadEvents: events(),
         scenarios: {},
+        notes: '',
       };
       const action = ACTION.create({
         gist: { id: 1, description: 'Bob', created_at: 'dt', owner: { login: 'by' } },

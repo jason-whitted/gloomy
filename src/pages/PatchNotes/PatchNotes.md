@@ -1,3 +1,11 @@
+### Version 0.1.11
+
+* :star: Added notes to: Campaign, Player, Party
+  [#30](https://github.com/jason-whitted/gloomy/issues/30)
+
+* :bug: Fixed ability card 263
+  [#32](https://github.com/jason-whitted/gloomy/issues/32)
+
 ### Version 0.1.10
 
 * :star: Player Owners - limit who can update a player's character to specified Github users

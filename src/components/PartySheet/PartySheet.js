@@ -111,6 +111,14 @@ class PartySheet extends Component {
                   <TabbedCharacterList characters={campaign.characters.filter(p => p.party.id === party.id)} />
                 </td>
               </tr>
+              <tr>
+                <td>
+                  <Flyout.PartyNotesFlyout party={party} onClick={this.show(Dialog.PartyNotesDialog)} />:
+                </td>
+                <td>
+                  <small>{party.notes}</small>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>

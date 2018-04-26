@@ -132,6 +132,14 @@ class CampaignSheet extends Component {
                   <PlayerList players={campaign.players} />
                 </td>
               </tr>
+              <tr>
+                <td>
+                  <Flyout.CampaignNotesFlyout onClick={this.show(Dialog.CampaignNotesDialog)} />:
+                </td>
+                <td>
+                  <small>{campaign.notes}</small>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>

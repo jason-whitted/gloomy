@@ -28,6 +28,7 @@ describe(ACTION.name, () => {
             reputation: 0,
             achievements: [],
             items: { 1: 2, 2: 2, 3: 2 },
+            notes: '',
             by: 'by',
             dt: 'dt',
           },

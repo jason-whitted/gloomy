@@ -9,6 +9,7 @@ export default (campaign, { payload: { name }, id, by, dt }) => ({
       retired: {},
       parties: {},
       owners: [],
+      notes: '',
       by,
       dt,
     },

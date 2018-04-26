@@ -4,9 +4,7 @@ import { ListGroup, ListGroupItem } from 'reactstrap';
 
 import { Flyout } from '../../Flyout';
 
-const CharacterNotesFlyout = ({ readonly, character, onClick }) => {
-  if (readonly) return 'Notes';
-
+const PartyNotesFlyout = ({ party, onClick }) => {
   return (
     <Flyout text="Notes">
       <Flyout.Head>Actions</Flyout.Head>
@@ -19,14 +17,14 @@ const CharacterNotesFlyout = ({ readonly, character, onClick }) => {
   );
 };
 
-CharacterNotesFlyout.propTypes = {
-  character: PropTypes.object.isRequired,
+PartyNotesFlyout.propTypes = {
+  party: PropTypes.object.isRequired,
   onClick: PropTypes.func.isRequired,
   readonly: PropTypes.bool,
 };
 
-CharacterNotesFlyout.defaultProps = {
+PartyNotesFlyout.defaultProps = {
   readonly: false,
 };
 
-export default CharacterNotesFlyout;
+export default PartyNotesFlyout;

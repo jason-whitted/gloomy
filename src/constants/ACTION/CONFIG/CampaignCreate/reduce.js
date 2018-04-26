@@ -52,4 +52,5 @@ export default (campaign, { payload: { gist, history } }) => ({
   prosperity: 0,
   roadEvents: starterEventDeck(),
   scenarios: {},
+  notes: '',
 });

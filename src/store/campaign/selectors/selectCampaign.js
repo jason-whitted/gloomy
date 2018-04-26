@@ -73,6 +73,7 @@ export default createSelector(selectRawCampaign, selectUser, (raw, user) => {
     p.characters = Object.keys(p.characters).map(k => campaign.characters.find(c => c.id == k));
     p.retired = Object.keys(p.retired).map(k => campaign.characters.find(c => c.id == k));
     p.parties = Object.keys(p.parties).map(k => campaign.parties.find(cp => cp.id == k));
+    p.restricted = !!p.owners.length && !p.owners.some(p => p.toLowerCase() === user.login.toLowerCase());
   });
   campaign.parties.forEach(p => {
     p.url = `/campaign/${campaign.id}/party/${p.id}`;
@@ -122,7 +123,6 @@ export default createSelector(selectRawCampaign, selectUser, (raw, user) => {
     c.levelUp = Convert.xpToLevel(c.xp) > c.level;
     c.perkUp = c.maxPerks > c.perks.length;
     c.abilityUp = c.maxAbilities > c.abilityDeck.length;
-    c.restricted = !!c.player.owners.length && !c.player.owners.some(p => p.toLowerCase() === user.login.toLowerCase());
   });
   return campaign;
 });

@@ -98,9 +98,9 @@ export default {
           bonuses: [
             {
               action: ACTION.NOTE,
-              value: `Add +2 Attack (Symbol:Attack) and double the
-                      value of all Move abilities played
-                      during the remainder of this turn,(XP:1)`,
+              value: `Double the value of all your
+                      Move (Symbol:Move) abilities played during
+                      the remainder of this turn, (XP:1).`,
               style: { fontSize: '0.75em' },
             },
           ],
@@ -116,9 +116,9 @@ export default {
           bonuses: [
             {
               action: ACTION.NOTE,
-              value: `Add +2 Move (Symbol:Move) and double the
-                      value of all Move abilities played
-                      during the remainder of this turn,(XP:1)`,
+              value: `Double the value of all your
+                      Attack (Symbol:Attack) abilities played during
+                      the remainder of this turn, (XP:1).`,
               style: { fontSize: '0.75em' },
             },
           ],

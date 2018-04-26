@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import { PERMISSION_RULE } from '../../constants';
 import * as Dialog from '../Dialogs';
 import * as Flyout from './Flyouts';
 import { PlayerIcon } from '../Icons';
 import { CharacterList } from '../CharacterList';
+import { Visibility } from '../Visibility';
 import './styles.css';
 
 class PlayerSheet extends Component {
@@ -20,6 +22,10 @@ class PlayerSheet extends Component {
   render() {
     const { campaign, player } = this.props;
     const { dialog: DialogComponent } = this.state;
+
+    const perm = {
+      notes: campaign.permissions[PERMISSION_RULE.NON_OWNER_PLAYER_NOTES],
+    };
 
     return (
       <div className="PlayerSheet row">
@@ -62,6 +68,26 @@ class PlayerSheet extends Component {
                   </td>
                 </tr>
               )}
+            </tbody>
+          </table>
+        </div>
+        <div className="col-12 col-md-6">
+          <table className="table table-sm table-card">
+            <tbody>
+              <tr>
+                <td>
+                  <Flyout.PlayerNotesFlyout
+                    readonly={player.restricted}
+                    player={player}
+                    onClick={this.show(Dialog.PlayerNotesDialog)}
+                  />:
+                </td>
+                <td className="w-100">
+                  <Visibility restricted={player.restricted} visibility={perm.notes}>
+                    <small>{player.notes}</small>
+                  </Visibility>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>

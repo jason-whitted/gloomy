@@ -5,33 +5,25 @@ const mockGithub = entry => ({ ...entry, id: 1, dt: 'dt', by: 'by' });
 describe(ACTION.name, () => {
   describe('create', () => {
     it('should create a history entry', () => {
-      const expected = { action: ACTION.id, payload: { name: 'Bob' } };
-      const actual = ACTION.create({ name: 'Bob' });
+      const expected = { action: ACTION.id, payload: { player: 1, notes: 'Bob' } };
+      const actual = ACTION.create({ player: 1, notes: 'Bob' });
       expect(actual).toEqual(expected);
     });
   });
 
   describe('reduce', () => {
-    it('should create a player', () => {
+    it('should update the notes', () => {
       const campaign = {
-        players: {},
+        players: {
+          123: { notes: 'abc' },
+        },
       };
       const expected = {
         players: {
-          1: {
-            id: 1,
-            name: 'Bob',
-            characters: {},
-            retired: {},
-            parties: {},
-            owners: [],
-            notes: '',
-            by: 'by',
-            dt: 'dt',
-          },
+          123: { notes: 'def' },
         },
       };
-      const action = ACTION.create({ id: 4, name: 'Bob', by: 'by', dt: 'dt' });
+      const action = ACTION.create({ player: 123, notes: 'def' });
       const actual = ACTION.reduce(campaign, mockGithub(action));
       expect(actual).toEqual(expected);
     });

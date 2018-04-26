@@ -4,7 +4,7 @@ import { ListGroup, ListGroupItem } from 'reactstrap';
 
 import { Flyout } from '../../Flyout';
 
-const CharacterNotesFlyout = ({ readonly, character, onClick }) => {
+const CampaignNotesFlyout = ({ readonly, onClick }) => {
   if (readonly) return 'Notes';
 
   return (
@@ -19,14 +19,13 @@ const CharacterNotesFlyout = ({ readonly, character, onClick }) => {
   );
 };
 
-CharacterNotesFlyout.propTypes = {
-  character: PropTypes.object.isRequired,
+CampaignNotesFlyout.propTypes = {
   onClick: PropTypes.func.isRequired,
   readonly: PropTypes.bool,
 };
 
-CharacterNotesFlyout.defaultProps = {
+CampaignNotesFlyout.defaultProps = {
   readonly: false,
 };
 
-export default CharacterNotesFlyout;
+export default CampaignNotesFlyout;

@@ -6,6 +6,7 @@ import CampaignAddAchievement from './CampaignAddAchievement';
 import CampaignAddProsperity from './CampaignAddProsperity';
 import CampaignContributors from './CampaignContributors';
 import CampaignCreate from './CampaignCreate';
+import CampaignNotes from './CampaignNotes';
 import CampaignPatch from './CampaignPatch';
 import CampaignPermissions from './CampaignPermissions';
 import CampaignUnlockClass from './CampaignUnlockClass';
@@ -38,10 +39,12 @@ import PartyAddAchievement from './PartyAddAchievement';
 import PartyAddReputation from './PartyAddReputation';
 import PartyCreate from './PartyCreate';
 import PartyFinishScenario from './PartyFinishScenario';
+import PartyNotes from './PartyNotes';
 import PartyRename from './PartyRename';
 import PartyTravelToGloomhaven from './PartyTravelToGloomhaven';
 import PartyTravelToScenario from './PartyTravelToScenario';
 import PlayerCreate from './PlayerCreate';
+import PlayerNotes from './PlayerNotes';
 import PlayerOwners from './PlayerOwners';
 import PlayerRename from './PlayerRename';
 
@@ -50,6 +53,7 @@ const config = {
   [ID.CAMPAIGN_ADD_PROSPERITY]: CampaignAddProsperity,
   [ID.CAMPAIGN_CONTRIBUTORS]: CampaignContributors,
   [ID.CAMPAIGN_CREATE]: CampaignCreate,
+  [ID.CAMPAIGN_NOTES]: CampaignNotes,
   [ID.CAMPAIGN_PATCH]: CampaignPatch,
   [ID.CAMPAIGN_PERMISSIONS]: CampaignPermissions,
   [ID.CAMPAIGN_UNLOCK_CLASS]: CampaignUnlockClass,
@@ -82,10 +86,12 @@ const config = {
   [ID.PARTY_ADD_REPUTATION]: PartyAddReputation,
   [ID.PARTY_CREATE]: PartyCreate,
   [ID.PARTY_FINISH_SCENARIO]: PartyFinishScenario,
+  [ID.PARTY_NOTES]: PartyNotes,
   [ID.PARTY_RENAME]: PartyRename,
   [ID.PARTY_TRAVEL_TO_GLOOMHAVEN]: PartyTravelToGloomhaven,
   [ID.PARTY_TRAVEL_TO_SCENARIO]: PartyTravelToScenario,
   [ID.PLAYER_CREATE]: PlayerCreate,
+  [ID.PLAYER_NOTES]: PlayerNotes,
   [ID.PLAYER_OWNERS]: PlayerOwners,
   [ID.PLAYER_RENAME]: PlayerRename,
 };

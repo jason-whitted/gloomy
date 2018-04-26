@@ -9,10 +9,10 @@ import * as Flyout from './Flyouts';
 import * as PartyFlyout from '../PartySheet/Flyouts';
 import { ClassIcon, StarIcon } from '../Icons';
 import { CharacterList } from '../CharacterList';
+import { Visibility } from '../Visibility';
 import Checkmarks from './Checkmarks';
 import ItemList from './ItemList';
 import PerkList from './PerkList';
-import Visibility from './Visibility';
 import './styles.css';
 
 class CharacterSheet extends Component {
@@ -34,7 +34,7 @@ class CharacterSheet extends Component {
     const canDonate = character.donate && character.gold >= 10 && character.party.location.gloomhaven;
     const { casual, gloomhaven } = character.party.location;
 
-    const readonly = character.retired || character.hiatus || character.restricted;
+    const readonly = character.retired || character.hiatus || character.player.restricted;
     const canRetire = character.retirement.complete && !character.retired;
 
     const peers = character.party.characters.filter(c => c.id !== character.id && !c.hiatus);
@@ -150,7 +150,7 @@ class CharacterSheet extends Component {
                 </td>
                 <td>
                   {canDonate && <StarIcon title="Sanctuary donation available" />}
-                  <Visibility restricted={character.restricted} visibility={perm.gold}>
+                  <Visibility restricted={character.player.restricted} visibility={perm.gold}>
                     {character.gold}
                   </Visibility>
                 </td>
@@ -167,7 +167,7 @@ class CharacterSheet extends Component {
                   />:
                 </td>
                 <td>
-                  <Visibility restricted={character.restricted} visibility={perm.items}>
+                  <Visibility restricted={character.player.restricted} visibility={perm.items}>
                     <ItemList
                       readonly={readonly}
                       show={this.show}
@@ -210,7 +210,7 @@ class CharacterSheet extends Component {
                   />:
                 </td>
                 <td>
-                  <Visibility restricted={character.restricted} visibility={perm.notes}>
+                  <Visibility restricted={character.player.restricted} visibility={perm.notes}>
                     <small>{character.notes}</small>
                   </Visibility>
                 </td>
@@ -254,7 +254,7 @@ class CharacterSheet extends Component {
                   />:
                 </td>
                 <td>
-                  <Visibility restricted={character.restricted} visibility={perm.quest}>
+                  <Visibility restricted={character.player.restricted} visibility={perm.quest}>
                     {character.quest.name} ({Math.round(character.retirement.progress * 100)}% complete)
                     <Progress className="bg-danger" color="success" value={character.retirement.progress} max={1} />
                   </Visibility>

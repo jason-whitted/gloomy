@@ -7,18 +7,18 @@ import { ACTION, ACTION_CONFIG } from '../../../constants';
 import { TextAreaField } from '../../Fields';
 import formConfig from './form';
 
-class CharacterNotesDialog extends Component {
+class PartyNotesDialog extends Component {
   componentWillMount() {
-    const { notes } = this.props.character;
+    const { notes } = this.props.party;
     this.props.initialize({ notes });
   }
 
   submit = values => {
-    const { appendCampaignAction, character } = this.props;
+    const { appendCampaignAction, party } = this.props;
     const { notes } = values;
-    if (notes !== character.notes) {
-      const action = ACTION_CONFIG[ACTION.CHARACTER_NOTES].create({
-        character: character.id,
+    if (notes !== party.notes) {
+      const action = ACTION_CONFIG[ACTION.PARTY_NOTES].create({
+        party: party.id,
         notes,
       });
       appendCampaignAction({ action });
@@ -34,7 +34,7 @@ class CharacterNotesDialog extends Component {
     return (
       <Modal isOpen toggle={this.cancel}>
         <form onSubmit={handleSubmit(this.submit)}>
-          <ModalHeader toggle={this.cancel}>Character Notes</ModalHeader>
+          <ModalHeader toggle={this.cancel}>Party Notes</ModalHeader>
           <ModalBody>
             <TextAreaField name="notes" label="Notes:" autoFocus />
           </ModalBody>
@@ -49,9 +49,9 @@ class CharacterNotesDialog extends Component {
   }
 }
 
-CharacterNotesDialog.propTypes = {
+PartyNotesDialog.propTypes = {
   appendCampaignAction: PropTypes.func.isRequired,
-  character: PropTypes.object.isRequired,
+  party: PropTypes.object.isRequired,
   onClose: PropTypes.func.isRequired,
   // reduxForm
   handleSubmit: PropTypes.func.isRequired,
@@ -59,6 +59,6 @@ CharacterNotesDialog.propTypes = {
   submitting: PropTypes.bool.isRequired,
 };
 
-CharacterNotesDialog.defaultProps = {};
+PartyNotesDialog.defaultProps = {};
 
-export default reduxForm(formConfig)(CharacterNotesDialog);
+export default reduxForm(formConfig)(PartyNotesDialog);
