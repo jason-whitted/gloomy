@@ -31,7 +31,7 @@ class CharacterAddXPDialog extends Component {
         <form onSubmit={handleSubmit(this.submit)}>
           <ModalHeader toggle={this.cancel}>Add XP</ModalHeader>
           <ModalBody>
-            <TextField name="xp" label="Amount:" type="number" min="0" max="500" autoFocus />
+            <TextField name="xp" label="Amount:" type="number" min="-500" max="500" autoFocus />
           </ModalBody>
           <ModalFooter>
             <Button color="success" disabled={submitting}>

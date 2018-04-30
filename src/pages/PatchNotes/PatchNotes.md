@@ -3,6 +3,9 @@
 * :bug: Update scenario requirements to support multiple global achievements
   [#35](https://github.com/jason-whitted/gloomy/issues/35)
 
+* :bug: Update XP dialog to support negative values
+  [#37](https://github.com/jason-whitted/gloomy/issues/37)
+
 ### Version 0.1.11
 
 * :star: Added notes to: Campaign, Player, Party
