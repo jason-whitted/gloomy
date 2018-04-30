@@ -1013,8 +1013,9 @@ export default {
     requirements: [
       {
         type: SCENARIO_REQUIREMENT.GLOBAL_ACHIEVEMENT,
-        achievement: GLOBAL_ACHIEVEMENT.CITY_RULE_DEMONIC,
+        achievement: GLOBAL_ACHIEVEMENT.END_OF_CORRUPTION,
         complete: true,
+        min: 3,
       },
     ],
     goals: [{ type: GOAL.KILL_ENEMY, enemy: ENEMY.GLOOM }],

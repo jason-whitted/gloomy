@@ -27,8 +27,10 @@ export default createSelector(selectRawCampaign, selectUser, (raw, user) => {
 
   campaign.achievements = Object.entries(campaign.achievements).map(([key, value]) => {
     const a = clone(CONST.GLOBAL_ACHIEVEMENT_CONFIG[key]);
-    if (a.id === CONST.GLOBAL_ACHIEVEMENT.ANCIENT_TECHNOLOGY) {
+    a.count = 1;
+    if (a.id === CONST.GLOBAL_ACHIEVEMENT.ANCIENT_TECHNOLOGY || a.id === CONST.GLOBAL_ACHIEVEMENT.END_OF_CORRUPTION) {
       a.name += ` (x${value})`;
+      a.count = value;
     }
     return a;
   });

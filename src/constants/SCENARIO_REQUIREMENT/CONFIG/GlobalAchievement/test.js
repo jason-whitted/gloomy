@@ -2,7 +2,7 @@ import config from './';
 
 describe('ScenarioRequirement: GlobalAchievement', () => {
   const eligibility = {
-    campaign: { achievements: [{ id: 1 }] },
+    campaign: { achievements: [{ id: 1, count: 1 }] },
     party: {},
     scenario: {},
     eligible: true,
@@ -13,6 +13,13 @@ describe('ScenarioRequirement: GlobalAchievement', () => {
       { type: config.id, achievement: 1, complete: true },
       { type: config.id, achievement: 2, complete: false },
     ];
+    const eligible = requirements.reduce(config.reduce, eligibility).eligible;
+    expect(eligible).toBe(true);
+  });
+
+  it('should check min condition', () => {
+    eligibility.campaign.achievements[0].count = 2;
+    const requirements = [{ type: config.id, achievement: 1, complete: true, min: 2 }];
     const eligible = requirements.reduce(config.reduce, eligibility).eligible;
     expect(eligible).toBe(true);
   });

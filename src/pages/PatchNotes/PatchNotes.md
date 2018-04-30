@@ -1,3 +1,8 @@
+### Version 0.1.12
+
+* :bug: Update scenario requirements to support multiple global achievements
+  [#35](https://github.com/jason-whitted/gloomy/issues/35)
+
 ### Version 0.1.11
 
 * :star: Added notes to: Campaign, Player, Party
@@ -11,22 +16,19 @@
 * :star: Player Owners - limit who can update a player's character to specified Github users
   * Access `Owners...` via the player name flyout on the player's page
 
-
-* :star: Permissions - Hide gold, items, quest, or notes from player's who do not own the character
+- :star: Permissions - Hide gold, items, quest, or notes from player's who do not own the character
   * Access `Permissions...` via campaign name flyout on the campaign page
-
 
 * :star: Campaign Contributors - limit updates to your campaign to specified Github users
   * Access `Contributors...` via the campaign name flyout on the campaign page
 
-
-* :bug: Suggested Level updated to ceil instead of round
+- :bug: Suggested Level updated to ceil instead of round
   [#29](https://github.com/jason-whitted/gloomy/issues/29)
 
-* :bug: Allow Suggested Level access while in Gloomhaven
+- :bug: Allow Suggested Level access while in Gloomhaven
   [#28](https://github.com/jason-whitted/gloomy/issues/28)
 
-* :bug: Camapaign Builder: Bonus perks with retired characters were miscalculated
+- :bug: Camapaign Builder: Bonus perks with retired characters were miscalculated
   [#27](https://github.com/jason-whitted/gloomy/issues/27)
 
 ### Version 0.1.9
