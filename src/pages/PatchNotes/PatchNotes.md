@@ -1,3 +1,11 @@
+### Version 0.1.13
+
+* :bug: Updated Ability 457
+  [#38](https://github.com/jason-whitted/gloomy/issues/38)
+
+* :bug: Campaign Builder: Solo Scenario items were not properly unlocked
+  [#35](https://github.com/jason-whitted/gloomy/issues/35)
+
 ### Version 0.1.12
 
 * :bug: Update scenario requirements to support multiple global achievements

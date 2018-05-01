@@ -5,7 +5,7 @@ import { reduxForm } from 'redux-form';
 import { Alert, Progress } from 'reactstrap';
 import LZUTF8 from 'lzutf8';
 
-import { ACTION, ACTION_CONFIG, ITEM_CONFIG } from '../../../constants';
+import { ACTION, ACTION_CONFIG, CLASS, ITEM_CONFIG, SCENARIO_CONFIG, SCENARIO_STATUS } from '../../../constants';
 import { TextField, TextAreaField } from '../../Fields';
 import formConfig from './form';
 
@@ -102,7 +102,18 @@ class Create extends Component {
       this.setState({ step: 'Wrapping Up' });
       {
         const { cityEvents, roadEvents, scenarios, envelopes, donations } = build;
-        const items = build.items.reduce((obj, id) => ({ ...obj, [id]: ITEM_CONFIG[id].count }), {});
+        let items = build.items.reduce((obj, id) => ({ ...obj, [id]: ITEM_CONFIG[id].count }), {});
+        // solo items
+        items = Object.values(CLASS).reduce((obj, c) => {
+          if (scenarios[c] === SCENARIO_STATUS.COMPLETE) {
+            const { item } = SCENARIO_CONFIG[c].rewards[0];
+            return {
+              ...obj,
+              [item]: ITEM_CONFIG[item].count,
+            };
+          }
+          return obj;
+        }, items);
         const action = ACTION_CONFIG[ACTION.CAMPAIGN_PATCH].create({
           updates: [
             {

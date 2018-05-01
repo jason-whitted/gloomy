@@ -328,14 +328,7 @@ export default {
       consumed: true,
     },
     bottom: {
-      actions: [
-        {
-          action: ACTION.MOVE,
-          value: 3,
-          augments: [3],
-          bonuses: [{ action: ACTION.JUMP }],
-        },
-      ],
+      actions: [{ action: ACTION.COMMAND, class: CLASS.BEAST_TYRANT }, { action: ACTION.LOOT, value: 1 }],
     },
   },
   458: {
