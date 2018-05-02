@@ -1,3 +1,8 @@
+### Version 0.1.14
+
+* :bug: Updated Ability 206
+  [#40](https://github.com/jason-whitted/gloomy/issues/40)
+
 ### Version 0.1.13
 
 * :bug: Updated Ability 457

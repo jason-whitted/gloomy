@@ -33,7 +33,7 @@ export default {
     class: CLASS.QUARTERMASTER,
     name: 'Oversized Pack',
     level: 1,
-    initiative: 206,
+    initiative: 81,
     top: {
       actions: [{ action: ACTION.LOOT, value: 2 }],
     },
