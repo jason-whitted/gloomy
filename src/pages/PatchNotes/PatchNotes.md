@@ -1,3 +1,11 @@
+### Version 0.1.15
+
+* :bug: Fixed Scenario 22 rewards
+  [#42](https://github.com/jason-whitted/gloomy/issues/42)
+
+* :bug: Fix Triforce perk
+  [#41](https://github.com/jason-whitted/gloomy/issues/41)
+
 ### Version 0.1.14
 
 * :bug: Updated Ability 206

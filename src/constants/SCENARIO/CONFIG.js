@@ -382,7 +382,7 @@ export default {
     goals: [{ type: GOAL.KILL_ENEMY, enemy: ENEMY.PRIME_DEMON }],
     effects: [],
     rewards: [
-      { type: REWARD.GLOBAL_ACHIEVEMENT, achievement: ID.THE_RIFT_NEUTRALIZED },
+      { type: REWARD.GLOBAL_ACHIEVEMENT, achievement: GLOBAL_ACHIEVEMENT.THE_RIFT_NEUTRALIZED },
       {
         type: REWARD.CONDITIONAL_GLOBAL_ACHIEVEMENT,
         condition: {

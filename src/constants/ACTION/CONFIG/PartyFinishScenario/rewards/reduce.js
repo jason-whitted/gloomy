@@ -4,6 +4,7 @@ import { Checkmarks } from './Checkmarks';
 import { CityEvent } from './CityEvent';
 import { Class } from './Class';
 import { CollectiveGold } from './CollectiveGold';
+import { ConditionalGlobalAchievement } from './ConditionalGlobalAchievement';
 import { Envelope } from './Envelope';
 import { GlobalAchievement } from './GlobalAchievement';
 import { Gold } from './Gold';
@@ -37,6 +38,8 @@ const reduceScenarioReward = (campaign, config) => {
       return Class(campaign, { payload: { class: reward.class } });
     case REWARD.COLLECTIVE_GOLD:
       return CollectiveGold(campaign, { characters: rewards[REWARD.COLLECTIVE_GOLD] });
+    case REWARD.CONDITIONAL_GLOBAL_ACHIEVEMENT:
+      return ConditionalGlobalAchievement(campaign, { condition: reward.condition, achievement: reward.achievement });
     case REWARD.EITHER:
       return reward[rewards[REWARD.EITHER]].reduce(
         (c, reward) => reduceScenarioReward(c, { ...config, reward }),
