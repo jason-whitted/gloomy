@@ -1,10 +1,9 @@
 import { ACTION } from '../../../ACTION';
-import { REGION } from '../../../REGION';
 import { SCENARIO, SCENARIO_CONFIG } from '../../../SCENARIO';
 import manualQuestProgress from '../manualQuestProgress';
 
 const cryptScenarios = Object.values(SCENARIO_CONFIG)
-  .filter(s => s.region === REGION.CRYPT)
+  .filter(s => s.crypt)
   .map(s => s.id);
 
 export default campaign => (character, action) => {

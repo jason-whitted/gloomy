@@ -1,3 +1,11 @@
+### Version 0.1.16
+
+* :bug: Changed crypt scenario region classification
+  [#44](https://github.com/jason-whitted/gloomy/issues/44)
+
+* :bug: Fixed Ability 71 agument
+  [#43](https://github.com/jason-whitted/gloomy/issues/43)
+
 ### Version 0.1.15
 
 * :bug: Fixed Scenario 22 rewards

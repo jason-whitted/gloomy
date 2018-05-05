@@ -201,8 +201,8 @@ export default {
     name: 'Mystic Ally',
     hp: { value: 2, augments: [3] },
     move: { value: 2, augments: [4] },
-    attack: { value: 3, augments: [5] },
-    range: { value: 2 },
+    attack: { value: 3 },
+    range: { value: 2, augments: [5] },
   },
   [ID.NAIL_SPHERES]: {
     id: ID.NAIL_SPHERES,

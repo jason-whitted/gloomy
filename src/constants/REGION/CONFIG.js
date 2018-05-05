@@ -8,5 +8,4 @@ export default {
   [ID.WATCHER_MOUNTAINS]: { id: ID.WATCHER_MOUNTAINS, name: 'Watcher Mountains' },
   [ID.COPPERNECK_MOUNTAINS]: { id: ID.COPPERNECK_MOUNTAINS, name: 'Copperneck Mountains' },
   [ID.MISTY_SEA]: { id: ID.MISTY_SEA, name: 'Misty Sea' },
-  [ID.CRYPT]: { id: ID.CRYPT, name: 'Crypt' },
 };

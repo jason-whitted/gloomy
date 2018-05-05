@@ -38,10 +38,10 @@ class PlayerOwnersDialog extends Component {
 
   submit = values => {
     const { appendCampaignAction, player } = this.props;
-    const { owners } = values;
+    const owners = values.owners.slice(0, values.ownerCount);
     const action = ACTION_CONFIG[ACTION.PLAYER_OWNERS].create({
       player: player.id,
-      owners: owners.length ? owners : undefined,
+      owners,
     });
     appendCampaignAction({ action });
     this.props.onClose();
@@ -70,7 +70,7 @@ class PlayerOwnersDialog extends Component {
                 No owners are specified. All contributors can update this player's characters.
               </Alert>
             )}
-            <TextField name="ownerCount" label="# of Owners:" type="number" min="1" autoFocus />
+            <TextField name="ownerCount" label="# of Owners:" type="number" min="0" autoFocus />
             {Array(ownerCount)
               .fill(0)
               .map((_, i) => <TextField key={i} name={`owners[${i}]`} label="Owner:" required />)}

@@ -6,5 +6,4 @@ export default {
   WATCHER_MOUNTAINS: 'WM',
   COPPERNECK_MOUNTAINS: 'CM',
   MISTY_SEA: 'MS',
-  CRYPT: 'CR',
 };
