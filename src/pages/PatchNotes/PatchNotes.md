@@ -1,3 +1,8 @@
+### Version 0.1.17
+
+* :bug: Fixed augment costs for bonuses
+  [#45](https://github.com/jason-whitted/gloomy/issues/45)
+
 ### Version 0.1.16
 
 * :bug: Changed crypt scenario region classification

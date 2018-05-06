@@ -19,7 +19,7 @@ const abilityAugmentCost = ({ ability, augments = {}, slotID, augmentID }) => {
         match = a.augments && a.augments.includes(slotID);
         if (match) return a;
         match = a.bonuses && findActionWithAugmentSlot(a.bonuses);
-        if (match) return a;
+        if (match) return match;
         const summon = a.action === ABILITY_CARD_ACTION.SUMMON && SUMMON_CONFIG[a.summon];
         match = summon && summon.hp.augments && summon.hp.augments.includes(slotID);
         if (match) return { ...summon.hp, summonAction: 'hp' };
@@ -38,6 +38,7 @@ const abilityAugmentCost = ({ ability, augments = {}, slotID, augmentID }) => {
   const augment = AUGMENT_CONFIG[augmentID];
 
   const base = augment.cost || AUGMENT_COST.PLUS1[action.action] || 0;
+  console.log({ ability, augments, slotID, augmentID, action, slot, augment, base });
   const double = slot.multiple ? base : 0;
   const summon = AUGMENT_COST.SUMMON[action.summonAction] || 0;
   const level = AUGMENT_COST.LEVEL[ability.level] || 0;
