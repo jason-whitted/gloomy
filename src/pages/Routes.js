@@ -13,6 +13,8 @@ export default () => (
     <Route exact path="/campaign/:campaignID/party/:partyID" component={Page.Party} />
     <Route exact path="/campaign/:campaignID/player/:playerID" component={Page.Player} />
     <Route exact path="/builder" component={Page.Builder} />
+    <Route exact path="/scenario/:scenario" component={Page.ScenarioMap} />
+    <Route exact path="/scene/builder" component={Page.SceneBuilder} />
     <Route component={Page.NotFound} />
   </Switch>
 );

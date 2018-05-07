@@ -10,6 +10,7 @@ export * from './ENVELOPE';
 export * from './GLOBAL_ACHIEVEMENT';
 export * from './HEALTH_POOL';
 export * from './ITEM';
+export * from './MONSTER';
 export * from './PARTY_ACHIEVEMENT';
 export * from './PERK';
 export * from './PERMISSION';
@@ -21,6 +22,8 @@ export * from './SCENARIO_REQUIREMENT';
 export * from './SLOT';
 export * from './SUMMON';
 export * from './SYMBOL';
+export * from './TILE';
+export * from './TOKEN';
 
 export const GIST_CAMPAIGN = {
   FILENAME: 'gloomy.campaign.js',

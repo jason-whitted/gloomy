@@ -1,0 +1,20 @@
+.SceneBuilder svg .tile.active {
+}
+
+.SceneBuilder svg .tile.inactive {
+  opacity: 0.85;
+}
+
+.SceneBuilder svg .token.active {
+}
+
+.SceneBuilder svg .token.inactive {
+  opacity: 0.85;
+}
+
+.SceneBuilder svg .monster.active {
+}
+
+.SceneBuilder svg .monster.inactive {
+  opacity: 0.85;
+}

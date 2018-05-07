@@ -8,3 +8,5 @@ export { NotFound } from './NotFound';
 export { Party } from './Party';
 export { PatchNotes } from './PatchNotes';
 export { Player } from './Player';
+export { ScenarioMap } from './ScenarioMap';
+export { SceneBuilder } from './SceneBuilder';

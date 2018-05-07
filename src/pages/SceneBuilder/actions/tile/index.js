@@ -1,0 +1,9 @@
+export { default as addTile } from './addTile';
+export { default as changeTile } from './changeTile';
+export { default as deleteTile } from './deleteTile';
+export { default as moveTileDown } from './moveTileDown';
+export { default as moveTileToBottom } from './moveTileToBottom';
+export { default as moveTileToTop } from './moveTileToTop';
+export { default as moveTileUp } from './moveTileUp';
+export { default as rotateTile } from './rotateTile';
+export { default as translateTile } from './translateTile';
