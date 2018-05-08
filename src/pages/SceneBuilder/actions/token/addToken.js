@@ -7,7 +7,7 @@ export default (scene, { tileIndex, token = 'Altar' } = {}) => {
 
   tiles[tileIndex] = {
     ...tile,
-    tokens: [...tokens, { token }],
+    tokens: [...tokens, typeof token === 'string' ? { token } : token],
   };
 
   return {

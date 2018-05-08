@@ -50,6 +50,8 @@ export default scene => {
 
   return {
     ...scene,
-    viewBox: `${bounds.left} ${bounds.top} ${bounds.width} ${bounds.height}`,
+    viewBox: `${Math.round(bounds.left)} ${Math.round(bounds.top)} ${Math.round(bounds.width)} ${Math.round(
+      bounds.height,
+    )}`,
   };
 };

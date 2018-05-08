@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ButtonGroup, Button } from 'reactstrap';
 
+import { MONSTER_CONFIG, TILE_CONFIG, TOKEN_CONFIG } from '../../constants';
 import * as Action from './actions';
 import { Scene } from '../../components/Scene';
 import './styles.css';
@@ -60,6 +61,14 @@ class SceneBuilderPage extends Component {
 
     const power = Math.pow(10, +shiftKey + +ctrlKey + +altKey);
     switch (code) {
+      case 'KeyC':
+        if (token && ctrlKey) this.clipboard = { token: { ...token } };
+        else if (monster && ctrlKey) this.clipboard = { monster: { ...monster } };
+        break;
+      case 'KeyV':
+        if (this.clipboard && this.clipboard.token && ctrlKey) this.action(Action.addToken, this.clipboard);
+        else if (this.clipboard && this.clipboard.monster && ctrlKey) this.action(Action.addMonster, this.clipboard);
+        break;
       case 'ArrowUp':
         if (token) this.action(Action.translateToken, { y: -1 * power });
         else if (monster) this.action(Action.translateMonster, { y: -1 * power });
@@ -163,7 +172,10 @@ class SceneBuilderPage extends Component {
     if (token) this.action(Action.changeToken, { ...this.state, token });
   };
   changeMonster = () => {
-    const monster = prompt('Monster?', this.curMonster().monster);
+    let monster = this.curMonster().monster;
+    do {
+      monster = prompt('Monster?', monster);
+    } while (monster && !MONSTER_CONFIG[monster]);
     if (monster) this.action(Action.changeMonster, { ...this.state, monster });
   };
 

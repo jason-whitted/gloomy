@@ -29,8 +29,14 @@ class Tile extends Component {
     const scale = config.scale || tile.scale || 1;
 
     return (
-      <g className={className} transform={transform({ ...config, scale })}>
-        <image xlinkHref={tile.image} width={tile.w} onClick={this.click} onDoubleClick={this.doubleClick} />
+      <g className={className}>
+        <image
+          xlinkHref={tile.image}
+          width={tile.w}
+          onClick={this.click}
+          onDoubleClick={this.doubleClick}
+          transform={transform({ ...config, scale })}
+        />
         {config.tokens && config.tokens.map((token, i) => <Token key={i} {...this.props} token={token} />)}
         {config.monsters && config.monsters.map((monster, i) => <Monster key={i} {...this.props} monster={monster} />)}
       </g>

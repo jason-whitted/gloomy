@@ -7,7 +7,7 @@ export default (scene, { tileIndex, monster = 'AncientArtilleryV' } = {}) => {
 
   tiles[tileIndex] = {
     ...tile,
-    monsters: [...monsters, { monster }],
+    monsters: [...monsters, typeof monster === 'string' ? { monster } : monster],
   };
 
   return {
