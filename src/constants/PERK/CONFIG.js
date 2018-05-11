@@ -418,4 +418,9 @@ export default {
     name: 'Replace two (Attack:+1) with two (Attack:+2)',
     apply: deck => [...remove(deck)(CARD.POS1, CARD.POS1), CARD.POS2, CARD.POS2],
   },
+  [ID.REPLACE2_POS0_WITH2_POS1]: {
+    id: ID.REPLACE2_POS0_WITH2_POS1,
+    name: 'Replace two (Attack:+0) with two (Attack:+1)',
+    apply: deck => [...remove(deck)(CARD.POS0, CARD.POS0), CARD.POS1, CARD.POS1],
+  },
 };

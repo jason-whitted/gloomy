@@ -1,3 +1,8 @@
+### Version 0.1.19
+
+* :bug: Fixed Angry Face class perk (again)
+  [#46](https://github.com/jason-whitted/gloomy/issues/46)
+
 ### Version 0.1.18
 
 * :bug: Fixed Angry Face class perk
