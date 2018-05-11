@@ -7,6 +7,7 @@ import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 import clone from 'clone';
 
 import { AUGMENT, ACTION, ACTION_CONFIG } from '../../../constants';
+import { Convert } from '../../../common';
 import { SelectField } from '../../Fields';
 import { AbilityCard } from '../../AbilityCard';
 
@@ -18,18 +19,22 @@ class CharacterAddAbilityDialog extends Component {
   state = { abilities: [] };
 
   componentWillMount() {
-    const { character } = this.props;
+    const { campaign, character } = this.props;
 
-    const abilities = character.abilityDeck.reduce((arr, ability) => {
+    const augmentableAbilities = character.abilityDeck.reduce((arr, ability) => {
       if (!ability.augmentSlots) return arr;
-      const a = clone(ability);
-      const augs = Object.values(a.augmentSlots)
-        .filter(aug => !aug.readonly && aug.type === AUGMENT.AVAILABLE)
-        .map(aug => aug.id);
-      if (!augs.length) return arr;
-      return [...arr, { ...a, augs }];
+      const slots = Object.values(ability.augmentSlots).filter(a => !a.readonly);
+      const augmented = slots.some(a => a.type !== AUGMENT.AVAILABLE);
+      const augmentedFully = slots.every(a => a.type !== AUGMENT.AVAILABLE);
+      const augs = slots.filter(a => a.type === AUGMENT.AVAILABLE).map(a => a.id);
+      return [...arr, { ...clone(ability), augmented, augmentedFully, augs }];
     }, []);
-    this.setState({ abilities });
+    const prosperity = Convert.prosperityToProsperityLevel(campaign.prosperity);
+    const augmentedCount = augmentableAbilities.filter(c => c.augmented).length;
+    const abilities = augmentableAbilities.filter(c => !c.augmentedFully);
+    this.setState({
+      abilities: augmentedCount < prosperity ? abilities : abilities.filter(c => c.augmented),
+    });
   }
 
   submit = values => {
@@ -85,6 +90,7 @@ class CharacterAddAbilityDialog extends Component {
 
 CharacterAddAbilityDialog.propTypes = {
   appendCampaignAction: PropTypes.func.isRequired,
+  campaign: PropTypes.object.isRequired,
   character: PropTypes.object.isRequired,
   onClose: PropTypes.func.isRequired,
   // connect

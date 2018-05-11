@@ -1952,7 +1952,7 @@ export default {
     when: { type: WHEN.TURN },
     what: [{ type: WHAT.YOU_OR_ALLY_REFRESH_1_SPENT_OR_CONSUMED_ITEM }],
     after: AFTER.CONSUMED,
-    slot: SLOT.NONE,
+    slot: SLOT.SMALL_ITEM,
     type: TYPE.SOLO_SCENARIO,
   },
   [ID.PHASING_IDOL]: {

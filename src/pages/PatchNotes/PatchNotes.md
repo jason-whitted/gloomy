@@ -1,3 +1,14 @@
+### Version 0.1.18
+
+* :bug: Fixed Angry Face class perk
+  [#46](https://github.com/jason-whitted/gloomy/issues/46)
+
+* :bug: Allow adding *additional* augments to a card when at the prosperity level cap
+  [#48](https://github.com/jason-whitted/gloomy/issues/48)
+
+* :bug: Fixed solo scenario for Spear class
+  [#50](https://github.com/jason-whitted/gloomy/issues/50)
+
 ### Version 0.1.17
 
 * :bug: Fixed augment costs for bonuses
@@ -8,7 +19,7 @@
 * :bug: Changed crypt scenario region classification
   [#44](https://github.com/jason-whitted/gloomy/issues/44)
 
-* :bug: Fixed Ability 71 agument
+* :bug: Fixed Ability 71 augument
   [#43](https://github.com/jason-whitted/gloomy/issues/43)
 
 ### Version 0.1.15
@@ -16,7 +27,7 @@
 * :bug: Fixed Scenario 22 rewards
   [#42](https://github.com/jason-whitted/gloomy/issues/42)
 
-* :bug: Fix Triforce perk
+* :bug: Fixed Triforce perk
   [#41](https://github.com/jason-whitted/gloomy/issues/41)
 
 ### Version 0.1.14
