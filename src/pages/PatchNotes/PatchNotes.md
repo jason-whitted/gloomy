@@ -1,3 +1,8 @@
+### Version 0.1.20
+
+* :bug: Fixed prosperity items sometimes not be unlocked
+  [#47](https://github.com/jason-whitted/gloomy/issues/47)
+
 ### Version 0.1.19
 
 * :bug: Fixed Angry Face class perk (again)

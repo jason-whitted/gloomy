@@ -38,7 +38,6 @@ const abilityAugmentCost = ({ ability, augments = {}, slotID, augmentID }) => {
   const augment = AUGMENT_CONFIG[augmentID];
 
   const base = augment.cost || AUGMENT_COST.PLUS1[action.action] || 0;
-  console.log({ ability, augments, slotID, augmentID, action, slot, augment, base });
   const double = slot.multiple ? base : 0;
   const summon = AUGMENT_COST.SUMMON[action.summonAction] || 0;
   const level = AUGMENT_COST.LEVEL[ability.level] || 0;

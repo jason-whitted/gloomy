@@ -58,7 +58,10 @@ describe(ACTION.name, () => {
     it('should give Envelope B bonus prosperity', () => {
       const campaign = {
         characters: {
-          123: { gold: 22, attackDeck: [], donate: true },
+          123: { party: 321, gold: 22, attackDeck: [], donate: true },
+        },
+        parties: {
+          321: {},
         },
         donations: 14,
         prosperity: 8,
@@ -66,7 +69,16 @@ describe(ACTION.name, () => {
       };
       const expected = {
         characters: {
-          123: { gold: 12, attackDeck: [ATTACK_MODIFIER_CARD.BLESS, ATTACK_MODIFIER_CARD.BLESS], donate: false },
+          123: {
+            party: 321,
+            gold: 12,
+            attackDeck: [ATTACK_MODIFIER_CARD.BLESS, ATTACK_MODIFIER_CARD.BLESS],
+            donate: false,
+          },
+        },
+        items: { 22: 2, 23: 2, 24: 2, 25: 2, 26: 2, 27: 4, 28: 2 },
+        parties: {
+          321: { items: { 22: 2, 23: 2, 24: 2, 25: 2, 26: 2, 27: 4, 28: 2 } },
         },
         donations: 15,
         prosperity: 9,
