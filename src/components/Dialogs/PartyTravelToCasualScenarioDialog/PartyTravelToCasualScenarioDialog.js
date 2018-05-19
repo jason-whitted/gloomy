@@ -36,7 +36,7 @@ class PartyTravelToCasualScenarioDialog extends Component {
           <ModalBody>
             <SelectField name="scenario" label="Scenario:" autoFocus>
               <option />
-              {campaign.scenarios.map(s => (
+              {campaign.scenarios.filter(s => !s.solo).map(s => (
                 <option key={s.id} value={s.id}>
                   {s.id} - {s.name}
                   {!s.region.unknown && `, ${s.region.name}`}

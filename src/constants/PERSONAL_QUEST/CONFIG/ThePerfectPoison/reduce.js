@@ -13,7 +13,7 @@ export default campaign => (character, action) => {
         oozes = Math.min(oozes + count, 3);
       } else if (enemy === ENEMY.LURKER) {
         lurkers = Math.min(lurkers + count, 3);
-      } else if ([ENEMY.RENDING_DRAKE, ENEMY.SPITTING_DRAKE, ENEMY.ELDER_DRAKE].includes(enemy)) {
+      } else if (enemy === ENEMY.SPITTING_DRAKE) {
         drakes = Math.min(drakes + count, 3);
       } else return character;
 

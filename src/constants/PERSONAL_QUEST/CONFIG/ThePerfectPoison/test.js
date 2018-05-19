@@ -33,9 +33,7 @@ describe('PQ:AberrantSlayer', () => {
     const result = reduce(
       killEnemy({ enemy: ENEMY.OOZE, count: 3 }),
       killEnemy({ enemy: ENEMY.LURKER, count: 3 }),
-      killEnemy({ enemy: ENEMY.RENDING_DRAKE, count: 1 }),
-      killEnemy({ enemy: ENEMY.SPITTING_DRAKE, count: 1 }),
-      killEnemy({ enemy: ENEMY.ELDER_DRAKE, count: 1 }),
+      killEnemy({ enemy: ENEMY.SPITTING_DRAKE, count: 3 }),
     );
     expect(result.retirement).toMatchObject({ complete: true, progress: 1 });
   });

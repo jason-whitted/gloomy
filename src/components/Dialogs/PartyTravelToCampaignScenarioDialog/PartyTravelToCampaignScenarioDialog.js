@@ -16,7 +16,10 @@ class PartyTravelToCampaignScenarioDialog extends Component {
   componentWillMount() {
     const { campaign, party } = this.props;
     const scenarios = campaign.scenarios
-      .filter(scenario => scenario.available && SCENARIO_REQUIREMENT_CONFIG.eligible({ campaign, party, scenario }))
+      .filter(
+        scenario =>
+          scenario.available && !scenario.solo && SCENARIO_REQUIREMENT_CONFIG.eligible({ campaign, party, scenario }),
+      )
       .map(scenario => {
         const from = party.location.scenario || {};
         const linked = from.links && from.links.includes(scenario.id);

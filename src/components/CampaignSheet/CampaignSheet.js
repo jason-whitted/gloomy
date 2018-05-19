@@ -6,6 +6,7 @@ import * as Dialog from '../Dialogs';
 import { CampaignIcon } from '../Icons';
 import * as Flyout from './Flyouts';
 import { TabbedCharacterList } from '../TabbedCharacterList';
+import { TabbedScenarioList } from '../TabbedScenarioList';
 import { GlobalAchievementList } from '../GlobalAchievementList';
 import { PartyList } from '../PartyList';
 import { PlayerList } from '../PlayerList';
@@ -87,6 +88,12 @@ class CampaignSheet extends Component {
                 <td>Envelopes:</td>
                 <td>
                   <EnvelopeList envelopes={campaign.envelopes} />
+                </td>
+              </tr>
+              <tr>
+                <td>Scenarios:</td>
+                <td>
+                  <TabbedScenarioList scenarios={campaign.scenarios} />
                 </td>
               </tr>
             </tbody>

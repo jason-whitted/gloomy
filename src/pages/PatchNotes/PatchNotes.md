@@ -1,3 +1,14 @@
+### Version 0.1.21
+
+* :star: Added Scenario list to campaign page
+  [#51](https://github.com/jason-whitted/gloomy/issues/51)
+
+* :bug: Fixed travel dialog showing solo scenarios
+  [#52](https://github.com/jason-whitted/gloomy/issues/52)
+
+* :bug: Fixed Perfect Poison quest tracking
+  [#53](https://github.com/jason-whitted/gloomy/issues/53)
+
 ### Version 0.1.20
 
 * :bug: Fixed prosperity items sometimes not be unlocked
