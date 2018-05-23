@@ -1,3 +1,8 @@
+### Version 0.1.23
+
+* :bug: Fixed Spears class perks
+  [#58](https://github.com/jason-whitted/gloomy/issues/58)
+
 ### Version 0.1.22
 
 * :bug: Added quest # to create character dialog
@@ -35,7 +40,7 @@
 * :bug: Fixed Angry Face class perk
   [#46](https://github.com/jason-whitted/gloomy/issues/46)
 
-* :bug: Allow adding *additional* augments to a card when at the prosperity level cap
+* :bug: Allow adding _additional_ augments to a card when at the prosperity level cap
   [#48](https://github.com/jason-whitted/gloomy/issues/48)
 
 * :bug: Fixed solo scenario for Spear class
