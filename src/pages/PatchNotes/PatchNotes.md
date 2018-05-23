@@ -1,3 +1,14 @@
+### Version 0.1.22
+
+* :bug: Added quest # to create character dialog
+  [#55](https://github.com/jason-whitted/gloomy/issues/55)
+
+* :bug: Fixed two-minis ability 459
+  [#56](https://github.com/jason-whitted/gloomy/issues/56)
+
+* :bug: Added region to scenario list on campaign page
+  [#57](https://github.com/jason-whitted/gloomy/issues/57)
+
 ### Version 0.1.21
 
 * :star: Added Scenario list to campaign page

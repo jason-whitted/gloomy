@@ -397,7 +397,7 @@ export default {
           className: 'mt-0',
         },
         {
-          action: ACTION.ELEMENT_AIR_CONSUME,
+          action: ACTION.ELEMENT_EARTH_CONSUME,
           condition: true,
           bonuses: [{ action: ACTION.NOTE, value: '+2 Heal (Symbol:Heal), (XP:1)' }],
           className: 'mt-0',

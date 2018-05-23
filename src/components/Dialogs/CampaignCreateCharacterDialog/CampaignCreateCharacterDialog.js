@@ -85,7 +85,7 @@ class CampaignCreateCharacterDialog extends Component {
               <option value="" />
               {availableQuests.map(c => (
                 <option key={c.id} value={c.id}>
-                  {c.name}
+                  {c.id} - {c.name}
                 </option>
               ))}
             </SelectField>

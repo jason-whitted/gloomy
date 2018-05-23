@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
 import { Scenario } from '../Common';
-import { StarIcon } from '../Icons';
 
 class ScenarioList extends Component {
   state = { open: false };
@@ -20,7 +19,7 @@ class ScenarioList extends Component {
         <ListGroup>
           {scenarios.map(c => (
             <ListGroupItem key={c.id}>
-              <Scenario scenario={c} />
+              <Scenario scenario={c} showRegion />
             </ListGroupItem>
           ))}
         </ListGroup>
@@ -30,7 +29,7 @@ class ScenarioList extends Component {
     return (
       <ListGroup>
         <ListGroupItem>
-          <Scenario scenario={scenarios[0]} />
+          <Scenario scenario={scenarios[0]} showRegion />
         </ListGroupItem>
         <ListGroupItem tag="a" href="#expand" onClick={this.toggle}>
           &hellip;and {scenarios.length - 1} other{scenarios.length === 2 ? '' : 's'}
