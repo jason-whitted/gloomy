@@ -3,8 +3,8 @@ import React, { Fragment } from 'react';
 import Augments from './Augments';
 
 export default props => {
-  const { action: { augments }, card: { augmentSlots: slots } } = props;
-  if (!augments || !augments.length) return null;
+  const { action: { augments }, card: { augmentSlots: slots } = {} } = props;
+  if (!augments || !augments.length || !slots) return null;
 
   return (
     <Fragment>

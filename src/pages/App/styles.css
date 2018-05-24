@@ -12,3 +12,7 @@
   font-family: 'HighTower';
   src: url('./fonts/HTOWERT.TTF');
 }
+
+.modal-open .modal {
+  -webkit-overflow-scrolling: touch;
+}

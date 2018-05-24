@@ -7,6 +7,8 @@ class Action extends Component {
   render() {
     const { action: { action, bonuses } } = this.props;
     const ActionComponent = Actions[action];
+    console.log('Action', this.props);
+    console.log({ ActionComponent });
     if (!ActionComponent) {
       return <div>{action}</div>;
     }

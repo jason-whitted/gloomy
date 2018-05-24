@@ -40,17 +40,17 @@ export default props => {
       {!altStyle && (
         <section className="effects">
           <div className="effects-inner">
-            {bonuses && bonuses.map((bonus, i) => <Action key={i} {...bonus} isBonus />)}
+            {bonuses && bonuses.map((bonus, i) => <Action key={i} action={bonus} isBonus />)}
           </div>
         </section>
       )}
       {altStyle && (
         <Fragment>
           <section className="effects">
-            <div className="effects-inner">{bonuses && <Action {...bonuses[0]} isBonus />}</div>
+            <div className="effects-inner">{bonuses && <Action action={bonuses[0]} isBonus />}</div>
           </section>
           <section className="effects">
-            <div className="effects-inner">{bonuses && <Action {...bonuses[1]} isBonus />}</div>
+            <div className="effects-inner">{bonuses && <Action action={bonuses[1]} isBonus />}</div>
           </section>
         </Fragment>
       )}

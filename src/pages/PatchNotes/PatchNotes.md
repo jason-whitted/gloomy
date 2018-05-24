@@ -1,3 +1,11 @@
+### Version 0.1.24
+
+* :bug: Fixed summon ability cards
+  [#59](https://github.com/jason-whitted/gloomy/issues/59)
+
+* :bug: Added momentum scrolling for mobile devices
+  [#60](https://github.com/jason-whitted/gloomy/issues/60)
+
 ### Version 0.1.23
 
 * :bug: Fixed Spears class perks
