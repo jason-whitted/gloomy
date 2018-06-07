@@ -1,3 +1,11 @@
+### Version 0.1.25
+
+* :bug: Fixed Sun class ability 193 initiative
+  [#61](https://github.com/jason-whitted/gloomy/issues/61)
+
+* :bug: Fixed character retirement not incrementing prosperity
+  [#62](https://github.com/jason-whitted/gloomy/issues/62)
+
 ### Version 0.1.24
 
 * :bug: Fixed summon ability cards

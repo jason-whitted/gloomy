@@ -1,8 +1,11 @@
 import { PERSONAL_QUEST_CONFIG, PERSONAL_QUEST_REWARD_TYPE } from '../../../PERSONAL_QUEST';
 import CharacterSellAllItems from '../CharacterSellAllItems';
+import CampaignAddProsperity from '../CampaignAddProsperity';
 
 export default (state, { payload: { character } }) => {
-  let campaign = CharacterSellAllItems.reduce(state, { payload: { character } });
+  let campaign = state;
+  campaign = CharacterSellAllItems.reduce(campaign, { payload: { character } });
+  campaign = CampaignAddProsperity.reduce(campaign, { payload: { count: 1 } });
 
   const curChar = campaign.characters[character];
   const curParty = campaign.parties[curChar.party];

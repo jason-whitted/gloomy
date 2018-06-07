@@ -12,8 +12,9 @@ describe(ACTION.name, () => {
   });
 
   describe('reduce', () => {
-    it('should mark the character as retired, sell their items and unlock a class', () => {
+    it('should mark the character as retired, increase prosperity, sell their items and unlock a class', () => {
       const campaign = {
+        prosperity: 2,
         characters: {
           1: { id: 1, party: 2, player: 3, quest: 510, items: { 1: true }, gold: 0 },
         },
@@ -25,6 +26,7 @@ describe(ACTION.name, () => {
         },
       };
       const expected = {
+        prosperity: 3,
         characters: {
           1: { id: 1, party: 2, player: 3, quest: 510, items: {}, gold: 10, retired: true },
         },
@@ -43,6 +45,7 @@ describe(ACTION.name, () => {
 
     it('should mark the character as retired and unlock an envelope', () => {
       const campaign = {
+        prosperity: 1,
         characters: {
           1: { id: 1, party: 2, player: 3, quest: 513, items: {}, gold: 0 },
         },
@@ -54,6 +57,7 @@ describe(ACTION.name, () => {
         },
       };
       const expected = {
+        prosperity: 2,
         characters: {
           1: { id: 1, party: 2, player: 3, quest: 513, items: {}, gold: 0, retired: true },
         },

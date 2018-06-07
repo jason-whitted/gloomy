@@ -599,7 +599,7 @@ export default {
     class: CLASS.SUNKEEPER,
     name: 'Righteous Strength',
     level: 4,
-    initiative: 193,
+    initiative: 18,
     augmentSlots: {
       1: { id: 1, ...AUGMENT_SLOT.SELF, top: true, multiple: true },
       2: { id: 2, ...AUGMENT_SLOT.MOVE },
