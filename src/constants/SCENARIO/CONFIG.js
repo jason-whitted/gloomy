@@ -328,7 +328,7 @@ export default {
   [ID.FORGOTTEN_CRYPT]: {
     id: ID.FORGOTTEN_CRYPT,
     name: 'Forgotten Crypt',
-    region: REGION.UNKNOWN,
+    region: REGION.LINGERING_SWAMP,
     crypt: true,
     links: [],
     requirements: [
@@ -1046,7 +1046,7 @@ export default {
   [ID.CRYPT_BASEMENT]: {
     id: ID.CRYPT_BASEMENT,
     name: 'Crypt Basement',
-    region: REGION.LINGERING_SWAMP,
+    region: REGION.UNKNOWN,
     crypt: true,
     links: [],
     requirements: [{ type: SCENARIO_REQUIREMENT.PERSONAL_QUEST, quest: PERSONAL_QUEST.SEEKER_OF_XORN }],

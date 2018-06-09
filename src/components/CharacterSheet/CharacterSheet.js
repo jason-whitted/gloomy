@@ -59,7 +59,7 @@ class CharacterSheet extends Component {
                 <th className="bg-light border-right p-2 w-100">
                   {canRetire && <StarIcon title="Character can retire!" />}
                   <Flyout.CharacterNameFlyout
-                    readonly={readonly}
+                    readonly={character.retired || character.player.restricted}
                     character={character}
                     onRenameClick={this.show(Dialog.CharacterRenameDialog)}
                     onToggleHiatusClick={this.show(Dialog.CharacterToggleHiatusDialog)}

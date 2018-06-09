@@ -1,3 +1,17 @@
+### Version 0.1.26
+
+* :bug: Fixed returning from hiatus
+  [#63](https://github.com/jason-whitted/gloomy/issues/63)
+
+* :bug: Fixed Scenario collective gold reward dialog
+  [#64](https://github.com/jason-whitted/gloomy/issues/64)
+
+* :bug: Fixed Scenario 19 not counting as Lingering Swamp
+  [#65](https://github.com/jason-whitted/gloomy/issues/65)
+
+* :bug: Fixed Casual Scenario completion giving rewards
+  [#66](https://github.com/jason-whitted/gloomy/issues/66)
+
 ### Version 0.1.25
 
 * :bug: Fixed Sun class ability 193 initiative

@@ -33,10 +33,13 @@ const REWARD_TYPES = [
 class PartyFinishScenarioDialog extends Component {
   componentWillMount() {
     const { campaign, party, character, solo } = this.props;
+    console.log(this.props);
 
     const scenario = solo
       ? campaign.scenarios.find(s => s.solo && s.class === character.class.id)
       : party.location.scenario;
+
+    const rewards = solo || party.location.campaign ? scenario.rewards : [];
 
     this.setState({
       scenario,
@@ -50,7 +53,7 @@ class PartyFinishScenarioDialog extends Component {
         })),
         { type: STEP.REQUIRE_ATTENDEE },
         { type: STEP.LEVEL },
-        ...scenario.rewards.filter(reward => REWARD_TYPES.includes(reward.type)).map(reward => ({
+        ...rewards.filter(reward => REWARD_TYPES.includes(reward.type)).map(reward => ({
           type: STEP.REWARD + reward.type,
           reward,
         })),
@@ -220,7 +223,7 @@ class PartyFinishScenarioDialog extends Component {
         />
         <RewardCollectiveGoldForm
           isOpen={step.type === STEP.REWARD + SCENARIO_REWARD_TYPE.COLLECTIVE_GOLD}
-          count={500}
+          count={(step.reward || {}).count || 0}
           attendees={attendees}
           onBack={this.back}
           onNext={this.next}
