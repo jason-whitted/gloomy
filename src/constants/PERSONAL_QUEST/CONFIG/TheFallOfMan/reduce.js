@@ -4,7 +4,7 @@ import { SCENARIO, SCENARIO_CONFIG } from '../../../SCENARIO';
 import manualQuestProgress from '../manualQuestProgress';
 
 const targetScenarios = Object.values(SCENARIO_CONFIG)
-  .filter(s => s.region === REGION.LINGERING_SWAMP && s.id !== SCENARIO.FADING_LIGHTHOUSE)
+  .filter(s => s.region === REGION.LINGERING_SWAMP && s.id !== SCENARIO.PIT_OF_SOULS)
   .map(s => s.id);
 
 export default campaign => (character, action) => {
@@ -33,7 +33,7 @@ export default campaign => (character, action) => {
         };
       }
 
-      if (scenario === SCENARIO.FADING_LIGHTHOUSE && character.retirement.progress === 2 / 3) {
+      if (scenario === SCENARIO.PIT_OF_SOULS && character.retirement.progress === 2 / 3) {
         return {
           ...character,
           retirement: {

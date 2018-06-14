@@ -38,14 +38,14 @@ describe('PQ:Vengeance', () => {
     const result = reduce(
       finishScenario({ scenario: SCENARIO.DECREPIT_WOOD, characters: { 1: {} } }),
       finishScenario({ scenario: SCENARIO.REBEL_SWAMP, characters: { 2: {} } }),
-      finishScenario({ scenario: SCENARIO.PIT_OF_SOULS, characters: { 1: {}, 2: {} } }),
+      finishScenario({ scenario: SCENARIO.FORGOTTEN_CRYPT, characters: { 1: {}, 2: {} } }),
     );
     expect(result.retirement).toEqual({
       complete: false,
       progress: 2 / 3,
       scenarios: {
         [SCENARIO.DECREPIT_WOOD]: true,
-        [SCENARIO.PIT_OF_SOULS]: true,
+        [SCENARIO.FORGOTTEN_CRYPT]: true,
       },
     });
   });
@@ -55,7 +55,7 @@ describe('PQ:Vengeance', () => {
       finishScenario({ scenario: SCENARIO.DECREPIT_WOOD }),
       finishScenario({ scenario: SCENARIO.REBEL_SWAMP }),
       finishScenario({ scenario: SCENARIO.REBEL_SWAMP }),
-      finishScenario({ scenario: SCENARIO.PIT_OF_SOULS }),
+      finishScenario({ scenario: SCENARIO.FADING_LIGHTHOUSE }),
     );
     expect(result.retirement).toEqual({
       complete: false,
@@ -63,7 +63,7 @@ describe('PQ:Vengeance', () => {
       scenarios: {
         [SCENARIO.DECREPIT_WOOD]: true,
         [SCENARIO.REBEL_SWAMP]: true,
-        [SCENARIO.PIT_OF_SOULS]: true,
+        [SCENARIO.FADING_LIGHTHOUSE]: true,
       },
     });
   });
@@ -72,7 +72,7 @@ describe('PQ:Vengeance', () => {
     const result = reduce(
       finishScenario({ scenario: SCENARIO.DECREPIT_WOOD }),
       finishScenario({ scenario: SCENARIO.REBEL_SWAMP }),
-      finishScenario({ scenario: SCENARIO.FADING_LIGHTHOUSE }),
+      finishScenario({ scenario: SCENARIO.PIT_OF_SOULS }),
     );
     expect(result.retirement).toEqual({ complete: true, progress: 1 });
   });

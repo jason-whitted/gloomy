@@ -1,3 +1,8 @@
+### Version 0.1.27
+
+* :bug: Fixed personal quest 529 retirement conditions
+  [#68](https://github.com/jason-whitted/gloomy/issues/68)
+
 ### Version 0.1.26
 
 * :bug: Fixed returning from hiatus
