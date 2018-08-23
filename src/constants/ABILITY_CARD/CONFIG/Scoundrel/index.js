@@ -149,7 +149,7 @@ export default {
       consumed: true,
     },
     bottom: {
-      actions: [{ action: ACTION.ATTACK, value: 6 }],
+      actions: [{ action: ACTION.MOVE, value: 6 }],
     },
   },
   92: {
