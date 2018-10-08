@@ -675,7 +675,7 @@ export default {
     goals: [{ type: GOAL.KILL_ENEMY, enemy: ENEMY.ELDER_DRAKE }],
     effects: [],
     rewards: [
-      { type: REWARD.PARTY_ACHIEVEMENT, achievement: PARTY_ACHIEVEMENT.THE_DRAKE_SLAIN },
+      { type: REWARD.GLOBAL_ACHIEVEMENT, achievement: GLOBAL_ACHIEVEMENT.THE_DRAKE_SLAIN },
       { type: REWARD.LOST_PARTY_ACHIEVEMENT, achievement: PARTY_ACHIEVEMENT.THE_DRAKES_COMMAND },
       { type: REWARD.GOLD, count: 20 },
       { type: REWARD.REPUTATION, count: 2 },

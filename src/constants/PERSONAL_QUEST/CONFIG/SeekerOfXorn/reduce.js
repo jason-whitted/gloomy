@@ -32,7 +32,7 @@ export default campaign => (character, action) => {
         };
       }
 
-      if (scenario === SCENARIO.NOXIOUS_CELLAR && character.retirement.progress === 3 / 4) {
+      if (scenario === SCENARIO.PALACE_OF_ICE && character.retirement.progress === 3 / 4) {
         return {
           ...character,
           retirement: {

@@ -1,5 +1,13 @@
 ### Version 0.1.27
 
+* :bug: Fixed Dragon Slain global achievement
+  [#70](https://github.com/jason-whitted/gloomy/issues/70)
+
+* :bug: Fixed Personal Quest 510
+  [#74](https://github.com/jason-whitted/gloomy/issues/74)
+
+### Version 0.1.27
+
 * :bug: Fixed personal quest 529 retirement conditions
   [#68](https://github.com/jason-whitted/gloomy/issues/68)
 

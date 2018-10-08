@@ -81,7 +81,7 @@ describe('PQ:SeekerOfXorn', () => {
       finishScenario({ scenario: SCENARIO.DECAYING_CRYPT }),
       finishScenario({ scenario: SCENARIO.FORGOTTEN_CRYPT }),
       finishScenario({ scenario: SCENARIO.CRYPT_BASEMENT }),
-      finishScenario({ scenario: SCENARIO.NOXIOUS_CELLAR }),
+      finishScenario({ scenario: SCENARIO.PALACE_OF_ICE }),
     );
     expect(result.retirement).toEqual({ complete: true, progress: 1 });
   });

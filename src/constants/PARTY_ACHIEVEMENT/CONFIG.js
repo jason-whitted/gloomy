@@ -18,7 +18,7 @@ export default {
   [ID.SIN_RA]: { id: ID.SIN_RA, name: 'Sin-Ra' },
   [ID.STONEBREAKERS_CENSER]: { id: ID.STONEBREAKERS_CENSER, name: "Stonebreaker's Censer" },
   [ID.THE_DRAKES_COMMAND]: { id: ID.THE_DRAKES_COMMAND, name: "The Drake's Command" },
-  [ID.THE_DRAKE_SLAIN]: { id: ID.THE_DRAKE_SLAIN, name: 'The Drake Slain' },
+  [ID.THE_DRAKE_SLAIN_INVALID]: { id: ID.THE_DRAKE_SLAIN_INVALID, name: 'The Drake Slain' },
   [ID.THE_DRAKES_TREASURE]: { id: ID.THE_DRAKES_TREASURE, name: "The Drake's Treasure" },
   [ID.THE_POISONS_SOURCE]: { id: ID.THE_POISONS_SOURCE, name: "The Poison's Source" },
   [ID.THE_SCEPTER_AND_THE_VOICE]: { id: ID.THE_SCEPTER_AND_THE_VOICE, name: 'The Scepter and the Voice' },

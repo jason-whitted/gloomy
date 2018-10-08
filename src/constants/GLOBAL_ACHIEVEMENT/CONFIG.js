@@ -21,4 +21,5 @@ export default {
   [ID.THE_VOICE_FREED]: { id: ID.THE_VOICE_FREED, name: 'The Voice Freed' },
   [ID.THE_VOICE_SILENCED]: { id: ID.THE_VOICE_SILENCED, name: 'The Voice Silenced' },
   [ID.WATER_BREATHING]: { id: ID.WATER_BREATHING, name: 'Water Breathing' },
+  [ID.THE_DRAKE_SLAIN]: { id: ID.THE_DRAKE_SLAIN, name: 'The Drake Slain' },
 };
