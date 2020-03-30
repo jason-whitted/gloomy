@@ -31,7 +31,7 @@ export default campaign => (character, action) => {
     case ACTION.PARTY_FINISH_SCENARIO: {
       if (!action.payload.characters[character.id] || action.payload.failed) return character;
 
-      if (action.payload.scenario === SCENARIO.FORGOTTEN_GROVE && character.retirement.enemies === 8) {
+      if (action.payload.scenario === SCENARIO.ALCHEMY_LAB && character.retirement.enemies === 8) {
         return {
           ...character,
           retirement: {
