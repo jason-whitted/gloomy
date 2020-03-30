@@ -6,7 +6,7 @@ import { GlobalAchievementIcon } from '../../Icons';
 import { Flyout } from '../../Flyout';
 
 const CampaignAchievementsFlyout = ({ campaign, onClick }) => (
-  <Flyout text="Achivements">
+  <Flyout text="Achievements">
     <ListGroup>
       <ListGroupItem tag="button" action onClick={onClick}>
         <GlobalAchievementIcon /> Add Global Achievement&hellip;
