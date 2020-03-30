@@ -29,7 +29,7 @@ describe('PQ:FindingTheCure', () => {
   it('should not count scenarios completed without the character', () => {
     const result = reduce(
       killEnemy({ enemy: ENEMY.FOREST_IMP, count: 8 }),
-      finishScenario({ scenario: SCENARIO.FORGOTTEN_GROVE, characters: { 2: {} } }),
+      finishScenario({ scenario: SCENARIO.ALCHEMY_LAB, characters: { 2: {} } }),
     );
     expect(result.retirement).toMatchObject({ complete: false, progress: 8 / 9 });
   });
@@ -37,7 +37,7 @@ describe('PQ:FindingTheCure', () => {
   it('should complete', () => {
     const result = reduce(
       killEnemy({ enemy: ENEMY.FOREST_IMP, count: 8 }),
-      finishScenario({ scenario: SCENARIO.FORGOTTEN_GROVE }),
+      finishScenario({ scenario: SCENARIO.ALCHEMY_LAB }),
     );
     expect(result.retirement).toMatchObject({ complete: true, progress: 1 });
   });
