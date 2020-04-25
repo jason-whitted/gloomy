@@ -1454,7 +1454,7 @@ export default {
     name: 'Flea-Bitten Shawl',
     desc: 'You are considered to have an initiative of 99 for the purpose of enemy focusing.',
     count: 1,
-    gold: 50,
+    gold: 10,
     effects: '',
     when: { type: WHEN.EQUIPPED },
     what: [{ type: WHAT.PERCEIVED_INITIATIVE, count: 99 }],
