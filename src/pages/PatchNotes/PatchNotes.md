@@ -1,11 +1,16 @@
+### Version 0.1.30
+
+- :bug: Personal quest 513 completing too early
+  [#83](https://github.com/jason-whitted/gloomy/pull/83)
+
 ### Version 0.1.29
 
 - :bug: Personal quest 513 completing too early
   [#76](https://github.com/jason-whitted/gloomy/issues/76)
 - :bug: Fix typo
-  [PR#81](https://github.com/jason-whitted/gloomy/pull/81)
+  [#81](https://github.com/jason-whitted/gloomy/pull/81)
 - :bug: Fix #76
-  [PR#82](https://github.com/jason-whitted/gloomy/pull/82)
+  [#82](https://github.com/jason-whitted/gloomy/pull/82)
 
 > Thanks [@zachbardon](https://github.com/zachbardon) for contributing to gloomy!
 
