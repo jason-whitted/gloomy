@@ -1,6 +1,6 @@
 ### Version 0.1.30
 
-- :bug: Personal quest 513 completing too early
+- :bug: Fix price of Flea-bitten Shawl
   [#83](https://github.com/jason-whitted/gloomy/pull/83)
 
 ### Version 0.1.29
