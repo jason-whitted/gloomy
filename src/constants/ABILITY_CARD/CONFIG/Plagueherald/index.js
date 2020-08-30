@@ -143,7 +143,7 @@ export default {
     bottom: {
       actions: [
         {
-          action: ACTION.MOVE,
+          action: ACTION.ATTACK,
           value: 3,
           augments: [1],
           bonuses: [{ action: ACTION.RANGE, value: 3, augments: [2] }],
