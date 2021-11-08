@@ -1,13 +1,13 @@
 import { ApiError } from '../ApiError';
 
-export default ({ url, method, data, ...other }) => {
+export default ({ url, method, data, headers, ...other }) => {
+  headers['Accept'] = 'application/json';
+  headers['Content-Type'] = 'application/json';
+
   const options = {
     method,
     body: data ? JSON.stringify(data) : null,
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
+    headers: headers,
     cache: 'no-store',
     ...other,
   };

@@ -32,6 +32,7 @@ class AuthManager {
       url: '/api/auth',
       method: 'POST',
       data: { code, state },
+      headers: {},
     };
 
     const success = ({ access_token }) => {

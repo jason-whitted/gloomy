@@ -14,14 +14,18 @@ export default ({ url, query, method, data, ...other }) =>
       throw new Error('Not logged in');
     }
 
+    let headers = {
+        Authorization: 'token ' + selectUserToken(store.getState()),
+    };
+
     return resolve(
       api({
         url: `https://api.github.com${url.replace(regLogin, login)}?${qs.stringify({
-          access_token: selectUserToken(store.getState()),
           ...query,
         })}`,
         method,
         data,
+        headers,
         ...other,
       }),
     );
